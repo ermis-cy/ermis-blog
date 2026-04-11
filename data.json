@@ -1,1 +1,13 @@
-{"updated":"","starting_balance":200,"total_value":200,"pnl":0,"cash":200,"invested":0,"wins":0,"losses":0,"total_trades":0,"open_positions":[],"resolved":[],"recent_trades":[]}
+{
+  "updated": "2026-04-11T21:40:20.798225+00:00",
+  "total_value": 0.0,
+  "pnl": 0,
+  "wallet_balance": 0.0,
+  "invested": 0,
+  "wins": 0,
+  "losses": 0,
+  "total_trades": 0,
+  "open_positions": [],
+  "resolved": [],
+  "recent_trades": []
+}
