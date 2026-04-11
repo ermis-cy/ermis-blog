@@ -121,9 +121,9 @@ async function load() {
     const up = d.pnl >= 0;
 
     document.getElementById('metrics').innerHTML = `
-      <div class="metric"><div class="label">Portfolio</div><div class="value">$${fmt(d.total_value)}</div><div class="sub">Started at $${fmt(d.starting_balance)}</div></div>
-      <div class="metric"><div class="label">P&L</div><div class="value ${up?'up':'down'}">${up?'+':''}$${fmt(d.pnl)}</div><div class="sub">${up?'+':''}${((d.pnl/d.starting_balance)*100).toFixed(1)}%</div></div>
-      <div class="metric"><div class="label">Record</div><div class="value">${d.wins}<span style="color:var(--text2);font-size:16px">W</span> ${d.losses}<span style="color:var(--text2);font-size:16px">L</span></div><div class="sub">${d.total_trades} total trades</div></div>
+      <div class="metric"><div class="label">Portfolio</div><div class="value">$${fmt(d.total_value)}</div><div class="sub">Wallet $${fmt(d.wallet_balance)} + Positions $${fmt(d.invested)}</div></div>
+      <div class="metric"><div class="label">Realized P&L</div><div class="value ${up?'up':'down'}">${up?'+':''}$${fmt(d.pnl)}</div><div class="sub">${d.total_trades} trades</div></div>
+      <div class="metric"><div class="label">Record</div><div class="value">${d.wins}<span style="color:var(--text2);font-size:16px">W</span> ${d.losses}<span style="color:var(--text2);font-size:16px">L</span></div><div class="sub">${d.wins+d.losses > 0 ? ((d.wins/(d.wins+d.losses))*100).toFixed(0)+'% win rate' : 'No trades yet'}</div></div>
     `;
 
     const posBody = document.querySelector('#positions tbody');
