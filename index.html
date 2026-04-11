@@ -4,113 +4,175 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ermis Agent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+:root {
+  --bg: #0a0e14;
+  --surface: #12171f;
+  --surface2: #1a2030;
+  --border: #1e2a3a;
+  --text: #e2e8f0;
+  --text2: #8892a4;
+  --green: #10b981;
+  --green-bg: rgba(16,185,129,0.1);
+  --red: #ef4444;
+  --red-bg: rgba(239,68,68,0.1);
+  --blue: #3b82f6;
+  --accent: #6366f1;
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #0d1117; color: #c9d1d9; font-family: -apple-system, system-ui, sans-serif; padding: 20px; max-width: 900px; margin: 0 auto; }
-h1 { color: #f0f6fc; margin-bottom: 4px; font-size: 24px; }
-.subtitle { color: #8b949e; margin-bottom: 24px; font-size: 14px; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 24px; }
-.card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; }
-.card .label { color: #8b949e; font-size: 12px; text-transform: uppercase; }
-.card .value { color: #f0f6fc; font-size: 22px; font-weight: 600; margin-top: 4px; }
-.card .value.green { color: #3fb950; }
-.card .value.red { color: #f85149; }
-h2 { color: #f0f6fc; font-size: 16px; margin: 20px 0 10px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-th { text-align: left; color: #8b949e; font-weight: 500; padding: 8px 6px; border-bottom: 1px solid #30363d; }
-td { padding: 8px 6px; border-bottom: 1px solid #21262d; }
-td a { color: #58a6ff; text-decoration: none; }
-td a:hover { text-decoration: underline; }
-.side { font-weight: 600; }
-.side.yes { color: #3fb950; }
-.side.no { color: #f85149; }
-.result { font-weight: 600; padding: 2px 8px; border-radius: 4px; font-size: 11px; }
-.result.win { background: #238636; color: #fff; }
-.result.loss { background: #da3633; color: #fff; }
-.updated { color: #484f58; font-size: 11px; margin-top: 16px; text-align: center; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, system-ui, sans-serif; min-height: 100vh; }
+.container { max-width: 960px; margin: 0 auto; padding: 32px 20px; }
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+.header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
+.header .mode { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 4px 10px; border-radius: 100px; background: var(--green-bg); color: var(--green); }
+.header .mode.paper { background: rgba(99,102,241,0.1); color: var(--accent); }
+
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+.metric { background: var(--surface); padding: 20px; }
+.metric .label { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
+.metric .value { font-size: 28px; font-weight: 700; margin-top: 4px; letter-spacing: -1px; }
+.metric .sub { font-size: 12px; color: var(--text2); margin-top: 2px; }
+.metric .value.up { color: var(--green); }
+.metric .value.down { color: var(--red); }
+
+.section { margin-bottom: 24px; }
+.section-header { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text2); margin-bottom: 10px; padding-left: 4px; }
+
+.table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; }
+th { font-size: 11px; font-weight: 500; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; text-align: left; padding: 12px 16px; background: var(--surface2); }
+td { padding: 12px 16px; font-size: 13px; border-top: 1px solid var(--border); }
+tr:hover td { background: var(--surface2); }
+td a { color: var(--blue); text-decoration: none; }
+td a:hover { color: #60a5fa; }
+
+.pill { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 100px; letter-spacing: 0.3px; }
+.pill.yes { background: var(--green-bg); color: var(--green); }
+.pill.no { background: var(--red-bg); color: var(--red); }
+.pill.win { background: var(--green-bg); color: var(--green); }
+.pill.loss { background: var(--red-bg); color: var(--red); }
+
+.pnl-up { color: var(--green); font-weight: 600; }
+.pnl-down { color: var(--red); font-weight: 600; }
+
+.footer { text-align: center; padding: 24px 0 12px; color: var(--text2); font-size: 11px; }
+.footer .dot { display: inline-block; width: 6px; height: 6px; background: var(--green); border-radius: 50%; margin-right: 6px; animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+.empty { padding: 32px; text-align: center; color: var(--text2); font-size: 13px; }
+
+@media (max-width: 600px) {
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+  td, th { padding: 10px 12px; font-size: 12px; }
+}
 </style>
 </head>
 <body>
-<h1>Ermis Agent</h1>
-<p class="subtitle">Autonomous prediction market trader. Paper trading mode.</p>
+<div class="container">
+  <div class="header">
+    <h1>Ermis Agent</h1>
+    <span class="mode paper" id="mode">Paper</span>
+  </div>
 
-<div class="cards" id="cards"></div>
+  <div class="metrics" id="metrics"></div>
 
-<h2>Open Positions</h2>
-<table id="positions">
-<thead><tr><th>Side</th><th>Market</th><th>Entry</th><th>Size</th></tr></thead>
-<tbody></tbody>
-</table>
+  <div class="section">
+    <div class="section-header">Open Positions</div>
+    <div class="table-wrap">
+      <table id="positions">
+        <thead><tr><th>Side</th><th>Market</th><th>Entry</th><th>Size</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
 
-<h2>Resolved Trades</h2>
-<table id="resolved">
-<thead><tr><th>Result</th><th>Side</th><th>Market</th><th>Entry</th><th>Size</th><th>P&L</th></tr></thead>
-<tbody></tbody>
-</table>
+  <div class="section">
+    <div class="section-header">Resolved</div>
+    <div class="table-wrap">
+      <table id="resolved">
+        <thead><tr><th>Result</th><th>Side</th><th>Market</th><th>Entry</th><th>Size</th><th>P&L</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
 
-<h2>Recent Trades</h2>
-<table id="trades">
-<thead><tr><th>Time</th><th>Side</th><th>Market</th><th>Price</th><th>Size</th></tr></thead>
-<tbody></tbody>
-</table>
+  <div class="section">
+    <div class="section-header">Recent Trades</div>
+    <div class="table-wrap">
+      <table id="trades">
+        <thead><tr><th>Time</th><th>Side</th><th>Market</th><th>Price</th><th>Size</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
 
-<p class="updated" id="updated"></p>
+  <div class="footer">
+    <span class="dot"></span>
+    <span id="updated">Loading...</span>
+  </div>
+</div>
 
 <script>
-async function load() {
-  try {
-    const resp = await fetch('data.json?' + Date.now());
-    const d = await resp.json();
-
-    // Cards
-    const pnlClass = d.pnl >= 0 ? 'green' : 'red';
-    document.getElementById('cards').innerHTML = `
-      <div class="card"><div class="label">Portfolio</div><div class="value">$${d.total_value.toFixed(2)}</div></div>
-      <div class="card"><div class="label">P&L</div><div class="value ${pnlClass}">${d.pnl >= 0 ? '+' : ''}$${d.pnl.toFixed(2)}</div></div>
-      <div class="card"><div class="label">Record</div><div class="value">${d.wins}W / ${d.losses}L</div></div>
-      <div class="card"><div class="label">Cash</div><div class="value">$${d.cash.toFixed(2)}</div></div>
-      <div class="card"><div class="label">Invested</div><div class="value">$${d.invested.toFixed(2)}</div></div>
-      <div class="card"><div class="label">Trades</div><div class="value">${d.total_trades}</div></div>
-    `;
-
-    // Positions
-    const posBody = document.querySelector('#positions tbody');
-    posBody.innerHTML = d.open_positions.map(p => `<tr>
-      <td class="side ${p.side.toLowerCase()}">${p.side}</td>
-      <td><a href="${p.url}" target="_blank">${p.question}</a></td>
-      <td>${(p.entry * 100).toFixed(0)}%</td>
-      <td>$${p.size.toFixed(2)}</td>
-    </tr>`).join('');
-
-    // Resolved
-    const resBody = document.querySelector('#resolved tbody');
-    resBody.innerHTML = d.resolved.map(r => `<tr>
-      <td><span class="result ${r.won ? 'win' : 'loss'}">${r.won ? 'WIN' : 'LOSS'}</span></td>
-      <td class="side ${r.side.toLowerCase()}">${r.side}</td>
-      <td><a href="${r.url}" target="_blank">${r.question}</a></td>
-      <td>${(r.entry * 100).toFixed(0)}%</td>
-      <td>$${r.size.toFixed(2)}</td>
-      <td style="color:${r.pnl >= 0 ? '#3fb950' : '#f85149'}">${r.pnl >= 0 ? '+' : ''}$${r.pnl.toFixed(2)}</td>
-    </tr>`).join('');
-
-    // Trades
-    const trBody = document.querySelector('#trades tbody');
-    trBody.innerHTML = d.recent_trades.slice(0, 20).map(t => `<tr>
-      <td>${new Date(t.time).toLocaleString()}</td>
-      <td class="side ${t.side.toLowerCase()}">${t.side}</td>
-      <td><a href="${t.url}" target="_blank">${t.question}</a></td>
-      <td>${(t.price * 100).toFixed(0)}%</td>
-      <td>$${t.size.toFixed(2)}</td>
-    </tr>`).join('');
-
-    document.getElementById('updated').textContent = 'Updated: ' + new Date(d.updated).toLocaleString();
-  } catch(e) {
-    console.error('Failed to load data:', e);
-  }
+function fmt(n) { return n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
+function pct(n) { return (n * 100).toFixed(0) + '%'; }
+function timeFmt(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-US', {month:'short', day:'numeric'}) + ' ' + d.toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
 }
 
+async function load() {
+  try {
+    const d = await (await fetch('data.json?' + Date.now())).json();
+    const up = d.pnl >= 0;
+
+    document.getElementById('metrics').innerHTML = `
+      <div class="metric"><div class="label">Portfolio</div><div class="value">$${fmt(d.total_value)}</div><div class="sub">Started at $${fmt(d.starting_balance)}</div></div>
+      <div class="metric"><div class="label">P&L</div><div class="value ${up?'up':'down'}">${up?'+':''}$${fmt(d.pnl)}</div><div class="sub">${up?'+':''}${((d.pnl/d.starting_balance)*100).toFixed(1)}%</div></div>
+      <div class="metric"><div class="label">Record</div><div class="value">${d.wins}<span style="color:var(--text2);font-size:16px">W</span> ${d.losses}<span style="color:var(--text2);font-size:16px">L</span></div><div class="sub">${d.total_trades} total trades</div></div>
+    `;
+
+    const posBody = document.querySelector('#positions tbody');
+    if (!d.open_positions.length) {
+      posBody.innerHTML = '<tr><td colspan="4" class="empty">No open positions</td></tr>';
+    } else {
+      posBody.innerHTML = d.open_positions.map(p => `<tr>
+        <td><span class="pill ${p.side.toLowerCase()}">${p.side}</span></td>
+        <td><a href="${p.url}" target="_blank">${p.question}</a></td>
+        <td>${pct(p.entry)}</td>
+        <td>$${fmt(p.size)}</td>
+      </tr>`).join('');
+    }
+
+    const resBody = document.querySelector('#resolved tbody');
+    if (!d.resolved.length) {
+      resBody.innerHTML = '<tr><td colspan="6" class="empty">No resolved trades yet</td></tr>';
+    } else {
+      resBody.innerHTML = d.resolved.map(r => `<tr>
+        <td><span class="pill ${r.won?'win':'loss'}">${r.won?'WIN':'LOSS'}</span></td>
+        <td><span class="pill ${r.side.toLowerCase()}">${r.side}</span></td>
+        <td><a href="${r.url}" target="_blank">${r.question}</a></td>
+        <td>${pct(r.entry)}</td>
+        <td>$${fmt(r.size)}</td>
+        <td class="${r.pnl>=0?'pnl-up':'pnl-down'}">${r.pnl>=0?'+':''}$${fmt(r.pnl)}</td>
+      </tr>`).join('');
+    }
+
+    const trBody = document.querySelector('#trades tbody');
+    trBody.innerHTML = d.recent_trades.slice(0, 25).map(t => `<tr>
+      <td style="color:var(--text2)">${timeFmt(t.time)}</td>
+      <td><span class="pill ${t.side.toLowerCase()}">${t.side}</span></td>
+      <td><a href="${t.url}" target="_blank">${t.question}</a></td>
+      <td>${pct(t.price)}</td>
+      <td>$${fmt(t.size)}</td>
+    </tr>`).join('');
+
+    document.getElementById('updated').textContent = 'Live \u00b7 Updated ' + timeFmt(d.updated);
+  } catch(e) { console.error(e); }
+}
 load();
-setInterval(load, 60000); // Refresh every minute
+setInterval(load, 30000);
 </script>
 </body>
 </html>
