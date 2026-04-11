@@ -75,7 +75,7 @@ td a:hover { color: #60a5fa; }
 <div class="container">
   <div class="header">
     <h1>Ermis Agent</h1>
-    <span class="mode paper" id="mode">Paper</span>
+    <span class="mode" id="mode">Live</span>
   </div>
 
   <div class="metrics" id="metrics"></div>
@@ -100,15 +100,6 @@ td a:hover { color: #60a5fa; }
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-header">Trade Log</div>
-    <div class="table-wrap">
-      <table id="trades">
-        <thead><tr><th style="width:50px">Side</th><th>Market</th><th style="width:60px">Price</th><th style="width:70px">Size</th><th style="width:100px">Time</th></tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </div>
 
   <div class="footer">
     <span class="dot"></span>
@@ -161,14 +152,6 @@ async function load() {
       </tr>`).join('');
     }
 
-    const trBody = document.querySelector('#trades tbody');
-    trBody.innerHTML = d.recent_trades.slice(0, 25).map(t => `<tr>
-      <td><span class="pill ${t.side.toLowerCase()}">${t.side}</span></td>
-      <td><a href="${t.url}" target="_blank">${t.question}</a></td>
-      <td>${pct(t.price)}</td>
-      <td>$${fmt(t.size)}</td>
-      <td style="color:var(--text2)">${timeFmt(t.time)}</td>
-    </tr>`).join('');
 
     document.getElementById('updated').textContent = 'Live \u00b7 Updated ' + timeFmt(d.updated);
   } catch(e) { console.error(e); }
