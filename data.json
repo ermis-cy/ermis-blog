@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-11T23:43:34.349072+00:00",
-  "total_value": 244.559749,
+  "updated": "2026-04-11T23:43:58.372224+00:00",
+  "total_value": 247.14975,
   "pnl": 0,
-  "wallet_balance": 236.599749,
-  "invested": 7.96,
+  "wallet_balance": 234.34975,
+  "invested": 12.8,
   "wins": 0,
   "losses": 0,
-  "total_trades": 26,
+  "total_trades": 30,
   "open_positions": [
     {
       "side": "YES",
@@ -56,10 +56,70 @@
       "url": "https://polymarket.com/market/xrp-up-or-down-april-11-2026-9pm-et",
       "entry": 0.51,
       "size": 1.0
+    },
+    {
+      "side": "NO",
+      "question": "San Diego FC vs. Minnesota United FC: O/U 2.5",
+      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-total-2pt5",
+      "entry": 0.4,
+      "size": 1.25
+    },
+    {
+      "side": "NO",
+      "question": "San Diego FC vs. Minnesota United FC: O/U 1.5",
+      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-total-1pt5",
+      "entry": 0.18000000000000005,
+      "size": 1.59
+    },
+    {
+      "side": "YES",
+      "question": "Hyperliquid Up or Down - April 11, 10:20PM-10:25PM ET",
+      "url": "https://polymarket.com/market/hype-updown-5m-1775960400",
+      "entry": 0.5,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Spread: Sharks (-1.5)",
+      "url": "https://polymarket.com/market/nhl-van-sj-2026-04-11-spread-home-1pt5",
+      "entry": 0.45,
+      "size": 1.0
     }
   ],
   "resolved": [],
   "recent_trades": [
+    {
+      "time": "2026-04-11T23:43:57.945721+00:00",
+      "side": "YES",
+      "question": "Spread: Sharks (-1.5)",
+      "url": "https://polymarket.com/market/nhl-van-sj-2026-04-11-spread-home-1pt5",
+      "price": 0.45,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-11T23:43:57.225257+00:00",
+      "side": "YES",
+      "question": "Hyperliquid Up or Down - April 11, 10:20PM-10:25PM ET",
+      "url": "https://polymarket.com/market/hype-updown-5m-1775960400",
+      "price": 0.5,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-11T23:43:56.714335+00:00",
+      "side": "NO",
+      "question": "San Diego FC vs. Minnesota United FC: O/U 1.5",
+      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-total-1pt5",
+      "price": 0.18000000000000005,
+      "size": 1.59
+    },
+    {
+      "time": "2026-04-11T23:43:56.278667+00:00",
+      "side": "NO",
+      "question": "San Diego FC vs. Minnesota United FC: O/U 2.5",
+      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-total-2pt5",
+      "price": 0.4,
+      "size": 1.25
+    },
     {
       "time": "2026-04-11T23:43:33.712695+00:00",
       "side": "NO",
