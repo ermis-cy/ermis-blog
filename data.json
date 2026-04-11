@@ -1,15 +1,63 @@
 {
-  "updated": "2026-04-11T23:02:01.027331+00:00",
+  "updated": "2026-04-11T23:04:36.590514+00:00",
   "total_value": 0.0,
   "pnl": 0,
   "wallet_balance": 0.0,
   "invested": 0,
   "wins": 0,
   "losses": 0,
-  "total_trades": 19,
+  "total_trades": 25,
   "open_positions": [],
   "resolved": [],
   "recent_trades": [
+    {
+      "time": "2026-04-11T23:04:36.134762+00:00",
+      "side": "YES",
+      "question": "Trump announces end of military operations against Iran by A",
+      "url": "https://polymarket.com/market/trump-announces-end-of-military-operations-against-iran-by-april-30th-753-882-164-769-641-926",
+      "price": 0.54,
+      "size": 1.68
+    },
+    {
+      "time": "2026-04-11T23:04:35.623374+00:00",
+      "side": "YES",
+      "question": "Iran x Israel/US conflict ends by April 15?",
+      "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
+      "price": 0.72,
+      "size": 1.16
+    },
+    {
+      "time": "2026-04-11T23:04:35.107267+00:00",
+      "side": "YES",
+      "question": "Iran x Israel/US conflict ends by April 30?",
+      "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
+      "price": 0.74,
+      "size": 1.06
+    },
+    {
+      "time": "2026-04-11T23:04:34.546960+00:00",
+      "side": "YES",
+      "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
+      "url": "https://polymarket.com/market/israel-x-hezbollah-ceasefire-by-april-30-2026-989-656",
+      "price": 0.31,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-11T23:04:34.068220+00:00",
+      "side": "YES",
+      "question": "Houston Astros vs. Seattle Mariners",
+      "url": "https://polymarket.com/market/mlb-hou-sea-2026-04-11",
+      "price": 0.41,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-11T23:04:33.532285+00:00",
+      "side": "YES",
+      "question": "Iran x Israel/US conflict ends by April 30?",
+      "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
+      "price": 0.74,
+      "size": 1.06
+    },
     {
       "time": "2026-04-11T22:23:39.559567+00:00",
       "side": "YES",
