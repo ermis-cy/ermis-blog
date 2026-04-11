@@ -1,13 +1,166 @@
 {
-  "updated": "2026-04-11T22:19:17.758458+00:00",
+  "updated": "2026-04-11T23:02:01.027331+00:00",
   "total_value": 0.0,
   "pnl": 0,
   "wallet_balance": 0.0,
   "invested": 0,
   "wins": 0,
   "losses": 0,
-  "total_trades": 0,
+  "total_trades": 19,
   "open_positions": [],
   "resolved": [],
-  "recent_trades": []
+  "recent_trades": [
+    {
+      "time": "2026-04-11T22:23:39.559567+00:00",
+      "side": "YES",
+      "question": "Exact Score: Chicago Fire FC 1 - 1 Atlanta United FC?",
+      "url": "https://polymarket.com/market/mls-chi-atl-2026-04-11-exact-score-1-1",
+      "price": 0.09,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:39.059355+00:00",
+      "side": "YES",
+      "question": "Exact Score: Chicago Fire FC 1 - 0 Atlanta United FC?",
+      "url": "https://polymarket.com/market/mls-chi-atl-2026-04-11-exact-score-1-0",
+      "price": 0.09,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:38.458953+00:00",
+      "side": "YES",
+      "question": "Exact Score: Chicago Fire FC 3 - 1 Atlanta United FC?",
+      "url": "https://polymarket.com/market/mls-chi-atl-2026-04-11-exact-score-3-1",
+      "price": 0.07,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:37.358102+00:00",
+      "side": "YES",
+      "question": "Exact Score: FC Dallas 2 - 0 St. Louis City SC?",
+      "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-2-0",
+      "price": 0.06,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:36.453706+00:00",
+      "side": "YES",
+      "question": "XRP Up or Down - April 11, 9:05PM-9:10PM ET",
+      "url": "https://polymarket.com/market/xrp-updown-5m-1775955900",
+      "price": 0.5,
+      "size": 15.0
+    },
+    {
+      "time": "2026-04-11T22:23:35.883846+00:00",
+      "side": "YES",
+      "question": "Solana Up or Down - April 11, 9:05PM-9:10PM ET",
+      "url": "https://polymarket.com/market/sol-updown-5m-1775955900",
+      "price": 0.5,
+      "size": 15.0
+    },
+    {
+      "time": "2026-04-11T22:23:35.300898+00:00",
+      "side": "YES",
+      "question": "Hyperliquid Up or Down - April 11, 9:05PM-9:10PM ET",
+      "url": "https://polymarket.com/market/hype-updown-5m-1775955900",
+      "price": 0.5,
+      "size": 15.0
+    },
+    {
+      "time": "2026-04-11T22:23:34.747033+00:00",
+      "side": "YES",
+      "question": "Ethereum Up or Down - April 11, 9:10PM-9:15PM ET",
+      "url": "https://polymarket.com/market/eth-updown-5m-1775956200",
+      "price": 0.5,
+      "size": 15.0
+    },
+    {
+      "time": "2026-04-11T22:23:34.105480+00:00",
+      "side": "YES",
+      "question": "Sporting Kansas City vs. San Jose Earthquakes: O/U 4.5",
+      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-total-4pt5",
+      "price": 0.27,
+      "size": 7.53
+    },
+    {
+      "time": "2026-04-11T22:23:33.503932+00:00",
+      "side": "YES",
+      "question": "Exact Score: FC Dallas 1 - 2 St. Louis City SC?",
+      "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-1-2",
+      "price": 0.07,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:32.893204+00:00",
+      "side": "YES",
+      "question": "Exact Score: FC Dallas 3 - 1 St. Louis City SC?",
+      "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-3-1",
+      "price": 0.06,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:32.293501+00:00",
+      "side": "YES",
+      "question": "Exact Score: FC Dallas 0 - 1 St. Louis City SC?",
+      "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-0-1",
+      "price": 0.07,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:31.723409+00:00",
+      "side": "YES",
+      "question": "Exact Score: FC Dallas 0 - 0 St. Louis City SC?",
+      "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-0-0",
+      "price": 0.06,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:31.217026+00:00",
+      "side": "YES",
+      "question": "Sporting Kansas City leading at halftime?",
+      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-halftime-result-home",
+      "price": 0.21,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:30.613125+00:00",
+      "side": "YES",
+      "question": "Sporting Kansas City vs. San Jose Earthquakes: Draw at halft",
+      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-halftime-result-draw",
+      "price": 0.36,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:30.095399+00:00",
+      "side": "YES",
+      "question": "San Jose Earthquakes leading at halftime?",
+      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-halftime-result-away",
+      "price": 0.43,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:29.558330+00:00",
+      "side": "YES",
+      "question": "Exact Score: Sporting Kansas City 2 - 2 San Jose Earthquakes",
+      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-exact-score-2-2",
+      "price": 0.07,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:28.974899+00:00",
+      "side": "YES",
+      "question": "Exact Score: Sporting Kansas City 2 - 1 San Jose Earthquakes",
+      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-exact-score-2-1",
+      "price": 0.07,
+      "size": 20.0
+    },
+    {
+      "time": "2026-04-11T22:23:28.320563+00:00",
+      "side": "YES",
+      "question": "Exact Score: Sporting Kansas City 0 - 1 San Jose Earthquakes",
+      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-exact-score-0-1",
+      "price": 0.08,
+      "size": 20.0
+    }
+  ]
 }
