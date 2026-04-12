@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T04:13:29.873457+00:00",
-  "total_value": 235.36141600000002,
+  "updated": "2026-04-12T04:13:35.813153+00:00",
+  "total_value": 91.68,
   "pnl": -4.294090238245836,
-  "wallet_balance": 144.931416,
-  "invested": 90.43,
+  "wallet_balance": 0.0,
+  "invested": 91.68,
   "wins": 3,
   "losses": 6,
-  "total_trades": 90,
+  "total_trades": 91,
   "open_positions": [
     {
       "side": "YES",
@@ -399,6 +399,13 @@
       "url": "https://polymarket.com/market/btc-updown-15m-1775972700",
       "entry": 0.49,
       "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "BNB Up or Down - April 12, 2:00AM-2:15AM ET",
+      "url": "https://polymarket.com/market/bnb-updown-15m-1775973600",
+      "entry": 0.5,
+      "size": 1.25
     }
   ],
   "resolved": [
@@ -485,6 +492,14 @@
     }
   ],
   "recent_trades": [
+    {
+      "time": "2026-04-12T04:13:35.130724+00:00",
+      "side": "YES",
+      "question": "BNB Up or Down - April 12, 2:00AM-2:15AM ET",
+      "url": "https://polymarket.com/market/bnb-updown-15m-1775973600",
+      "price": 0.5,
+      "size": 1.25
+    },
     {
       "time": "2026-04-12T03:58:34.707480+00:00",
       "side": "YES",
@@ -714,14 +729,6 @@
       "side": "YES",
       "question": "XRP Up or Down - April 12, 1:45AM-1:50AM ET",
       "url": "https://polymarket.com/market/xrp-updown-5m-1775972700",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:41.078294+00:00",
-      "side": "YES",
-      "question": "Hyperliquid Up or Down - April 12, 1:45AM-1:50AM ET",
-      "url": "https://polymarket.com/market/hype-updown-5m-1775972700",
       "price": 0.5,
       "size": 2.25
     }
