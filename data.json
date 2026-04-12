@@ -1,18 +1,18 @@
 {
-  "updated": "2026-04-12T15:19:16.144654+00:00",
+  "updated": "2026-04-12T15:24:16.143733+00:00",
   "wallet": 27.29,
   "deposit": 245.8,
-  "open_value": 141.44,
-  "total": 168.73,
-  "pnl": -77.07,
-  "pnl_pct": -31.4,
+  "open_value": 138.76,
+  "total": 166.05,
+  "pnl": -79.75,
+  "pnl_pct": -32.4,
   "positions": [
     {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 6.1852,
-      "current": 0.545,
+      "current": 0.555,
       "cost": 0.9,
       "value": 0.08,
       "pnl": -0.82
@@ -22,9 +22,9 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.075,
+      "current": 0.0765,
       "cost": 1.56,
-      "value": 0.43,
+      "value": 0.44,
       "pnl": -1.13
     },
     {
@@ -32,7 +32,7 @@
       "question": "Will the price of Ethereum be above $2,200 on April 12?",
       "url": "https://polymarket.com/market/ethereum-above-2200-on-april-12",
       "entry": 4.3692,
-      "current": 0.033,
+      "current": 0.0335,
       "cost": 12.39,
       "value": 0.09,
       "pnl": -12.29
@@ -52,10 +52,10 @@
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.0295,
+      "current": 0.0275,
       "cost": 12.66,
-      "value": 26.68,
-      "pnl": 14.02
+      "value": 24.87,
+      "pnl": 12.21
     },
     {
       "side": "Yes",
@@ -72,10 +72,10 @@
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": 0.008,
-      "current": 0.0135,
+      "current": 0.013,
       "cost": 13.39,
-      "value": 22.6,
-      "pnl": 9.21
+      "value": 21.76,
+      "pnl": 8.37
     },
     {
       "side": "Yes",
@@ -182,7 +182,7 @@
       "question": "Will SV Werder Bremen win on 2026-04-12?",
       "url": "https://polymarket.com/market/bun-koe-wer-2026-04-12-wer",
       "entry": 0.31,
-      "current": 0.0025,
+      "current": 0.003,
       "cost": 0.39,
       "value": 0.0,
       "pnl": -0.39
@@ -192,17 +192,17 @@
       "question": "Will FK Lokomotiv Moskva win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-lok-mak-2026-04-12-lok",
       "entry": 3.1584,
-      "current": 0.155,
+      "current": 0.005,
       "cost": 1.11,
-      "value": 0.05,
-      "pnl": -1.06
+      "value": 0.0,
+      "pnl": -1.11
     },
     {
       "side": "Over",
       "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 2.5",
       "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-2pt5",
       "entry": 2.1283,
-      "current": 0.575,
+      "current": 0.58,
       "cost": 0.85,
       "value": 0.23,
       "pnl": -0.62
@@ -212,10 +212,10 @@
       "question": "Will FK Rostov win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-ros-spa-2026-04-12-ros",
       "entry": 1.7146,
-      "current": 0.095,
+      "current": 0.055,
       "cost": 1.28,
-      "value": 0.07,
-      "pnl": -1.21
+      "value": 0.04,
+      "pnl": -1.24
     },
     {
       "side": "Over",
@@ -232,10 +232,10 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.497,
+      "current": 0.5195,
       "cost": 1.15,
-      "value": 0.79,
-      "pnl": -0.36
+      "value": 0.83,
+      "pnl": -0.32
     }
   ],
   "pnl_history": [
@@ -532,6 +532,12 @@
       "pnl": -77.07,
       "wallet": 27.29,
       "total": 168.73
+    },
+    {
+      "t": "2026-04-12T15:24:16.143733+00:00",
+      "pnl": -79.75,
+      "wallet": 27.29,
+      "total": 166.05
     }
   ]
 }
