@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T17:46:11.997988+00:00",
+  "updated": "2026-04-12T17:47:53.077854+00:00",
   "wallet": 21.83,
   "deposit": 245.8,
-  "open_value": 170.23,
-  "total": 192.06,
-  "pnl": -53.74,
-  "pnl_pct": -21.9,
+  "open_value": 157.9,
+  "total": 179.73,
+  "pnl": -66.07,
+  "pnl_pct": -26.9,
   "positions": [
     {
       "side": "Yes",
@@ -22,10 +22,10 @@
       "question": "Military action against Iran continues through April 30",
       "url": "https://polymarket.com/market/military-action-against-iran-continues-through-april-30-2026",
       "entry": 0.014,
-      "current": 0.013,
+      "current": 0.0125,
       "cost": 2.73,
-      "value": 2.53,
-      "pnl": -0.2
+      "value": 2.44,
+      "pnl": -0.29
     },
     {
       "side": "Yes",
@@ -42,7 +42,7 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.092,
+      "current": 0.091,
       "cost": 1.56,
       "value": 0.52,
       "pnl": -1.04
@@ -82,10 +82,10 @@
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.054,
+      "current": 0.0405,
       "cost": 12.66,
-      "value": 48.83,
-      "pnl": 36.17
+      "value": 36.62,
+      "pnl": 23.96
     },
     {
       "side": "Yes",
@@ -242,20 +242,20 @@
       "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 3.5",
       "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-3pt5",
       "entry": 1.3276,
-      "current": 0.775,
+      "current": 0.76,
       "cost": 1.11,
-      "value": 0.65,
-      "pnl": -0.46
+      "value": 0.63,
+      "pnl": -0.47
     },
     {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.482,
+      "current": 0.481,
       "cost": 1.15,
-      "value": 0.77,
-      "pnl": -0.38
+      "value": 0.76,
+      "pnl": -0.39
     }
   ],
   "pnl_history": [
@@ -648,6 +648,12 @@
       "pnl": -54.65,
       "wallet": 21.83,
       "total": 191.15
+    },
+    {
+      "t": "2026-04-12T17:47:53.077854+00:00",
+      "pnl": -66.07,
+      "wallet": 21.83,
+      "total": 179.73
     }
   ]
 }
