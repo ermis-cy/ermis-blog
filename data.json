@@ -1,31 +1,31 @@
 {
-  "updated": "2026-04-12T18:37:53.055597+00:00",
+  "updated": "2026-04-12T18:41:11.967189+00:00",
   "wallet": 21.83,
   "deposit": 245.8,
-  "open_value": 301.32,
-  "total": 323.15,
-  "pnl": 77.35,
-  "pnl_pct": 31.5,
+  "open_value": 312.2,
+  "total": 334.03,
+  "pnl": 88.23,
+  "pnl_pct": 35.9,
   "positions": [
     {
       "side": "Yes",
       "question": "Military action against Iran ends on April 30, 2026?",
       "url": "https://polymarket.com/market/military-action-against-iran-ends-on-april-30-2026",
       "entry": 0.002,
-      "current": 0.001,
+      "current": 0.0015,
       "cost": 3.2,
-      "value": 1.6,
-      "pnl": -1.6
+      "value": 2.4,
+      "pnl": -0.8
     },
     {
       "side": "Yes",
       "question": "Military action against Iran continues through April 30",
       "url": "https://polymarket.com/market/military-action-against-iran-continues-through-april-30-2026",
       "entry": 0.014,
-      "current": 0.0105,
+      "current": 0.01,
       "cost": 2.73,
-      "value": 2.05,
-      "pnl": -0.68
+      "value": 1.95,
+      "pnl": -0.78
     },
     {
       "side": "Yes",
@@ -42,10 +42,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.125,
+      "current": 0.1385,
       "cost": 1.56,
-      "value": 0.71,
-      "pnl": -0.85
+      "value": 0.79,
+      "pnl": -0.77
     },
     {
       "side": "Yes",
@@ -62,10 +62,10 @@
       "question": "Will Elon Musk post 340-359 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-340-359",
       "entry": 0.3768,
-      "current": 0.1265,
+      "current": 0.129,
       "cost": 4.19,
-      "value": 1.41,
-      "pnl": -2.79
+      "value": 1.44,
+      "pnl": -2.76
     },
     {
       "side": "Yes",
@@ -82,20 +82,20 @@
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.0765,
+      "current": 0.083,
       "cost": 12.66,
-      "value": 69.18,
-      "pnl": 56.52
+      "value": 75.06,
+      "pnl": 62.4
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": 0.008,
-      "current": 0.0335,
+      "current": 0.036,
       "cost": 13.39,
-      "value": 56.08,
-      "pnl": 42.69
+      "value": 60.27,
+      "pnl": 46.88
     },
     {
       "side": "Yes",
@@ -222,7 +222,7 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.491,
+      "current": 0.4885,
       "cost": 1.15,
       "value": 0.78,
       "pnl": -0.37
