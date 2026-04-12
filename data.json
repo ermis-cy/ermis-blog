@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T11:02:31.283017+00:00",
+  "updated": "2026-04-12T11:05:02.967775+00:00",
   "wallet_balance": 207.21,
   "deposit": 245.8,
-  "open_value": 38.39,
-  "total_pnl": -0.2,
+  "open_value": 38.36,
+  "total_pnl": -0.23,
   "realized_pnl": -104.81,
-  "unrealized_pnl": -7.79,
+  "unrealized_pnl": -7.82,
   "wins": 0,
   "losses": 61,
   "total_trades": 72,
@@ -81,7 +81,7 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.5595,
+      "current": 0.5605,
       "size": 1.15,
       "value": 0.89,
       "pnl": -0.26,
@@ -103,10 +103,10 @@
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 0.74,
-      "current": 0.605,
+      "current": 0.595,
       "size": 2.12,
-      "value": 1.73,
-      "pnl": -0.39,
+      "value": 1.7,
+      "pnl": -0.42,
       "shares": 2.86
     },
     {
@@ -138,6 +138,12 @@
       "pnl": 0.52,
       "wallet": 239.88,
       "positions": 6.44
+    },
+    {
+      "t": "2026-04-12T11:05:02.967775+00:00",
+      "pnl": -0.23,
+      "wallet": 207.21,
+      "positions": 38.36
     }
   ]
 }
