@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T07:43:29.862176+00:00",
-  "total_value": 216.431427,
-  "pnl": 0.47740146954839235,
+  "updated": "2026-04-12T07:48:29.867387+00:00",
+  "total_value": 214.431427,
+  "pnl": 0.43818578327388247,
   "wallet_balance": 130.871427,
-  "invested": 85.56,
-  "wins": 15,
-  "losses": 12,
+  "invested": 83.56,
+  "wins": 16,
+  "losses": 13,
   "total_trades": 102,
   "open_positions": [
     {
@@ -68,20 +68,6 @@
       "side": "YES",
       "question": "Bitcoin Up or Down - April 12, 1:40AM-1:45AM ET",
       "url": "https://polymarket.com/market/btc-updown-5m-1775972400",
-      "entry": 0.51,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "Bitcoin Up or Down - April 12, 1:35AM-1:40AM ET",
-      "url": "https://polymarket.com/market/btc-updown-5m-1775972100",
-      "entry": 0.51,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "Bitcoin Up or Down - April 12, 1:30AM-1:35AM ET",
-      "url": "https://polymarket.com/market/btc-updown-5m-1775971800",
       "entry": 0.51,
       "size": 1.0
     },
@@ -503,6 +489,24 @@
       "size": 1.0,
       "won": true,
       "pnl": 1.0833333333333335
+    },
+    {
+      "side": "YES",
+      "question": "Bitcoin Up or Down - April 12, 1:35AM-1:40AM ET",
+      "url": "https://polymarket.com/market/btc-updown-5m-1775972100",
+      "entry": 0.51,
+      "size": 1.0,
+      "won": false,
+      "pnl": -1.0
+    },
+    {
+      "side": "YES",
+      "question": "Bitcoin Up or Down - April 12, 1:30AM-1:35AM ET",
+      "url": "https://polymarket.com/market/btc-updown-5m-1775971800",
+      "entry": 0.51,
+      "size": 1.0,
+      "won": true,
+      "pnl": 0.9607843137254901
     },
     {
       "side": "YES",
