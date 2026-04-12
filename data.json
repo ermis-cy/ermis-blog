@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T18:46:12.000798+00:00",
+  "updated": "2026-04-12T18:47:53.077781+00:00",
   "wallet": 21.83,
   "deposit": 245.8,
-  "open_value": 318.4,
-  "total": 340.23,
-  "pnl": 94.43,
-  "pnl_pct": 38.4,
+  "open_value": 315.69,
+  "total": 337.52,
+  "pnl": 91.72,
+  "pnl_pct": 37.3,
   "positions": [
     {
       "side": "Yes",
@@ -22,10 +22,10 @@
       "question": "Military action against Iran continues through April 30",
       "url": "https://polymarket.com/market/military-action-against-iran-continues-through-april-30-2026",
       "entry": 0.014,
-      "current": 0.0085,
+      "current": 0.009,
       "cost": 2.73,
-      "value": 1.66,
-      "pnl": -1.07
+      "value": 1.75,
+      "pnl": -0.98
     },
     {
       "side": "Yes",
@@ -42,10 +42,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.1755,
+      "current": 0.2045,
       "cost": 1.56,
-      "value": 1.0,
-      "pnl": -0.56
+      "value": 1.17,
+      "pnl": -0.4
     },
     {
       "side": "Yes",
@@ -82,20 +82,20 @@
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.0925,
+      "current": 0.092,
       "cost": 12.66,
-      "value": 83.65,
-      "pnl": 70.99
+      "value": 83.19,
+      "pnl": 70.53
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": 0.008,
-      "current": 0.034,
+      "current": 0.0325,
       "cost": 13.39,
-      "value": 56.92,
-      "pnl": 43.53
+      "value": 54.41,
+      "pnl": 41.02
     },
     {
       "side": "Yes",
@@ -680,6 +680,12 @@
       "pnl": 94.18,
       "wallet": 21.83,
       "total": 339.98
+    },
+    {
+      "t": "2026-04-12T18:47:53.077781+00:00",
+      "pnl": 91.72,
+      "wallet": 21.83,
+      "total": 337.52
     }
   ]
 }
