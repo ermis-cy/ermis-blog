@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T03:13:29.873601+00:00",
-  "total_value": 24.05,
+  "updated": "2026-04-12T03:14:02.104205+00:00",
+  "total_value": 243.559764,
   "pnl": 0.9607843137254901,
-  "wallet_balance": 0.0,
-  "invested": 24.05,
+  "wallet_balance": 218.509764,
+  "invested": 25.05,
   "wins": 1,
   "losses": 0,
-  "total_trades": 42,
+  "total_trades": 43,
   "open_positions": [
     {
       "side": "YES",
@@ -161,6 +161,13 @@
       "url": "https://polymarket.com/market/nba-gsw-lac-2026-04-12",
       "entry": 0.3,
       "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "BNB Up or Down - April 12, 1:30AM-1:45AM ET",
+      "url": "https://polymarket.com/market/bnb-updown-15m-1775971800",
+      "entry": 0.5,
+      "size": 1.0
     }
   ],
   "resolved": [
@@ -175,6 +182,14 @@
     }
   ],
   "recent_trades": [
+    {
+      "time": "2026-04-12T03:14:01.349065+00:00",
+      "side": "YES",
+      "question": "BNB Up or Down - April 12, 1:30AM-1:45AM ET",
+      "url": "https://polymarket.com/market/bnb-updown-15m-1775971800",
+      "price": 0.5,
+      "size": 1.0
+    },
     {
       "time": "2026-04-12T02:58:32.639217+00:00",
       "side": "YES",
@@ -404,14 +419,6 @@
       "side": "YES",
       "question": "Solana Up or Down - April 11, 9:05PM-9:10PM ET",
       "url": "https://polymarket.com/market/sol-updown-5m-1775955900",
-      "price": 0.5,
-      "size": 15.0
-    },
-    {
-      "time": "2026-04-11T22:23:35.300898+00:00",
-      "side": "YES",
-      "question": "Hyperliquid Up or Down - April 11, 9:05PM-9:10PM ET",
-      "url": "https://polymarket.com/market/hype-updown-5m-1775955900",
       "price": 0.5,
       "size": 15.0
     }
