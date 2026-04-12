@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T04:28:29.864127+00:00",
-  "total_value": 234.36141700000002,
+  "updated": "2026-04-12T04:28:39.661548+00:00",
+  "total_value": 235.361422,
   "pnl": -3.442238386393984,
-  "wallet_balance": 143.681417,
-  "invested": 90.68,
+  "wallet_balance": 137.681422,
+  "invested": 97.68,
   "wins": 4,
   "losses": 6,
-  "total_trades": 91,
+  "total_trades": 98,
   "open_positions": [
     {
       "side": "YES",
@@ -399,6 +399,55 @@
       "url": "https://polymarket.com/market/bnb-updown-15m-1775973600",
       "entry": 0.5,
       "size": 1.25
+    },
+    {
+      "side": "YES",
+      "question": "BNB Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/bnb-updown-15m-1775975400",
+      "entry": 0.5,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Dogecoin Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/doge-updown-15m-1775975400",
+      "entry": 0.5,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Solana Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/sol-updown-15m-1775975400",
+      "entry": 0.5,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Hyperliquid Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/hype-updown-15m-1775975400",
+      "entry": 0.5,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Ethereum Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/eth-updown-15m-1775975400",
+      "entry": 0.5,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "XRP Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/xrp-updown-15m-1775975400",
+      "entry": 0.5,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Bitcoin Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/btc-updown-15m-1775975400",
+      "entry": 0.5,
+      "size": 1.0
     }
   ],
   "resolved": [
@@ -494,6 +543,62 @@
     }
   ],
   "recent_trades": [
+    {
+      "time": "2026-04-12T04:28:38.996071+00:00",
+      "side": "YES",
+      "question": "Bitcoin Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/btc-updown-15m-1775975400",
+      "price": 0.5,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T04:28:38.214748+00:00",
+      "side": "YES",
+      "question": "XRP Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/xrp-updown-15m-1775975400",
+      "price": 0.5,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T04:28:37.486863+00:00",
+      "side": "YES",
+      "question": "Ethereum Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/eth-updown-15m-1775975400",
+      "price": 0.5,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T04:28:36.652837+00:00",
+      "side": "YES",
+      "question": "Hyperliquid Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/hype-updown-15m-1775975400",
+      "price": 0.5,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T04:28:35.927017+00:00",
+      "side": "YES",
+      "question": "Solana Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/sol-updown-15m-1775975400",
+      "price": 0.5,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T04:28:35.140205+00:00",
+      "side": "YES",
+      "question": "Dogecoin Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/doge-updown-15m-1775975400",
+      "price": 0.5,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T04:28:34.418225+00:00",
+      "side": "YES",
+      "question": "BNB Up or Down - April 12, 2:30AM-2:45AM ET",
+      "url": "https://polymarket.com/market/bnb-updown-15m-1775975400",
+      "price": 0.5,
+      "size": 1.0
+    },
     {
       "time": "2026-04-12T04:13:35.130724+00:00",
       "side": "YES",
@@ -675,62 +780,6 @@
       "side": "YES",
       "question": "Solana Up or Down - April 12, 1:40AM-1:45AM ET",
       "url": "https://polymarket.com/market/sol-updown-5m-1775972400",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:46.431480+00:00",
-      "side": "YES",
-      "question": "BNB Up or Down - April 12, 1:40AM-1:45AM ET",
-      "url": "https://polymarket.com/market/bnb-updown-5m-1775972400",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:45.730304+00:00",
-      "side": "YES",
-      "question": "Dogecoin Up or Down - April 12, 1:45AM-2:00AM ET",
-      "url": "https://polymarket.com/market/doge-updown-15m-1775972700",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:44.947984+00:00",
-      "side": "YES",
-      "question": "Bitcoin Up or Down - April 12, 1:45AM-1:50AM ET",
-      "url": "https://polymarket.com/market/btc-updown-5m-1775972700",
-      "price": 0.51,
-      "size": 2.24
-    },
-    {
-      "time": "2026-04-12T03:43:44.240891+00:00",
-      "side": "YES",
-      "question": "Solana Up or Down - April 12, 1:45AM-1:50AM ET",
-      "url": "https://polymarket.com/market/sol-updown-5m-1775972700",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:43.391407+00:00",
-      "side": "YES",
-      "question": "Dogecoin Up or Down - April 12, 1:45AM-1:50AM ET",
-      "url": "https://polymarket.com/market/doge-updown-5m-1775972700",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:42.639598+00:00",
-      "side": "YES",
-      "question": "BNB Up or Down - April 12, 1:45AM-1:50AM ET",
-      "url": "https://polymarket.com/market/bnb-updown-5m-1775972700",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:41.747623+00:00",
-      "side": "YES",
-      "question": "XRP Up or Down - April 12, 1:45AM-1:50AM ET",
-      "url": "https://polymarket.com/market/xrp-updown-5m-1775972700",
       "price": 0.5,
       "size": 2.25
     }
