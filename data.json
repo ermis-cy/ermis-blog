@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T04:03:29.847542+00:00",
-  "total_value": 240.61141600000002,
-  "pnl": -1.2663124604680582,
+  "updated": "2026-04-12T04:08:29.846924+00:00",
+  "total_value": 235.36141600000002,
+  "pnl": -4.294090238245836,
   "wallet_balance": 144.931416,
-  "invested": 95.68,
-  "wins": 2,
-  "losses": 2,
+  "invested": 90.43,
+  "wins": 3,
+  "losses": 6,
   "total_trades": 90,
   "open_positions": [
     {
@@ -59,13 +59,6 @@
     },
     {
       "side": "YES",
-      "question": "Spread: Sharks (-1.5)",
-      "url": "https://polymarket.com/market/nhl-van-sj-2026-04-11-spread-home-1pt5",
-      "entry": 0.45,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
       "question": "CF Am\u00e9rica vs. CF Cruz Azul: Both Teams to Score",
       "url": "https://polymarket.com/market/mex-ame-caz-2026-04-11-btts",
       "entry": 0.54,
@@ -83,34 +76,6 @@
       "question": "Ethereum Up or Down - April 11, 11:15PM-11:30PM ET",
       "url": "https://polymarket.com/market/eth-updown-15m-1775963700",
       "entry": 0.5,
-      "size": 1.0
-    },
-    {
-      "side": "NO",
-      "question": "O/U 1.5 Rounds",
-      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-totals-1pt5",
-      "entry": 0.32999999999999996,
-      "size": 1.0
-    },
-    {
-      "side": "NO",
-      "question": "O/U 0.5 Rounds",
-      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-totals-0pt5",
-      "entry": 0.17000000000000004,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "Will Azamat Murzakanov win by KO or TKO?",
-      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-murzakanov-win-by-ko-tko",
-      "entry": 0.3,
-      "size": 1.25
-    },
-    {
-      "side": "YES",
-      "question": "Will the fight be won by KO or TKO?",
-      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-win-by-ko-tko",
-      "entry": 0.45,
       "size": 1.0
     },
     {
@@ -465,6 +430,15 @@
       "pnl": -1.59
     },
     {
+      "side": "YES",
+      "question": "Spread: Sharks (-1.5)",
+      "url": "https://polymarket.com/market/nhl-van-sj-2026-04-11-spread-home-1pt5",
+      "entry": 0.45,
+      "size": 1.0,
+      "won": false,
+      "pnl": -1.0
+    },
+    {
       "side": "NO",
       "question": "San Diego FC vs. Minnesota United FC: Draw at halftime?",
       "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-halftime-result-draw",
@@ -472,6 +446,42 @@
       "size": 1.0,
       "won": true,
       "pnl": 0.6129032258064517
+    },
+    {
+      "side": "NO",
+      "question": "O/U 1.5 Rounds",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-totals-1pt5",
+      "entry": 0.32999999999999996,
+      "size": 1.0,
+      "won": false,
+      "pnl": -1.0
+    },
+    {
+      "side": "NO",
+      "question": "O/U 0.5 Rounds",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-totals-0pt5",
+      "entry": 0.17000000000000004,
+      "size": 1.0,
+      "won": false,
+      "pnl": -1.0
+    },
+    {
+      "side": "YES",
+      "question": "Will Azamat Murzakanov win by KO or TKO?",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-murzakanov-win-by-ko-tko",
+      "entry": 0.3,
+      "size": 1.25,
+      "won": false,
+      "pnl": -1.25
+    },
+    {
+      "side": "YES",
+      "question": "Will the fight be won by KO or TKO?",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-win-by-ko-tko",
+      "entry": 0.45,
+      "size": 1.0,
+      "won": true,
+      "pnl": 1.2222222222222223
     }
   ],
   "recent_trades": [
