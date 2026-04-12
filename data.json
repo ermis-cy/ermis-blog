@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-12T12:36:13.066005+00:00",
+  "updated": "2026-04-12T12:41:13.090297+00:00",
   "wallet": 226.74,
   "deposit": 245.8,
-  "open_value": 12.97,
-  "total": 239.71,
-  "pnl": -6.09,
+  "open_value": 12.96,
+  "total": 239.7,
+  "pnl": -6.1,
   "pnl_pct": -2.5,
   "positions": [
     {
@@ -42,10 +42,10 @@
       "question": "Will FK Rostov win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-ros-spa-2026-04-12-ros",
       "entry": 1.7146,
-      "current": 0.305,
+      "current": 0.295,
       "cost": 1.28,
-      "value": 0.23,
-      "pnl": -1.05
+      "value": 0.22,
+      "pnl": -1.06
     },
     {
       "side": "Over",
@@ -208,6 +208,12 @@
       "pnl": -6.09,
       "wallet": 226.74,
       "total": 239.71
+    },
+    {
+      "t": "2026-04-12T12:41:13.090297+00:00",
+      "pnl": -6.1,
+      "wallet": 226.74,
+      "total": 239.7
     }
   ]
 }
