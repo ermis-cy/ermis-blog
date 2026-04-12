@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T18:06:11.966567+00:00",
+  "updated": "2026-04-12T18:07:53.053824+00:00",
   "wallet": 21.83,
   "deposit": 245.8,
-  "open_value": 168.84,
-  "total": 190.67,
-  "pnl": -55.13,
-  "pnl_pct": -22.4,
+  "open_value": 224.43,
+  "total": 246.26,
+  "pnl": 0.46,
+  "pnl_pct": 0.2,
   "positions": [
     {
       "side": "Yes",
@@ -22,10 +22,10 @@
       "question": "Military action against Iran continues through April 30",
       "url": "https://polymarket.com/market/military-action-against-iran-continues-through-april-30-2026",
       "entry": 0.014,
-      "current": 0.0125,
+      "current": 0.014,
       "cost": 2.73,
-      "value": 2.44,
-      "pnl": -0.29
+      "value": 2.73,
+      "pnl": 0.0
     },
     {
       "side": "Yes",
@@ -42,10 +42,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.13,
+      "current": 0.142,
       "cost": 1.56,
-      "value": 0.74,
-      "pnl": -0.82
+      "value": 0.81,
+      "pnl": -0.75
     },
     {
       "side": "Yes",
@@ -62,10 +62,10 @@
       "question": "Will Elon Musk post 340-359 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-340-359",
       "entry": 0.3768,
-      "current": 0.069,
+      "current": 0.07,
       "cost": 4.19,
-      "value": 0.77,
-      "pnl": -3.43
+      "value": 0.78,
+      "pnl": -3.42
     },
     {
       "side": "Yes",
@@ -82,80 +82,80 @@
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.0415,
+      "current": 0.049,
       "cost": 12.66,
-      "value": 37.53,
-      "pnl": 24.87
+      "value": 44.31,
+      "pnl": 31.65
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": 0.008,
-      "current": 0.02,
+      "current": 0.022,
       "cost": 13.39,
-      "value": 33.48,
-      "pnl": 20.09
+      "value": 36.83,
+      "pnl": 23.44
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 440-459 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-440-459",
       "entry": 0.005,
-      "current": 0.0055,
+      "current": 0.0065,
       "cost": 14.72,
-      "value": 16.2,
-      "pnl": 1.47
+      "value": 19.14,
+      "pnl": 4.42
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 420-439 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-420-439",
       "entry": 0.007,
-      "current": 0.011,
+      "current": 0.0105,
       "cost": 13.38,
-      "value": 21.02,
-      "pnl": 7.64
+      "value": 20.07,
+      "pnl": 6.69
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 480-499 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-480-499",
       "entry": 0.003,
-      "current": 0.0015,
+      "current": 0.006,
       "cost": 12.13,
-      "value": 6.06,
-      "pnl": -6.06
+      "value": 24.26,
+      "pnl": 12.13
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 500-519 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-500-519",
       "entry": 0.004,
-      "current": 0.0015,
+      "current": 0.006,
       "cost": 11.85,
-      "value": 4.44,
-      "pnl": -7.41
+      "value": 17.77,
+      "pnl": 5.92
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 460-479 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-460-479",
       "entry": 0.003,
-      "current": 0.0025,
+      "current": 0.004,
       "cost": 12.64,
-      "value": 10.54,
-      "pnl": -2.11
+      "value": 16.86,
+      "pnl": 4.21
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 520-539 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-520-539",
       "entry": 0.003,
-      "current": 0.0005,
+      "current": 0.0015,
       "cost": 15.74,
-      "value": 2.62,
-      "pnl": -13.12
+      "value": 7.87,
+      "pnl": -7.87
     },
     {
       "side": "Yes",
@@ -672,6 +672,12 @@
       "pnl": -63.27,
       "wallet": 21.83,
       "total": 182.53
+    },
+    {
+      "t": "2026-04-12T18:07:53.053824+00:00",
+      "pnl": 0.46,
+      "wallet": 21.83,
+      "total": 246.26
     }
   ]
 }
