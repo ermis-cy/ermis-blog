@@ -1,18 +1,18 @@
 {
-  "updated": "2026-04-12T16:01:41.046076+00:00",
+  "updated": "2026-04-12T16:04:56.177730+00:00",
   "wallet": 27.29,
   "deposit": 245.8,
-  "open_value": 138.58,
-  "total": 165.87,
-  "pnl": -79.93,
-  "pnl_pct": -32.5,
+  "open_value": 143.26,
+  "total": 170.55,
+  "pnl": -75.25,
+  "pnl_pct": -30.6,
   "positions": [
     {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 6.1852,
-      "current": 0.54,
+      "current": 0.545,
       "cost": 0.9,
       "value": 0.08,
       "pnl": -0.82
@@ -22,10 +22,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.0835,
+      "current": 0.085,
       "cost": 1.56,
       "value": 0.48,
-      "pnl": -1.09
+      "pnl": -1.08
     },
     {
       "side": "Yes",
@@ -72,10 +72,10 @@
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": 0.008,
-      "current": 0.0135,
+      "current": 0.014,
       "cost": 13.39,
-      "value": 22.6,
-      "pnl": 9.21
+      "value": 23.44,
+      "pnl": 10.04
     },
     {
       "side": "Yes",
@@ -92,10 +92,10 @@
       "question": "Will Elon Musk post 420-439 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-420-439",
       "entry": 0.007,
-      "current": 0.0065,
+      "current": 0.0085,
       "cost": 13.38,
-      "value": 12.42,
-      "pnl": -0.96
+      "value": 16.24,
+      "pnl": 2.87
     },
     {
       "side": "Yes",
@@ -232,10 +232,10 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.4835,
+      "current": 0.4985,
       "cost": 1.15,
-      "value": 0.77,
-      "pnl": -0.38
+      "value": 0.79,
+      "pnl": -0.36
     }
   ],
   "pnl_history": [
@@ -580,6 +580,12 @@
       "pnl": -79.06,
       "wallet": 27.29,
       "total": 166.74
+    },
+    {
+      "t": "2026-04-12T16:04:56.177730+00:00",
+      "pnl": -75.25,
+      "wallet": 27.29,
+      "total": 170.55
     }
   ]
 }
