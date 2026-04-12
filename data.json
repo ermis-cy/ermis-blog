@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T02:58:29.864248+00:00",
-  "total_value": 242.559763,
+  "updated": "2026-04-12T02:58:33.125974+00:00",
+  "total_value": 243.559763,
   "pnl": 0.9607843137254901,
   "wallet_balance": 219.509763,
-  "invested": 23.05,
+  "invested": 24.05,
   "wins": 1,
   "losses": 0,
-  "total_trades": 41,
+  "total_trades": 42,
   "open_positions": [
     {
       "side": "YES",
@@ -154,6 +154,13 @@
       "url": "https://polymarket.com/market/xrp-updown-15m-1775968200",
       "entry": 0.48,
       "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Warriors vs. Clippers",
+      "url": "https://polymarket.com/market/nba-gsw-lac-2026-04-12",
+      "entry": 0.3,
+      "size": 1.0
     }
   ],
   "resolved": [
@@ -168,6 +175,14 @@
     }
   ],
   "recent_trades": [
+    {
+      "time": "2026-04-12T02:58:32.639217+00:00",
+      "side": "YES",
+      "question": "Warriors vs. Clippers",
+      "url": "https://polymarket.com/market/nba-gsw-lac-2026-04-12",
+      "price": 0.3,
+      "size": 1.0
+    },
     {
       "time": "2026-04-12T02:13:55.775228+00:00",
       "side": "YES",
@@ -397,14 +412,6 @@
       "side": "YES",
       "question": "Hyperliquid Up or Down - April 11, 9:05PM-9:10PM ET",
       "url": "https://polymarket.com/market/hype-updown-5m-1775955900",
-      "price": 0.5,
-      "size": 15.0
-    },
-    {
-      "time": "2026-04-11T22:23:34.747033+00:00",
-      "side": "YES",
-      "question": "Ethereum Up or Down - April 11, 9:10PM-9:15PM ET",
-      "url": "https://polymarket.com/market/eth-updown-5m-1775956200",
       "price": 0.5,
       "size": 15.0
     }
