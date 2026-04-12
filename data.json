@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T01:43:29.877658+00:00",
-  "total_value": 243.55975600000002,
+  "updated": "2026-04-12T01:43:56.213840+00:00",
+  "total_value": 21.05,
   "pnl": 0,
-  "wallet_balance": 226.759756,
-  "invested": 16.8,
+  "wallet_balance": 0.0,
+  "invested": 21.05,
   "wins": 0,
   "losses": 0,
-  "total_trades": 34,
+  "total_trades": 38,
   "open_positions": [
     {
       "side": "YES",
@@ -112,10 +112,70 @@
       "url": "https://polymarket.com/market/eth-updown-15m-1775963700",
       "entry": 0.5,
       "size": 1.0
+    },
+    {
+      "side": "NO",
+      "question": "O/U 1.5 Rounds",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-totals-1pt5",
+      "entry": 0.32999999999999996,
+      "size": 1.0
+    },
+    {
+      "side": "NO",
+      "question": "O/U 0.5 Rounds",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-totals-0pt5",
+      "entry": 0.17000000000000004,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Will Azamat Murzakanov win by KO or TKO?",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-murzakanov-win-by-ko-tko",
+      "entry": 0.3,
+      "size": 1.25
+    },
+    {
+      "side": "YES",
+      "question": "Will the fight be won by KO or TKO?",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-win-by-ko-tko",
+      "entry": 0.45,
+      "size": 1.0
     }
   ],
   "resolved": [],
   "recent_trades": [
+    {
+      "time": "2026-04-12T01:43:55.782889+00:00",
+      "side": "YES",
+      "question": "Will the fight be won by KO or TKO?",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-win-by-ko-tko",
+      "price": 0.45,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T01:43:55.225099+00:00",
+      "side": "YES",
+      "question": "Will Azamat Murzakanov win by KO or TKO?",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-murzakanov-win-by-ko-tko",
+      "price": 0.3,
+      "size": 1.25
+    },
+    {
+      "time": "2026-04-12T01:43:54.796723+00:00",
+      "side": "NO",
+      "question": "O/U 0.5 Rounds",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-totals-0pt5",
+      "price": 0.17000000000000004,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T01:43:54.185509+00:00",
+      "side": "NO",
+      "question": "O/U 1.5 Rounds",
+      "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-totals-1pt5",
+      "price": 0.32999999999999996,
+      "size": 1.0
+    },
     {
       "time": "2026-04-12T01:13:33.986626+00:00",
       "side": "YES",
@@ -322,38 +382,6 @@
       "question": "Exact Score: FC Dallas 3 - 1 St. Louis City SC?",
       "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-3-1",
       "price": 0.06,
-      "size": 20.0
-    },
-    {
-      "time": "2026-04-11T22:23:32.293501+00:00",
-      "side": "YES",
-      "question": "Exact Score: FC Dallas 0 - 1 St. Louis City SC?",
-      "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-0-1",
-      "price": 0.07,
-      "size": 20.0
-    },
-    {
-      "time": "2026-04-11T22:23:31.723409+00:00",
-      "side": "YES",
-      "question": "Exact Score: FC Dallas 0 - 0 St. Louis City SC?",
-      "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-0-0",
-      "price": 0.06,
-      "size": 20.0
-    },
-    {
-      "time": "2026-04-11T22:23:31.217026+00:00",
-      "side": "YES",
-      "question": "Sporting Kansas City leading at halftime?",
-      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-halftime-result-home",
-      "price": 0.21,
-      "size": 20.0
-    },
-    {
-      "time": "2026-04-11T22:23:30.613125+00:00",
-      "side": "YES",
-      "question": "Sporting Kansas City vs. San Jose Earthquakes: Draw at halft",
-      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-halftime-result-draw",
-      "price": 0.36,
       "size": 20.0
     }
   ]
