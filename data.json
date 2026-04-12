@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T02:13:29.874596+00:00",
-  "total_value": 242.55976,
+  "updated": "2026-04-12T02:13:56.565878+00:00",
+  "total_value": 245.55976,
   "pnl": 0.9607843137254901,
   "wallet_balance": 222.50976,
-  "invested": 20.05,
+  "invested": 23.05,
   "wins": 1,
   "losses": 0,
-  "total_trades": 38,
+  "total_trades": 41,
   "open_positions": [
     {
       "side": "YES",
@@ -133,6 +133,27 @@
       "url": "https://polymarket.com/market/ufc-pau2-aza-2026-04-11-win-by-ko-tko",
       "entry": 0.45,
       "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Bitcoin Up or Down - April 12, 12:40AM-12:45AM ET",
+      "url": "https://polymarket.com/market/btc-updown-5m-1775968800",
+      "entry": 0.51,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Solana Up or Down - April 12, 12:30AM-12:45AM ET",
+      "url": "https://polymarket.com/market/sol-updown-15m-1775968200",
+      "entry": 0.51,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "XRP Up or Down - April 12, 12:30AM-12:45AM ET",
+      "url": "https://polymarket.com/market/xrp-updown-15m-1775968200",
+      "entry": 0.48,
+      "size": 1.0
     }
   ],
   "resolved": [
@@ -147,6 +168,30 @@
     }
   ],
   "recent_trades": [
+    {
+      "time": "2026-04-12T02:13:55.775228+00:00",
+      "side": "YES",
+      "question": "XRP Up or Down - April 12, 12:30AM-12:45AM ET",
+      "url": "https://polymarket.com/market/xrp-updown-15m-1775968200",
+      "price": 0.48,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T02:13:55.045834+00:00",
+      "side": "YES",
+      "question": "Solana Up or Down - April 12, 12:30AM-12:45AM ET",
+      "url": "https://polymarket.com/market/sol-updown-15m-1775968200",
+      "price": 0.51,
+      "size": 1.0
+    },
+    {
+      "time": "2026-04-12T02:13:54.128740+00:00",
+      "side": "YES",
+      "question": "Bitcoin Up or Down - April 12, 12:40AM-12:45AM ET",
+      "url": "https://polymarket.com/market/btc-updown-5m-1775968800",
+      "price": 0.51,
+      "size": 1.0
+    },
     {
       "time": "2026-04-12T01:43:55.782889+00:00",
       "side": "YES",
@@ -362,30 +407,6 @@
       "url": "https://polymarket.com/market/eth-updown-5m-1775956200",
       "price": 0.5,
       "size": 15.0
-    },
-    {
-      "time": "2026-04-11T22:23:34.105480+00:00",
-      "side": "YES",
-      "question": "Sporting Kansas City vs. San Jose Earthquakes: O/U 4.5",
-      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-total-4pt5",
-      "price": 0.27,
-      "size": 7.53
-    },
-    {
-      "time": "2026-04-11T22:23:33.503932+00:00",
-      "side": "YES",
-      "question": "Exact Score: FC Dallas 1 - 2 St. Louis City SC?",
-      "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-1-2",
-      "price": 0.07,
-      "size": 20.0
-    },
-    {
-      "time": "2026-04-11T22:23:32.893204+00:00",
-      "side": "YES",
-      "question": "Exact Score: FC Dallas 3 - 1 St. Louis City SC?",
-      "url": "https://polymarket.com/market/mls-dal-stl-2026-04-11-exact-score-3-1",
-      "price": 0.06,
-      "size": 20.0
     }
   ]
 }
