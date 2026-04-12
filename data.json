@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-12T12:31:13.076820+00:00",
+  "updated": "2026-04-12T12:36:13.066005+00:00",
   "wallet": 226.74,
   "deposit": 245.8,
-  "open_value": 12.96,
-  "total": 239.7,
-  "pnl": -6.1,
+  "open_value": 12.97,
+  "total": 239.71,
+  "pnl": -6.09,
   "pnl_pct": -2.5,
   "positions": [
     {
@@ -22,7 +22,7 @@
       "question": "Will FK Lokomotiv Moskva win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-lok-mak-2026-04-12-lok",
       "entry": 3.1584,
-      "current": 0.61,
+      "current": 0.605,
       "cost": 1.11,
       "value": 0.21,
       "pnl": -0.9
@@ -42,10 +42,10 @@
       "question": "Will FK Rostov win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-ros-spa-2026-04-12-ros",
       "entry": 1.7146,
-      "current": 0.295,
+      "current": 0.305,
       "cost": 1.28,
-      "value": 0.22,
-      "pnl": -1.06
+      "value": 0.23,
+      "pnl": -1.05
     },
     {
       "side": "Over",
@@ -202,6 +202,12 @@
       "pnl": -6.1,
       "wallet": 226.74,
       "total": 239.7
+    },
+    {
+      "t": "2026-04-12T12:36:13.066005+00:00",
+      "pnl": -6.09,
+      "wallet": 226.74,
+      "total": 239.71
     }
   ]
 }
