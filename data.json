@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T17:57:53.050217+00:00",
-  "wallet": 21.83,
+  "updated": "2026-04-12T18:01:11.984717+00:00",
+  "wallet": 0.0,
   "deposit": 245.8,
-  "open_value": 161.05,
-  "total": 182.88,
-  "pnl": -62.92,
-  "pnl_pct": -25.6,
+  "open_value": 166.06,
+  "total": 166.06,
+  "pnl": -79.74,
+  "pnl_pct": -32.4,
   "positions": [
     {
       "side": "Yes",
@@ -22,10 +22,10 @@
       "question": "Military action against Iran continues through April 30",
       "url": "https://polymarket.com/market/military-action-against-iran-continues-through-april-30-2026",
       "entry": 0.014,
-      "current": 0.014,
+      "current": 0.0135,
       "cost": 2.73,
-      "value": 2.73,
-      "pnl": 0.0
+      "value": 2.63,
+      "pnl": -0.1
     },
     {
       "side": "Yes",
@@ -42,10 +42,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.091,
+      "current": 0.1055,
       "cost": 1.56,
-      "value": 0.52,
-      "pnl": -1.04
+      "value": 0.6,
+      "pnl": -0.96
     },
     {
       "side": "Yes",
@@ -62,10 +62,10 @@
       "question": "Will Elon Musk post 340-359 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-340-359",
       "entry": 0.3768,
-      "current": 0.0705,
+      "current": 0.07,
       "cost": 4.19,
       "value": 0.78,
-      "pnl": -3.41
+      "pnl": -3.42
     },
     {
       "side": "Yes",
@@ -92,10 +92,10 @@
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": 0.008,
-      "current": 0.0175,
+      "current": 0.0205,
       "cost": 13.39,
-      "value": 29.3,
-      "pnl": 15.9
+      "value": 34.32,
+      "pnl": 20.93
     },
     {
       "side": "Yes",
@@ -242,20 +242,20 @@
       "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 3.5",
       "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-3pt5",
       "entry": 1.3276,
-      "current": 0.995,
+      "current": 0.9995,
       "cost": 1.11,
       "value": 0.83,
-      "pnl": -0.28
+      "pnl": -0.27
     },
     {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.48,
+      "current": 0.4845,
       "cost": 1.15,
-      "value": 0.76,
-      "pnl": -0.39
+      "value": 0.77,
+      "pnl": -0.38
     }
   ],
   "pnl_history": [
