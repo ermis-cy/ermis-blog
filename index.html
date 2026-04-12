@@ -4,220 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ermis Agent</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 <style>
-:root {
-  --bg: #0a0e14; --surface: #12171f; --surface2: #1a2030; --border: #1e2a3a;
-  --text: #e2e8f0; --text2: #8892a4; --green: #10b981; --green-bg: rgba(16,185,129,0.1);
-  --red: #ef4444; --red-bg: rgba(239,68,68,0.1); --blue: #3b82f6; --accent: #6366f1;
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--bg); color:var(--text); font-family:'Inter',-apple-system,system-ui,sans-serif; min-height:100vh; }
-.container { max-width:960px; margin:0 auto; padding:32px 20px; }
-.header { display:flex; align-items:center; justify-content:space-between; margin-bottom:32px; }
-.header h1 { font-size:20px; font-weight:700; letter-spacing:-0.5px; }
-.badge { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:1px; padding:4px 10px; border-radius:100px; background:var(--green-bg); color:var(--green); }
-
-.metrics { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border-radius:12px; overflow:hidden; margin-bottom:24px; }
-.metric { background:var(--surface); padding:20px; }
-.metric .label { font-size:11px; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px; font-weight:500; }
-.metric .value { font-size:24px; font-weight:700; margin-top:4px; letter-spacing:-1px; }
-.metric .sub { font-size:12px; color:var(--text2); margin-top:2px; }
-.up { color:var(--green); } .down { color:var(--red); }
-
-.card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:24px; }
-.card-title { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:var(--text2); margin-bottom:16px; }
-.card canvas { width:100%!important; }
-
-.table-wrap { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:24px; }
-.table-title { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:var(--text2); padding:16px 16px 0; }
-table { width:100%; border-collapse:collapse; }
-th { font-size:11px; font-weight:500; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px; text-align:left; padding:12px 16px; background:var(--surface2); }
-td { padding:12px 16px; font-size:13px; border-top:1px solid var(--border); }
-tr:hover td { background:var(--surface2); }
-td a { color:var(--blue); text-decoration:none; }
-.pill { display:inline-block; font-size:11px; font-weight:600; padding:3px 10px; border-radius:100px; }
-.pill.up { background:var(--green-bg); color:var(--green); }
-.pill.down { background:var(--red-bg); color:var(--red); }
-th.r, td.r { text-align:right; }
-
-.footer { text-align:center; padding:24px 0 12px; color:var(--text2); font-size:11px; }
-.footer .dot { display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%; margin-right:6px; animation:pulse 2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-.empty { padding:32px; text-align:center; color:var(--text2); font-size:13px; }
-
-@media (max-width:600px) {
-  .metrics { grid-template-columns:repeat(2,1fr); }
-  td,th { padding:10px 12px; font-size:12px; }
-}
+:root{--bg:#0a0e14;--s1:#12171f;--s2:#1a2030;--bd:#1e2a3a;--t1:#e2e8f0;--t2:#8892a4;--g:#10b981;--r:#ef4444;--b:#3b82f6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--t1);font-family:'Inter',system-ui,sans-serif}
+.c{max-width:900px;margin:0 auto;padding:28px 20px}
+.hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.hd h1{font-size:18px;font-weight:700}
+.badge{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:99px;background:rgba(16,185,129,.12);color:var(--g)}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--bd);border-radius:10px;overflow:hidden;margin-bottom:20px}
+.stat{background:var(--s1);padding:18px}
+.stat .l{font-size:10px;color:var(--t2);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+.stat .v{font-size:22px;font-weight:700;margin-top:3px;letter-spacing:-.5px}
+.stat .s{font-size:11px;color:var(--t2);margin-top:2px}
+.up{color:var(--g)}.dn{color:var(--r)}
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:10px;padding:16px;margin-bottom:20px}
+.card h2{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--t2);margin-bottom:12px}
+.tbl{background:var(--s1);border:1px solid var(--bd);border-radius:10px;overflow:hidden;margin-bottom:20px}
+.tbl h2{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--t2);padding:14px 14px 0}
+table{width:100%;border-collapse:collapse}
+th{font-size:10px;font-weight:500;color:var(--t2);text-transform:uppercase;letter-spacing:.5px;text-align:left;padding:10px 14px;background:var(--s2)}
+td{padding:10px 14px;font-size:12px;border-top:1px solid var(--bd)}
+tr:hover td{background:var(--s2)}
+td a{color:var(--b);text-decoration:none}
+.r{text-align:right}
+.empty{padding:28px;text-align:center;color:var(--t2);font-size:12px}
+.ft{text-align:center;padding:20px 0;color:var(--t2);font-size:10px}
+.dot{display:inline-block;width:5px;height:5px;background:var(--g);border-radius:50%;margin-right:5px;animation:p 2s infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.3}}
+@media(max-width:600px){.stats{grid-template-columns:1fr 1fr}td,th{padding:8px 10px;font-size:11px}}
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="header">
-    <h1>Ermis Agent</h1>
-    <span class="badge">Live</span>
-  </div>
-
-  <div class="metrics" id="metrics"></div>
-
-  <div class="card">
-    <div class="card-title">Portfolio Value</div>
-    <canvas id="pnlChart" height="220"></canvas>
-  </div>
-
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;">
-    <div class="card">
-      <div class="card-title">Win Rate</div>
-      <canvas id="winChart" height="180"></canvas>
-    </div>
-    <div class="card">
-      <div class="card-title">Capital Allocation</div>
-      <canvas id="allocChart" height="180"></canvas>
-    </div>
-  </div>
-
-  <div class="table-wrap">
-    <div class="table-title">Open Positions</div>
-    <table id="positions">
-      <thead><tr><th>Position</th><th>Market</th><th class="r">Entry</th><th class="r">Now</th><th class="r">Size</th><th class="r">P&L</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <div class="footer"><span class="dot"></span><span id="updated">Loading...</span></div>
+<div class="c">
+  <div class="hd"><h1>Ermis Agent</h1><span class="badge">Live</span></div>
+  <div class="stats" id="stats"></div>
+  <div class="card"><h2>Portfolio Value</h2><canvas id="chart" height="200"></canvas></div>
+  <div class="tbl"><h2>Open Positions</h2><table id="pos"><thead><tr><th>Position</th><th>Market</th><th class="r">Entry</th><th class="r">Now</th><th class="r">P&L</th></tr></thead><tbody></tbody></table></div>
+  <div class="ft"><span class="dot"></span><span id="upd">Loading...</span></div>
 </div>
-
 <script>
-const $ = s => document.querySelector(s);
-const fmt = n => n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
-const pct = n => (n*100).toFixed(0)+'%';
-const cs = {bg:'#0a0e14',green:'#10b981',red:'#ef4444',blue:'#3b82f6',text2:'#8892a4',border:'#1e2a3a'};
-
-Chart.defaults.color = cs.text2;
-Chart.defaults.borderColor = cs.border;
-Chart.defaults.font.family = 'Inter';
-
-let pnlChartInstance, winChartInstance, allocChartInstance;
-
-function renderPnlChart(history) {
-  const ctx = $('#pnlChart').getContext('2d');
-  const data = history.map(h => ({x: new Date(h.t), y: h.pnl}));
-  const isUp = data.length && data[data.length-1].y >= 0;
-  const color = isUp ? cs.green : cs.red;
-
-  if (pnlChartInstance) pnlChartInstance.destroy();
-  pnlChartInstance = new Chart(ctx, {
-    type: 'line',
-    data: {
-      datasets: [{
-        data, borderColor: color, backgroundColor: color+'18',
-        fill: true, tension: 0.3, pointRadius: 0, pointHitRadius: 10, borderWidth: 2,
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      interaction: {mode:'index', intersect:false},
-      plugins: {
-        legend: {display:false},
-        tooltip: {
-          backgroundColor: '#1a2030', titleColor: '#e2e8f0', bodyColor: '#e2e8f0',
-          borderColor: cs.border, borderWidth: 1, padding: 10,
-          callbacks: {
-            title: items => new Date(items[0].parsed.x).toLocaleString(),
-            label: item => `P&L: ${item.parsed.y >= 0 ? '+' : ''}$${fmt(item.parsed.y)}`
-          }
-        }
-      },
-      scales: {
-        x: {type:'time', time:{unit:'hour', displayFormats:{hour:'MMM d, ha'}}, grid:{display:false}},
-        y: {grid:{color:cs.border+'60'}, ticks:{callback: v => '$'+fmt(v)}}
-      }
-    }
-  });
+const $=s=>document.querySelector(s),fm=n=>n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),pc=n=>(n*100).toFixed(0)+'%';
+let ch;
+function renderChart(hist){
+  const ctx=$('#chart').getContext('2d');
+  if(ch)ch.destroy();
+  if(hist.length<2){ctx.fillStyle='#8892a4';ctx.font='12px Inter';ctx.textAlign='center';ctx.fillText('Collecting data...',ctx.canvas.width/2,100);return}
+  const data=hist.map(h=>({x:new Date(h.t),y:h.total}));
+  const col=data[data.length-1].y>=data[0].y?'#10b981':'#ef4444';
+  ch=new Chart(ctx,{type:'line',data:{datasets:[{data,borderColor:col,backgroundColor:col+'18',fill:true,tension:.3,pointRadius:0,pointHitRadius:10,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a2030',titleColor:'#e2e8f0',bodyColor:'#e2e8f0',borderColor:'#1e2a3a',borderWidth:1,padding:8,callbacks:{title:i=>new Date(i[0].parsed.x).toLocaleString(),label:i=>'$'+fm(i.parsed.y)}}},scales:{x:{type:'time',time:{unit:hist.length>100?'hour':'minute',displayFormats:{minute:'HH:mm',hour:'MMM d, ha'}},grid:{display:false},ticks:{color:'#8892a4',font:{size:10}}},y:{grid:{color:'#1e2a3a40'},ticks:{color:'#8892a4',font:{size:10},callback:v=>'$'+fm(v)}}}}});
 }
-
-function renderWinChart(wins, losses) {
-  const ctx = $('#winChart').getContext('2d');
-  if (winChartInstance) winChartInstance.destroy();
-  winChartInstance = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Wins', 'Losses'],
-      datasets: [{data:[wins,losses], backgroundColor:[cs.green,cs.red], borderWidth:0, spacing:2}]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false, cutout: '70%',
-      plugins: {
-        legend: {position:'bottom', labels:{padding:16, usePointStyle:true, pointStyle:'circle'}},
-        tooltip: {callbacks:{label: item => `${item.label}: ${item.raw}`}}
-      }
-    }
-  });
+async function load(){
+  try{
+    const d=await(await fetch('data.json?'+Date.now())).json();
+    const up=d.pnl>=0;
+    $('#stats').innerHTML=`
+      <div class="stat"><div class="l">Portfolio</div><div class="v">$${fm(d.total)}</div><div class="s">Wallet $${fm(d.wallet)} + Positions $${fm(d.open_value)}</div></div>
+      <div class="stat"><div class="l">P&L</div><div class="v ${up?'up':'dn'}">${up?'+':''}$${fm(d.pnl)}</div><div class="s">${d.pnl_pct>=0?'+':''}${d.pnl_pct}% from $${fm(d.deposit)}</div></div>
+      <div class="stat"><div class="l">Positions</div><div class="v">${d.positions.length}</div><div class="s">$${fm(d.open_value)} deployed</div></div>`;
+    renderChart(d.pnl_history||[]);
+    const tb=$('#pos tbody');
+    if(!d.positions.length){tb.innerHTML='<tr><td colspan="5" class="empty">No open positions</td></tr>'}
+    else{tb.innerHTML=d.positions.map(p=>{const u=p.pnl>=0;return`<tr><td style="color:var(--${u?'g':'r'});font-weight:600">${p.side}</td><td>${p.url?`<a href="${p.url}" target="_blank">${p.question}</a>`:p.question}</td><td class="r">${pc(p.entry)}</td><td class="r">${pc(p.current)}</td><td class="r" style="color:var(--${u?'g':'r'});font-weight:600">${u?'+':''}$${fm(p.pnl)}</td></tr>`}).join('')}
+    $('#upd').textContent='Updated '+new Date(d.updated).toLocaleString();
+  }catch(e){console.error(e)}
 }
-
-function renderAllocChart(wallet, openValue) {
-  const ctx = $('#allocChart').getContext('2d');
-  if (allocChartInstance) allocChartInstance.destroy();
-  allocChartInstance = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Available', 'In Positions'],
-      datasets: [{data:[wallet, openValue], backgroundColor:[cs.blue, cs.green], borderWidth:0, spacing:2}]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false, cutout: '70%',
-      plugins: {
-        legend: {position:'bottom', labels:{padding:16, usePointStyle:true, pointStyle:'circle'}},
-        tooltip: {callbacks:{label: item => `${item.label}: $${fmt(item.raw)}`}}
-      }
-    }
-  });
-}
-
-async function load() {
-  try {
-    const d = await (await fetch('data.json?'+Date.now())).json();
-    const up = d.total_pnl >= 0;
-    const winRate = d.wins+d.losses > 0 ? ((d.wins/(d.wins+d.losses))*100).toFixed(0)+'%' : '-';
-    const portfolio = d.wallet_balance + d.open_value;
-
-    $('#metrics').innerHTML = `
-      <div class="metric"><div class="label">Portfolio</div><div class="value">$${fmt(portfolio)}</div><div class="sub">Deposit: $${fmt(d.deposit)}</div></div>
-      <div class="metric"><div class="label">Total P&L</div><div class="value ${up?'up':'down'}">${up?'+':''}$${fmt(d.total_pnl)}</div><div class="sub">${((d.total_pnl/d.deposit)*100).toFixed(1)}% return</div></div>
-      <div class="metric"><div class="label">Record</div><div class="value">${d.wins}<span style="color:var(--text2);font-size:14px">W</span> ${d.losses}<span style="color:var(--text2);font-size:14px">L</span></div><div class="sub">${winRate} win rate</div></div>
-      <div class="metric"><div class="label">Positions</div><div class="value">${d.open_positions.length}</div><div class="sub">$${fmt(d.open_value)} deployed</div></div>
-    `;
-
-    renderPnlChart(d.pnl_history || []);
-    renderWinChart(d.wins, d.losses);
-    renderAllocChart(d.wallet_balance, d.open_value);
-
-    const tbody = $('#positions tbody');
-    if (!d.open_positions.length) {
-      tbody.innerHTML = '<tr><td colspan="6" class="empty">No open positions</td></tr>';
-    } else {
-      tbody.innerHTML = d.open_positions.map(p => {
-        const pUp = p.pnl >= 0;
-        return `<tr>
-          <td><span class="pill ${pUp?'up':'down'}">${p.side}</span></td>
-          <td>${p.url ? `<a href="${p.url}" target="_blank">${p.question}</a>` : p.question}</td>
-          <td class="r">${pct(p.entry)}</td>
-          <td class="r">${pct(p.current)}</td>
-          <td class="r">$${fmt(p.size)}</td>
-          <td class="r" style="color:var(--${pUp?'green':'red'});font-weight:600">${pUp?'+':''}$${fmt(p.pnl)}</td>
-        </tr>`;
-      }).join('');
-    }
-
-    $('#updated').textContent = 'Updated ' + new Date(d.updated).toLocaleString();
-  } catch(e) { console.error(e); }
-}
-load();
-setInterval(load, 30000);
+load();setInterval(load,30000);
 </script>
 </body>
 </html>

@@ -1,13 +1,13 @@
 {
-  "updated": "2026-04-12T12:05:45.789179+00:00",
+  "updated": "2026-04-12T12:10:45.799290+00:00",
   "wallet_balance": 226.71,
   "deposit": 245.8,
-  "open_value": 176.69,
-  "total_pnl": 157.6,
-  "realized_pnl": -105.81,
-  "unrealized_pnl": -5.82,
+  "open_value": 177.37,
+  "total_pnl": 158.28,
+  "realized_pnl": -109.6,
+  "unrealized_pnl": -1.33,
   "wins": 0,
-  "losses": 62,
+  "losses": 64,
   "total_trades": 76,
   "open_positions": [
     {
@@ -37,10 +37,10 @@
       "question": "Will FK Lokomotiv Moskva win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-lok-mak-2026-04-12-lok",
       "entry": 0.6051,
-      "current": 0.605,
+      "current": 0.61,
       "size": 36.29,
-      "value": 36.28,
-      "pnl": -0.01,
+      "value": 36.58,
+      "pnl": 0.29,
       "shares": 59.97
     },
     {
@@ -70,10 +70,10 @@
       "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 3.5",
       "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-3pt5",
       "entry": 0.3401,
-      "current": 0.34,
+      "current": 0.345,
       "size": 27.97,
-      "value": 27.97,
-      "pnl": -0.01,
+      "value": 28.38,
+      "pnl": 0.4,
       "shares": 82.25
     },
     {
@@ -110,36 +110,14 @@
       "shares": 113.93
     },
     {
-      "side": "FC Anyang",
-      "question": "Spread: FC Anyang (-1.5)",
-      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
-      "entry": 0.13,
-      "current": 0.0005,
-      "size": 1.93,
-      "value": 0.01,
-      "pnl": -1.92,
-      "shares": 14.85
-    },
-    {
-      "side": "Gimcheon Sangmu FC",
-      "question": "Spread: Gimcheon Sangmu FC (-1.5)",
-      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-home-1pt5",
-      "entry": 0.18,
-      "current": 0.0005,
-      "size": 1.88,
-      "value": 0.01,
-      "pnl": -1.87,
-      "shares": 10.44
-    },
-    {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.5035,
+      "current": 0.496,
       "size": 1.15,
-      "value": 0.8,
-      "pnl": -0.35,
+      "value": 0.79,
+      "pnl": -0.36,
       "shares": 1.59
     },
     {
@@ -249,6 +227,12 @@
       "pnl": 157.6,
       "wallet": 226.71,
       "positions": 176.69
+    },
+    {
+      "t": "2026-04-12T12:10:45.799290+00:00",
+      "pnl": 158.28,
+      "wallet": 226.71,
+      "positions": 177.37
     }
   ]
 }
