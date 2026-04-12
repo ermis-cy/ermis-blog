@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T00:13:29.875070+00:00",
-  "total_value": 243.559753,
+  "updated": "2026-04-12T00:13:54.588227+00:00",
+  "total_value": 13.8,
   "pnl": 0,
-  "wallet_balance": 230.759753,
-  "invested": 12.8,
+  "wallet_balance": 0.0,
+  "invested": 13.8,
   "wins": 0,
   "losses": 0,
-  "total_trades": 30,
+  "total_trades": 31,
   "open_positions": [
     {
       "side": "YES",
@@ -84,10 +84,25 @@
       "url": "https://polymarket.com/market/nhl-van-sj-2026-04-11-spread-home-1pt5",
       "entry": 0.45,
       "size": 1.0
+    },
+    {
+      "side": "NO",
+      "question": "San Diego FC vs. Minnesota United FC: Draw at halftime?",
+      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-halftime-result-draw",
+      "entry": 0.62,
+      "size": 1.0
     }
   ],
   "resolved": [],
   "recent_trades": [
+    {
+      "time": "2026-04-12T00:13:54.173291+00:00",
+      "side": "NO",
+      "question": "San Diego FC vs. Minnesota United FC: Draw at halftime?",
+      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-halftime-result-draw",
+      "price": 0.62,
+      "size": 1.0
+    },
     {
       "time": "2026-04-11T23:43:57.945721+00:00",
       "side": "YES",
@@ -318,14 +333,6 @@
       "question": "Exact Score: Sporting Kansas City 2 - 1 San Jose Earthquakes",
       "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-exact-score-2-1",
       "price": 0.07,
-      "size": 20.0
-    },
-    {
-      "time": "2026-04-11T22:23:28.320563+00:00",
-      "side": "YES",
-      "question": "Exact Score: Sporting Kansas City 0 - 1 San Jose Earthquakes",
-      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-exact-score-0-1",
-      "price": 0.08,
       "size": 20.0
     }
   ]
