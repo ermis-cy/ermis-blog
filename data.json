@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T00:43:29.874403+00:00",
-  "total_value": 243.559754,
+  "updated": "2026-04-12T00:44:08.987010+00:00",
+  "total_value": 244.559754,
   "pnl": 0,
   "wallet_balance": 229.759754,
-  "invested": 13.8,
+  "invested": 14.8,
   "wins": 0,
   "losses": 0,
-  "total_trades": 31,
+  "total_trades": 32,
   "open_positions": [
     {
       "side": "YES",
@@ -91,10 +91,25 @@
       "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-halftime-result-draw",
       "entry": 0.62,
       "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "CF Am\u00e9rica vs. CF Cruz Azul: Both Teams to Score",
+      "url": "https://polymarket.com/market/mex-ame-caz-2026-04-11-btts",
+      "entry": 0.54,
+      "size": 1.0
     }
   ],
   "resolved": [],
   "recent_trades": [
+    {
+      "time": "2026-04-12T00:44:08.506922+00:00",
+      "side": "YES",
+      "question": "CF Am\u00e9rica vs. CF Cruz Azul: Both Teams to Score",
+      "url": "https://polymarket.com/market/mex-ame-caz-2026-04-11-btts",
+      "price": 0.54,
+      "size": 1.0
+    },
     {
       "time": "2026-04-12T00:13:54.173291+00:00",
       "side": "NO",
@@ -324,14 +339,6 @@
       "side": "YES",
       "question": "Exact Score: Sporting Kansas City 2 - 2 San Jose Earthquakes",
       "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-exact-score-2-2",
-      "price": 0.07,
-      "size": 20.0
-    },
-    {
-      "time": "2026-04-11T22:23:28.974899+00:00",
-      "side": "YES",
-      "question": "Exact Score: Sporting Kansas City 2 - 1 San Jose Earthquakes",
-      "url": "https://polymarket.com/market/mls-skc-sje-2026-04-11-exact-score-2-1",
       "price": 0.07,
       "size": 20.0
     }
