@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T13:16:22.595605+00:00",
+  "updated": "2026-04-12T13:16:58.290749+00:00",
   "wallet": 0.92,
   "deposit": 245.8,
-  "open_value": 366.51,
-  "total": 367.43,
-  "pnl": 121.63,
-  "pnl_pct": 49.5,
+  "open_value": 354.18,
+  "total": 355.1,
+  "pnl": 109.3,
+  "pnl_pct": 44.5,
   "positions": [
     {
       "side": "Yes",
@@ -52,10 +52,10 @@
       "question": "Will Elon Musk post 420-439 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-420-439",
       "entry": 0.007,
-      "current": 0.0075,
+      "current": 0.008,
       "cost": 13.38,
-      "value": 14.33,
-      "pnl": 0.96
+      "value": 15.29,
+      "pnl": 1.91
     },
     {
       "side": "Yes",
@@ -82,20 +82,20 @@
       "question": "Will Elon Musk post 500-519 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-500-519",
       "entry": 0.004,
-      "current": 0.0065,
+      "current": 0.0055,
       "cost": 11.85,
-      "value": 19.25,
-      "pnl": 7.41
+      "value": 16.29,
+      "pnl": 4.44
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 520-539 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-520-539",
       "entry": 0.003,
-      "current": 0.005,
+      "current": 0.006,
       "cost": 15.74,
-      "value": 26.23,
-      "pnl": 10.49
+      "value": 31.48,
+      "pnl": 15.74
     },
     {
       "side": "Yes",
@@ -112,20 +112,20 @@
       "question": "Will the price of Ethereum be above $2,200 on April 12?",
       "url": "https://polymarket.com/market/ethereum-above-2200-on-april-12",
       "entry": 0.4,
-      "current": 0.3755,
+      "current": 0.3855,
       "cost": 22.67,
-      "value": 21.28,
-      "pnl": -1.39
+      "value": 21.85,
+      "pnl": -0.82
     },
     {
       "side": "Yes",
       "question": "Will the price of Ethereum be above $2,300 on April 12?",
       "url": "https://polymarket.com/market/ethereum-above-2300-on-april-12",
       "entry": 0.02,
-      "current": 0.017,
+      "current": 0.0175,
       "cost": 23.95,
-      "value": 20.36,
-      "pnl": -3.59
+      "value": 20.95,
+      "pnl": -2.99
     },
     {
       "side": "Yes",
@@ -152,10 +152,10 @@
       "question": "Will the price of Ethereum be above $2,600 on April 12?",
       "url": "https://polymarket.com/market/ethereum-above-2600-on-april-12",
       "entry": 0.001,
-      "current": 0.0015,
+      "current": 0.0005,
       "cost": 16.69,
-      "value": 25.04,
-      "pnl": 8.35
+      "value": 8.35,
+      "pnl": -8.35
     },
     {
       "side": "Yes",
@@ -212,17 +212,17 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.084,
-      "current": 0.082,
+      "current": 0.0815,
       "cost": 9.57,
-      "value": 9.34,
-      "pnl": -0.23
+      "value": 9.29,
+      "pnl": -0.28
     },
     {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.3985,
+      "current": 0.3975,
       "cost": 1.15,
       "value": 0.63,
       "pnl": -0.52
