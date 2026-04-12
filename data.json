@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T08:23:29.847572+00:00",
-  "total_value": 256.97258899999997,
-  "pnl": -5.894559314765333,
+  "updated": "2026-04-12T08:28:29.865416+00:00",
+  "total_value": 253.842589,
+  "pnl": -6.524559314765333,
   "wallet_balance": 239.882589,
-  "invested": 17.09,
-  "wins": 30,
-  "losses": 32,
+  "invested": 13.96,
+  "wins": 31,
+  "losses": 33,
   "total_trades": 102,
   "open_positions": [
     {
@@ -59,13 +59,6 @@
     },
     {
       "side": "YES",
-      "question": "BNB Up or Down - April 12, 2:00AM-2:15AM ET",
-      "url": "https://polymarket.com/market/bnb-updown-15m-1775973600",
-      "entry": 0.5,
-      "size": 1.25
-    },
-    {
-      "side": "YES",
       "question": "BNB Up or Down - April 12, 2:30AM-2:45AM ET",
       "url": "https://polymarket.com/market/bnb-updown-15m-1775975400",
       "entry": 0.5,
@@ -105,13 +98,6 @@
       "url": "https://polymarket.com/market/sol-updown-15m-1775978100",
       "entry": 0.5,
       "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "Spread: Gimcheon Sangmu FC (-1.5)",
-      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-home-1pt5",
-      "entry": 0.19,
-      "size": 1.88
     }
   ],
   "resolved": [
@@ -639,6 +625,15 @@
     },
     {
       "side": "YES",
+      "question": "BNB Up or Down - April 12, 2:00AM-2:15AM ET",
+      "url": "https://polymarket.com/market/bnb-updown-15m-1775973600",
+      "entry": 0.5,
+      "size": 1.25,
+      "won": true,
+      "pnl": 1.25
+    },
+    {
+      "side": "YES",
       "question": "Hyperliquid Up or Down - April 12, 2:30AM-2:45AM ET",
       "url": "https://polymarket.com/market/hype-updown-15m-1775975400",
       "entry": 0.5,
@@ -672,6 +667,15 @@
       "size": 1.93,
       "won": false,
       "pnl": -1.93
+    },
+    {
+      "side": "YES",
+      "question": "Spread: Gimcheon Sangmu FC (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-home-1pt5",
+      "entry": 0.19,
+      "size": 1.88,
+      "won": false,
+      "pnl": -1.88
     }
   ],
   "recent_trades": [
