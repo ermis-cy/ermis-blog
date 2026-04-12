@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-12T12:21:13.079011+00:00",
-  "wallet": 226.71,
+  "updated": "2026-04-12T12:26:13.064656+00:00",
+  "wallet": 226.74,
   "deposit": 245.8,
-  "open_value": 13.01,
-  "total": 239.72,
-  "pnl": -6.08,
+  "open_value": 12.97,
+  "total": 239.71,
+  "pnl": -6.09,
   "pnl_pct": -2.5,
   "positions": [
     {
@@ -12,17 +12,17 @@
       "question": "Will SV Werder Bremen win on 2026-04-12?",
       "url": "https://polymarket.com/market/bun-koe-wer-2026-04-12-wer",
       "entry": 0.31,
-      "current": 0.315,
+      "current": 0.305,
       "cost": 0.39,
-      "value": 0.4,
-      "pnl": 0.01
+      "value": 0.39,
+      "pnl": -0.01
     },
     {
       "side": "Yes",
       "question": "Will FK Lokomotiv Moskva win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-lok-mak-2026-04-12-lok",
       "entry": 3.1584,
-      "current": 0.605,
+      "current": 0.61,
       "cost": 1.11,
       "value": 0.21,
       "pnl": -0.9
@@ -59,16 +59,6 @@
     },
     {
       "side": "Yes",
-      "question": "Trump announces end of military operations against Iran",
-      "url": "https://polymarket.com/market/trump-announces-end-of-military-operations-against-iran-by-april-30th-753-882-164-769-641-926",
-      "entry": 7.2155,
-      "current": 0.285,
-      "cost": 0.87,
-      "value": 0.03,
-      "pnl": -0.84
-    },
-    {
-      "side": "Yes",
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.084,
@@ -82,7 +72,7 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.4915,
+      "current": 0.4885,
       "cost": 1.15,
       "value": 0.78,
       "pnl": -0.37
@@ -200,6 +190,12 @@
       "pnl": -6.08,
       "wallet": 226.71,
       "total": 239.72
+    },
+    {
+      "t": "2026-04-12T12:26:13.064656+00:00",
+      "pnl": -6.09,
+      "wallet": 226.74,
+      "total": 239.71
     }
   ]
 }
