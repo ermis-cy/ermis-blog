@@ -4,54 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ermis Agent</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0e14;--s1:#12171f;--bd:#1e2a3a;--t1:#e2e8f0;--t2:#8892a4;--g:#10b981;--r:#ef4444}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--t1);font-family:'Inter',system-ui,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh}
-.c{max-width:480px;width:100%;padding:20px}
-.hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
-.hd h1{font-size:18px;font-weight:700}
-.badge{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:99px;background:rgba(16,185,129,.12);color:var(--g)}
-.box{background:var(--s1);border:1px solid var(--bd);border-radius:10px;overflow:hidden;margin-bottom:16px}
-.row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 16px;border-bottom:1px solid var(--bd)}
-.row:last-child{border-bottom:none}
-.row .l{font-size:12px;color:var(--t2)}
-.row .v{font-size:14px;font-weight:600}
-.big .v{font-size:28px;font-weight:700;letter-spacing:-1px}
-.up{color:var(--g)}.dn{color:var(--r)}
-.ft{text-align:center;padding:16px 0;color:var(--t2);font-size:10px}
-.dot{display:inline-block;width:5px;height:5px;background:var(--g);border-radius:50%;margin-right:5px;animation:p 2s infinite}
-@keyframes p{0%,100%{opacity:1}50%{opacity:.3}}
+body{background:#0a0e14;color:#e2e8f0;font-family:'Inter',system-ui,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.c{max-width:400px;width:100%;padding:20px;text-align:center}
+h1{font-size:18px;font-weight:700;margin-bottom:24px}
+.badge{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:99px;background:rgba(16,185,129,.12);color:#10b981;margin-left:8px}
+.val{font-size:36px;font-weight:700;margin:16px 0 4px}
+.label{font-size:12px;color:#8892a4}
+.sub{font-size:13px;color:#8892a4;margin-top:4px}
+.ft{margin-top:24px;font-size:10px;color:#8892a4}
+a{color:#3b82f6;text-decoration:none}
 </style>
 </head>
 <body>
 <div class="c">
-  <div class="hd"><h1>Ermis Agent</h1><span class="badge">Live</span></div>
-  <div id="content">Loading...</div>
-  <div class="ft"><span class="dot"></span><span id="upd"></span></div>
+  <h1>Ermis Agent<span class="badge">Live</span></h1>
+  <div class="label">WALLET BALANCE</div>
+  <div class="val" id="wallet">...</div>
+  <div class="sub">Deposit: $<span id="dep">...</span></div>
+  <div class="sub" style="margin-top:16px"><a href="https://polymarket.com/portfolio" target="_blank">View full portfolio on Polymarket →</a></div>
+  <div class="ft" id="upd"></div>
 </div>
 <script>
-const fm=n=>n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
 async function load(){
   try{
     const d=await(await fetch('data.json?'+Date.now())).json();
-    const up=d.pnl>=0;
-    document.getElementById('content').innerHTML=`
-      <div class="box">
-        <div class="row big"><span class="l">Portfolio</span><span class="v">$${fm(d.total)}</span></div>
-        <div class="row"><span class="l">P&L</span><span class="v ${up?'up':'dn'}">${up?'+':''}$${fm(d.pnl)} (${d.pnl_pct>=0?'+':''}${d.pnl_pct}%)</span></div>
-      </div>
-      <div class="box">
-        <div class="row"><span class="l">Wallet</span><span class="v">$${fm(d.wallet)}</span></div>
-        <div class="row"><span class="l">In Positions</span><span class="v">$${fm(d.open_value)}</span></div>
-        <div class="row"><span class="l">Positions</span><span class="v">${d.positions.length}</span></div>
-        <div class="row"><span class="l">Deposit</span><span class="v">$${fm(d.deposit)}</span></div>
-      </div>`;
+    document.getElementById('wallet').textContent='$'+d.wallet.toLocaleString('en-US',{minimumFractionDigits:2});
+    document.getElementById('dep').textContent=d.deposit.toFixed(2);
     document.getElementById('upd').textContent='Updated '+new Date(d.updated).toLocaleString();
-  }catch(e){console.error(e)}
+  }catch(e){}
 }
-load();setInterval(load,30000);
+load();setInterval(load,60000);
 </script>
 </body>
 </html>
