@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T07:33:29.846885+00:00",
-  "total_value": 224.361427,
-  "pnl": -1.3965200990790583,
+  "updated": "2026-04-12T07:38:29.847875+00:00",
+  "total_value": 216.431427,
+  "pnl": 0.47740146954839235,
   "wallet_balance": 130.871427,
-  "invested": 93.49,
-  "wins": 10,
-  "losses": 10,
+  "invested": 85.56,
+  "wins": 15,
+  "losses": 12,
   "total_trades": 102,
   "open_positions": [
     {
@@ -82,48 +82,6 @@
       "side": "YES",
       "question": "Bitcoin Up or Down - April 12, 1:30AM-1:35AM ET",
       "url": "https://polymarket.com/market/btc-updown-5m-1775971800",
-      "entry": 0.51,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "Bitcoin Up or Down - April 12, 1:25AM-1:30AM ET",
-      "url": "https://polymarket.com/market/btc-updown-5m-1775971500",
-      "entry": 0.51,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "Solana Up or Down - April 12, 1:15AM-1:30AM ET",
-      "url": "https://polymarket.com/market/sol-updown-15m-1775970900",
-      "entry": 0.51,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "Ethereum Up or Down - April 12, 1:15AM-1:30AM ET",
-      "url": "https://polymarket.com/market/eth-updown-15m-1775970900",
-      "entry": 0.51,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "BNB Up or Down - April 12, 1:15AM-1:30AM ET",
-      "url": "https://polymarket.com/market/bnb-updown-15m-1775970900",
-      "entry": 0.51,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "Hyperliquid Up or Down - April 12, 1:15AM-1:30AM ET",
-      "url": "https://polymarket.com/market/hype-updown-15m-1775970900",
-      "entry": 0.51,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "Bitcoin Up or Down - April 12, 1:15AM-1:30AM ET",
-      "url": "https://polymarket.com/market/btc-updown-15m-1775970900",
       "entry": 0.51,
       "size": 1.0
     },
@@ -395,13 +353,6 @@
     },
     {
       "side": "YES",
-      "question": "Spread: FC Anyang (-1.5)",
-      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
-      "entry": 0.12,
-      "size": 1.93
-    },
-    {
-      "side": "YES",
       "question": "Spread: Gimcheon Sangmu FC (-1.5)",
       "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-home-1pt5",
       "entry": 0.19,
@@ -555,6 +506,60 @@
     },
     {
       "side": "YES",
+      "question": "Bitcoin Up or Down - April 12, 1:25AM-1:30AM ET",
+      "url": "https://polymarket.com/market/btc-updown-5m-1775971500",
+      "entry": 0.51,
+      "size": 1.0,
+      "won": true,
+      "pnl": 0.9607843137254901
+    },
+    {
+      "side": "YES",
+      "question": "Solana Up or Down - April 12, 1:15AM-1:30AM ET",
+      "url": "https://polymarket.com/market/sol-updown-15m-1775970900",
+      "entry": 0.51,
+      "size": 1.0,
+      "won": true,
+      "pnl": 0.9607843137254901
+    },
+    {
+      "side": "YES",
+      "question": "Ethereum Up or Down - April 12, 1:15AM-1:30AM ET",
+      "url": "https://polymarket.com/market/eth-updown-15m-1775970900",
+      "entry": 0.51,
+      "size": 1.0,
+      "won": true,
+      "pnl": 0.9607843137254901
+    },
+    {
+      "side": "YES",
+      "question": "BNB Up or Down - April 12, 1:15AM-1:30AM ET",
+      "url": "https://polymarket.com/market/bnb-updown-15m-1775970900",
+      "entry": 0.51,
+      "size": 1.0,
+      "won": true,
+      "pnl": 0.9607843137254901
+    },
+    {
+      "side": "YES",
+      "question": "Hyperliquid Up or Down - April 12, 1:15AM-1:30AM ET",
+      "url": "https://polymarket.com/market/hype-updown-15m-1775970900",
+      "entry": 0.51,
+      "size": 1.0,
+      "won": false,
+      "pnl": -1.0
+    },
+    {
+      "side": "YES",
+      "question": "Bitcoin Up or Down - April 12, 1:15AM-1:30AM ET",
+      "url": "https://polymarket.com/market/btc-updown-15m-1775970900",
+      "entry": 0.51,
+      "size": 1.0,
+      "won": true,
+      "pnl": 0.9607843137254901
+    },
+    {
+      "side": "YES",
       "question": "Solana Up or Down - April 12, 1:30AM-1:45AM ET",
       "url": "https://polymarket.com/market/sol-updown-15m-1775971800",
       "entry": 0.5,
@@ -588,6 +593,15 @@
       "size": 1.0,
       "won": false,
       "pnl": -1.0
+    },
+    {
+      "side": "YES",
+      "question": "Spread: FC Anyang (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
+      "entry": 0.12,
+      "size": 1.93,
+      "won": false,
+      "pnl": -1.93
     }
   ],
   "recent_trades": [
