@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-12T03:53:29.847222+00:00",
-  "total_value": 239.719803,
-  "pnl": -1.87921568627451,
+  "updated": "2026-04-12T03:58:29.863659+00:00",
+  "total_value": 238.719803,
+  "pnl": -1.2663124604680582,
   "wallet_balance": 144.039803,
-  "invested": 95.68,
-  "wins": 1,
+  "invested": 94.68,
+  "wins": 2,
   "losses": 2,
   "total_trades": 89,
   "open_positions": [
@@ -62,13 +62,6 @@
       "question": "Spread: Sharks (-1.5)",
       "url": "https://polymarket.com/market/nhl-van-sj-2026-04-11-spread-home-1pt5",
       "entry": 0.45,
-      "size": 1.0
-    },
-    {
-      "side": "NO",
-      "question": "San Diego FC vs. Minnesota United FC: Draw at halftime?",
-      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-halftime-result-draw",
-      "entry": 0.62,
       "size": 1.0
     },
     {
@@ -463,6 +456,15 @@
       "size": 1.59,
       "won": false,
       "pnl": -1.59
+    },
+    {
+      "side": "NO",
+      "question": "San Diego FC vs. Minnesota United FC: Draw at halftime?",
+      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-halftime-result-draw",
+      "entry": 0.62,
+      "size": 1.0,
+      "won": true,
+      "pnl": 0.6129032258064517
     }
   ],
   "recent_trades": [
