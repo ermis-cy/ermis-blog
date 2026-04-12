@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T05:53:29.847383+00:00",
-  "total_value": 231.361427,
-  "pnl": -0.401422059863372,
+  "updated": "2026-04-12T05:58:29.865306+00:00",
+  "total_value": 230.361427,
+  "pnl": -1.401422059863372,
   "wallet_balance": 130.871427,
-  "invested": 100.49,
+  "invested": 99.49,
   "wins": 7,
-  "losses": 6,
+  "losses": 7,
   "total_trades": 102,
   "open_positions": [
     {
@@ -352,13 +352,6 @@
       "size": 1.0
     },
     {
-      "side": "YES",
-      "question": "Solana Up or Down - April 12, 1:30AM-1:45AM ET",
-      "url": "https://polymarket.com/market/sol-updown-15m-1775971800",
-      "entry": 0.5,
-      "size": 1.0
-    },
-    {
       "side": "NO",
       "question": "Bitcoin Up or Down - April 12, 1:30AM-1:45AM ET",
       "url": "https://polymarket.com/market/btc-updown-15m-1775971800",
@@ -574,6 +567,15 @@
       "size": 1.0,
       "won": true,
       "pnl": 1.2222222222222223
+    },
+    {
+      "side": "YES",
+      "question": "Solana Up or Down - April 12, 1:30AM-1:45AM ET",
+      "url": "https://polymarket.com/market/sol-updown-15m-1775971800",
+      "entry": 0.5,
+      "size": 1.0,
+      "won": false,
+      "pnl": -1.0
     }
   ],
   "recent_trades": [
