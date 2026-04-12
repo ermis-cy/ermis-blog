@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T12:01:28.436278+00:00",
+  "updated": "2026-04-12T12:05:45.789179+00:00",
   "wallet_balance": 226.71,
   "deposit": 245.8,
-  "open_value": 177.15,
-  "total_pnl": 158.06,
+  "open_value": 176.69,
+  "total_pnl": 157.6,
   "realized_pnl": -105.81,
-  "unrealized_pnl": -5.36,
+  "unrealized_pnl": -5.82,
   "wins": 0,
   "losses": 62,
   "total_trades": 76,
@@ -37,10 +37,10 @@
       "question": "Will FK Lokomotiv Moskva win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-lok-mak-2026-04-12-lok",
       "entry": 0.6051,
-      "current": 0.61,
+      "current": 0.605,
       "size": 36.29,
-      "value": 36.58,
-      "pnl": 0.29,
+      "value": 36.28,
+      "pnl": -0.01,
       "shares": 59.97
     },
     {
@@ -81,10 +81,10 @@
       "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
       "url": "https://polymarket.com/market/israel-x-hezbollah-ceasefire-by-april-30-2026-989-656",
       "entry": 0.264,
-      "current": 0.2145,
+      "current": 0.216,
       "size": 1.65,
-      "value": 1.34,
-      "pnl": -0.31,
+      "value": 1.35,
+      "pnl": -0.3,
       "shares": 6.25
     },
     {
@@ -103,10 +103,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.084,
-      "current": 0.0825,
+      "current": 0.0815,
       "size": 9.57,
-      "value": 9.4,
-      "pnl": -0.17,
+      "value": 9.29,
+      "pnl": -0.28,
       "shares": 113.93
     },
     {
@@ -136,10 +136,10 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.5175,
+      "current": 0.5035,
       "size": 1.15,
-      "value": 0.82,
-      "pnl": -0.33,
+      "value": 0.8,
+      "pnl": -0.35,
       "shares": 1.59
     },
     {
@@ -147,10 +147,10 @@
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 0.74,
-      "current": 0.58,
+      "current": 0.565,
       "size": 2.12,
-      "value": 1.66,
-      "pnl": -0.46,
+      "value": 1.62,
+      "pnl": -0.5,
       "shares": 2.86
     },
     {
@@ -243,6 +243,12 @@
       "pnl": 158.06,
       "wallet": 226.71,
       "positions": 177.15
+    },
+    {
+      "t": "2026-04-12T12:05:45.789179+00:00",
+      "pnl": 157.6,
+      "wallet": 226.71,
+      "positions": 176.69
     }
   ]
 }
