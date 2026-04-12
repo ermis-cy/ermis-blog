@@ -6,67 +6,52 @@
 <title>Ermis Agent</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 <style>
 :root {
-  --bg: #0a0e14;
-  --surface: #12171f;
-  --surface2: #1a2030;
-  --border: #1e2a3a;
-  --text: #e2e8f0;
-  --text2: #8892a4;
-  --green: #10b981;
-  --green-bg: rgba(16,185,129,0.1);
-  --red: #ef4444;
-  --red-bg: rgba(239,68,68,0.1);
-  --blue: #3b82f6;
-  --accent: #6366f1;
+  --bg: #0a0e14; --surface: #12171f; --surface2: #1a2030; --border: #1e2a3a;
+  --text: #e2e8f0; --text2: #8892a4; --green: #10b981; --green-bg: rgba(16,185,129,0.1);
+  --red: #ef4444; --red-bg: rgba(239,68,68,0.1); --blue: #3b82f6; --accent: #6366f1;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--bg); color: var(--text); font-family: 'Inter', -apple-system, system-ui, sans-serif; min-height: 100vh; }
-.container { max-width: 960px; margin: 0 auto; padding: 32px 20px; }
-.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
-.header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.5px; }
-.header .mode { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; padding: 4px 10px; border-radius: 100px; background: var(--green-bg); color: var(--green); }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:'Inter',-apple-system,system-ui,sans-serif; min-height:100vh; }
+.container { max-width:960px; margin:0 auto; padding:32px 20px; }
+.header { display:flex; align-items:center; justify-content:space-between; margin-bottom:32px; }
+.header h1 { font-size:20px; font-weight:700; letter-spacing:-0.5px; }
+.badge { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:1px; padding:4px 10px; border-radius:100px; background:var(--green-bg); color:var(--green); }
 
-.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
-.metric { background: var(--surface); padding: 20px; }
-.metric .label { font-size: 11px; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
-.metric .value { font-size: 24px; font-weight: 700; margin-top: 4px; letter-spacing: -1px; }
-.metric .sub { font-size: 12px; color: var(--text2); margin-top: 2px; }
-.metric .value.up { color: var(--green); }
-.metric .value.down { color: var(--red); }
+.metrics { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border-radius:12px; overflow:hidden; margin-bottom:24px; }
+.metric { background:var(--surface); padding:20px; }
+.metric .label { font-size:11px; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px; font-weight:500; }
+.metric .value { font-size:24px; font-weight:700; margin-top:4px; letter-spacing:-1px; }
+.metric .sub { font-size:12px; color:var(--text2); margin-top:2px; }
+.up { color:var(--green); } .down { color:var(--red); }
 
-.section { margin-bottom: 24px; }
-.section-header { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text2); margin-bottom: 10px; padding-left: 4px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; margin-bottom:24px; }
+.card-title { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:var(--text2); margin-bottom:16px; }
+.card canvas { width:100%!important; }
 
-.chart-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 24px; }
-.chart-wrap canvas { width: 100%; height: 200px; }
+.table-wrap { background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:24px; }
+.table-title { font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px; color:var(--text2); padding:16px 16px 0; }
+table { width:100%; border-collapse:collapse; }
+th { font-size:11px; font-weight:500; color:var(--text2); text-transform:uppercase; letter-spacing:0.5px; text-align:left; padding:12px 16px; background:var(--surface2); }
+td { padding:12px 16px; font-size:13px; border-top:1px solid var(--border); }
+tr:hover td { background:var(--surface2); }
+td a { color:var(--blue); text-decoration:none; }
+.pill { display:inline-block; font-size:11px; font-weight:600; padding:3px 10px; border-radius:100px; }
+.pill.up { background:var(--green-bg); color:var(--green); }
+.pill.down { background:var(--red-bg); color:var(--red); }
+th.r, td.r { text-align:right; }
 
-.table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-table { width: 100%; border-collapse: collapse; }
-th { font-size: 11px; font-weight: 500; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; text-align: left; padding: 12px 16px; background: var(--surface2); }
-th:nth-child(n+3) { text-align: right; }
-td { padding: 12px 16px; font-size: 13px; border-top: 1px solid var(--border); }
-td:nth-child(n+3) { text-align: right; }
-tr:hover td { background: var(--surface2); }
-td a { color: var(--blue); text-decoration: none; }
-td a:hover { color: #60a5fa; }
+.footer { text-align:center; padding:24px 0 12px; color:var(--text2); font-size:11px; }
+.footer .dot { display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%; margin-right:6px; animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.empty { padding:32px; text-align:center; color:var(--text2); font-size:13px; }
 
-.pill { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 100px; letter-spacing: 0.3px; }
-.pill.yes { background: var(--green-bg); color: var(--green); }
-.pill.no { background: var(--red-bg); color: var(--red); }
-.pill.win { background: var(--green-bg); color: var(--green); }
-.pill.loss { background: var(--red-bg); color: var(--red); }
-
-.footer { text-align: center; padding: 24px 0 12px; color: var(--text2); font-size: 11px; }
-.footer .dot { display: inline-block; width: 6px; height: 6px; background: var(--green); border-radius: 50%; margin-right: 6px; animation: pulse 2s infinite; }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-.empty { padding: 32px; text-align: center; color: var(--text2); font-size: 13px; }
-
-@media (max-width: 600px) {
-  .metrics { grid-template-columns: repeat(2, 1fr); }
-  td, th { padding: 10px 12px; font-size: 12px; }
+@media (max-width:600px) {
+  .metrics { grid-template-columns:repeat(2,1fr); }
+  td,th { padding:10px 12px; font-size:12px; }
 }
 </style>
 </head>
@@ -74,179 +59,161 @@ td a:hover { color: #60a5fa; }
 <div class="container">
   <div class="header">
     <h1>Ermis Agent</h1>
-    <span class="mode">Live</span>
+    <span class="badge">Live</span>
   </div>
 
   <div class="metrics" id="metrics"></div>
 
-  <div class="section">
-    <div class="section-header">P&L History</div>
-    <div class="chart-wrap"><canvas id="pnlChart"></canvas></div>
+  <div class="card">
+    <div class="card-title">Portfolio Value</div>
+    <canvas id="pnlChart" height="220"></canvas>
   </div>
 
-  <div class="section">
-    <div class="section-header">Open Positions</div>
-    <div class="table-wrap">
-      <table id="positions">
-        <thead><tr><th style="width:50px">Side</th><th>Market</th><th>Entry</th><th>Now</th><th>Size</th><th>P&L</th></tr></thead>
-        <tbody></tbody>
-      </table>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:24px;">
+    <div class="card">
+      <div class="card-title">Win Rate</div>
+      <canvas id="winChart" height="180"></canvas>
+    </div>
+    <div class="card">
+      <div class="card-title">Capital Allocation</div>
+      <canvas id="allocChart" height="180"></canvas>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-header">Recent Resolved</div>
-    <div class="table-wrap">
-      <table id="resolved">
-        <thead><tr><th style="width:50px">Side</th><th>Market</th><th>Entry</th><th>Size</th><th>Result</th></tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
+  <div class="table-wrap">
+    <div class="table-title">Open Positions</div>
+    <table id="positions">
+      <thead><tr><th>Position</th><th>Market</th><th class="r">Entry</th><th class="r">Now</th><th class="r">Size</th><th class="r">P&L</th></tr></thead>
+      <tbody></tbody>
+    </table>
   </div>
 
-  <div class="footer">
-    <span class="dot"></span>
-    <span id="updated">Loading...</span>
-  </div>
+  <div class="footer"><span class="dot"></span><span id="updated">Loading...</span></div>
 </div>
 
 <script>
-function fmt(n) { return n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}); }
-function pct(n) { return (n * 100).toFixed(0) + '%'; }
-function timeFmt(iso) {
-  const d = new Date(iso);
-  return d.toLocaleDateString('en-US', {month:'short', day:'numeric'}) + ' ' + d.toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'});
+const $ = s => document.querySelector(s);
+const fmt = n => n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = n => (n*100).toFixed(0)+'%';
+const cs = {bg:'#0a0e14',green:'#10b981',red:'#ef4444',blue:'#3b82f6',text2:'#8892a4',border:'#1e2a3a'};
+
+Chart.defaults.color = cs.text2;
+Chart.defaults.borderColor = cs.border;
+Chart.defaults.font.family = 'Inter';
+
+let pnlChartInstance, winChartInstance, allocChartInstance;
+
+function renderPnlChart(history) {
+  const ctx = $('#pnlChart').getContext('2d');
+  const data = history.map(h => ({x: new Date(h.t), y: h.pnl}));
+  const isUp = data.length && data[data.length-1].y >= 0;
+  const color = isUp ? cs.green : cs.red;
+
+  if (pnlChartInstance) pnlChartInstance.destroy();
+  pnlChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      datasets: [{
+        data, borderColor: color, backgroundColor: color+'18',
+        fill: true, tension: 0.3, pointRadius: 0, pointHitRadius: 10, borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: {mode:'index', intersect:false},
+      plugins: {
+        legend: {display:false},
+        tooltip: {
+          backgroundColor: '#1a2030', titleColor: '#e2e8f0', bodyColor: '#e2e8f0',
+          borderColor: cs.border, borderWidth: 1, padding: 10,
+          callbacks: {
+            title: items => new Date(items[0].parsed.x).toLocaleString(),
+            label: item => `P&L: ${item.parsed.y >= 0 ? '+' : ''}$${fmt(item.parsed.y)}`
+          }
+        }
+      },
+      scales: {
+        x: {type:'time', time:{unit:'hour', displayFormats:{hour:'MMM d, ha'}}, grid:{display:false}},
+        y: {grid:{color:cs.border+'60'}, ticks:{callback: v => '$'+fmt(v)}}
+      }
+    }
+  });
 }
 
-function drawPnlChart(canvas, resolved) {
-  const ctx = canvas.getContext('2d');
-  const dpr = window.devicePixelRatio || 1;
-  const rect = canvas.getBoundingClientRect();
-  canvas.width = rect.width * dpr;
-  canvas.height = rect.height * dpr;
-  ctx.scale(dpr, dpr);
-
-  if (resolved.length < 2) {
-    ctx.fillStyle = '#8892a4';
-    ctx.font = '13px Inter, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('Not enough data yet', rect.width / 2, rect.height / 2);
-    return;
-  }
-
-  // Build cumulative P&L
-  let cum = 0;
-  const points = [{x: 0, y: 0}];
-  resolved.slice().reverse().forEach((r, i) => {
-    cum += r.pnl;
-    points.push({x: i + 1, y: cum});
+function renderWinChart(wins, losses) {
+  const ctx = $('#winChart').getContext('2d');
+  if (winChartInstance) winChartInstance.destroy();
+  winChartInstance = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Wins', 'Losses'],
+      datasets: [{data:[wins,losses], backgroundColor:[cs.green,cs.red], borderWidth:0, spacing:2}]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '70%',
+      plugins: {
+        legend: {position:'bottom', labels:{padding:16, usePointStyle:true, pointStyle:'circle'}},
+        tooltip: {callbacks:{label: item => `${item.label}: ${item.raw}`}}
+      }
+    }
   });
+}
 
-  const w = rect.width, h = rect.height;
-  const pad = {t: 10, r: 10, b: 30, l: 50};
-  const pw = w - pad.l - pad.r, ph = h - pad.t - pad.b;
-
-  const maxY = Math.max(...points.map(p => p.y), 1);
-  const minY = Math.min(...points.map(p => p.y), -1);
-  const rangeY = maxY - minY || 1;
-
-  const scaleX = i => pad.l + (i / (points.length - 1)) * pw;
-  const scaleY = v => pad.t + (1 - (v - minY) / rangeY) * ph;
-
-  // Zero line
-  const zeroY = scaleY(0);
-  ctx.strokeStyle = '#1e2a3a';
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(pad.l, zeroY);
-  ctx.lineTo(w - pad.r, zeroY);
-  ctx.stroke();
-
-  // P&L line
-  ctx.strokeStyle = cum >= 0 ? '#10b981' : '#ef4444';
-  ctx.lineWidth = 2;
-  ctx.beginPath();
-  points.forEach((p, i) => {
-    const x = scaleX(i), y = scaleY(p.y);
-    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+function renderAllocChart(wallet, openValue) {
+  const ctx = $('#allocChart').getContext('2d');
+  if (allocChartInstance) allocChartInstance.destroy();
+  allocChartInstance = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Available', 'In Positions'],
+      datasets: [{data:[wallet, openValue], backgroundColor:[cs.blue, cs.green], borderWidth:0, spacing:2}]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '70%',
+      plugins: {
+        legend: {position:'bottom', labels:{padding:16, usePointStyle:true, pointStyle:'circle'}},
+        tooltip: {callbacks:{label: item => `${item.label}: $${fmt(item.raw)}`}}
+      }
+    }
   });
-  ctx.stroke();
-
-  // Fill under
-  ctx.globalAlpha = 0.1;
-  ctx.fillStyle = cum >= 0 ? '#10b981' : '#ef4444';
-  ctx.lineTo(scaleX(points.length - 1), zeroY);
-  ctx.lineTo(scaleX(0), zeroY);
-  ctx.closePath();
-  ctx.fill();
-  ctx.globalAlpha = 1;
-
-  // Labels
-  ctx.fillStyle = '#8892a4';
-  ctx.font = '11px Inter, sans-serif';
-  ctx.textAlign = 'right';
-  ctx.fillText('$' + fmt(maxY), pad.l - 8, pad.t + 10);
-  ctx.fillText('$' + fmt(minY), pad.l - 8, h - pad.b);
-  ctx.fillText('$0', pad.l - 8, zeroY + 4);
-
-  ctx.textAlign = 'center';
-  ctx.fillText('Trades', w / 2, h - 6);
 }
 
 async function load() {
   try {
-    const d = await (await fetch('data.json?' + Date.now())).json();
-    const totalPnl = d.pnl + (d.unrealized_pnl || 0);
-    const up = totalPnl >= 0;
-    const winRate = d.wins + d.losses > 0 ? ((d.wins / (d.wins + d.losses)) * 100).toFixed(0) + '%' : '-';
+    const d = await (await fetch('data.json?'+Date.now())).json();
+    const up = d.total_pnl >= 0;
+    const winRate = d.wins+d.losses > 0 ? ((d.wins/(d.wins+d.losses))*100).toFixed(0)+'%' : '-';
+    const portfolio = d.wallet_balance + d.open_value;
 
-    document.getElementById('metrics').innerHTML = `
-      <div class="metric"><div class="label">Balance</div><div class="value">$${fmt(d.wallet_balance)}</div><div class="sub">+ $${fmt(d.invested)} in positions</div></div>
-      <div class="metric"><div class="label">Realized P&L</div><div class="value ${d.pnl>=0?'up':'down'}">${d.pnl>=0?'+':''}$${fmt(d.pnl)}</div><div class="sub">${d.total_trades} trades</div></div>
-      <div class="metric"><div class="label">Unrealized</div><div class="value ${(d.unrealized_pnl||0)>=0?'up':'down'}">${(d.unrealized_pnl||0)>=0?'+':''}$${fmt(d.unrealized_pnl||0)}</div><div class="sub">${d.open_positions.length} open</div></div>
+    $('#metrics').innerHTML = `
+      <div class="metric"><div class="label">Portfolio</div><div class="value">$${fmt(portfolio)}</div><div class="sub">Deposit: $${fmt(d.deposit)}</div></div>
+      <div class="metric"><div class="label">Total P&L</div><div class="value ${up?'up':'down'}">${up?'+':''}$${fmt(d.total_pnl)}</div><div class="sub">${((d.total_pnl/d.deposit)*100).toFixed(1)}% return</div></div>
       <div class="metric"><div class="label">Record</div><div class="value">${d.wins}<span style="color:var(--text2);font-size:14px">W</span> ${d.losses}<span style="color:var(--text2);font-size:14px">L</span></div><div class="sub">${winRate} win rate</div></div>
+      <div class="metric"><div class="label">Positions</div><div class="value">${d.open_positions.length}</div><div class="sub">$${fmt(d.open_value)} deployed</div></div>
     `;
 
-    // P&L chart
-    const canvas = document.getElementById('pnlChart');
-    canvas.style.height = '200px';
-    drawPnlChart(canvas, d.resolved);
+    renderPnlChart(d.pnl_history || []);
+    renderWinChart(d.wins, d.losses);
+    renderAllocChart(d.wallet_balance, d.open_value);
 
-    // Open positions
-    const posBody = document.querySelector('#positions tbody');
+    const tbody = $('#positions tbody');
     if (!d.open_positions.length) {
-      posBody.innerHTML = '<tr><td colspan="6" class="empty">No open positions</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" class="empty">No open positions</td></tr>';
     } else {
-      posBody.innerHTML = d.open_positions.map(p => {
-        const pnlClass = (p.pnl||0) >= 0 ? 'up' : 'down';
-        const pnlSign = (p.pnl||0) >= 0 ? '+' : '';
+      tbody.innerHTML = d.open_positions.map(p => {
+        const pUp = p.pnl >= 0;
         return `<tr>
-          <td><span class="pill ${p.side.toLowerCase()}">${p.side}</span></td>
-          <td><a href="${p.url}" target="_blank">${p.question}</a></td>
-          <td>${pct(p.entry)}</td>
-          <td>${p.current ? pct(p.current) : '-'}</td>
-          <td>$${fmt(p.size)}</td>
-          <td style="color:var(--${pnlClass}); font-weight:600">${pnlSign}$${fmt(p.pnl||0)}</td>
+          <td><span class="pill ${pUp?'up':'down'}">${p.side}</span></td>
+          <td>${p.url ? `<a href="${p.url}" target="_blank">${p.question}</a>` : p.question}</td>
+          <td class="r">${pct(p.entry)}</td>
+          <td class="r">${pct(p.current)}</td>
+          <td class="r">$${fmt(p.size)}</td>
+          <td class="r" style="color:var(--${pUp?'green':'red'});font-weight:600">${pUp?'+':''}$${fmt(p.pnl)}</td>
         </tr>`;
       }).join('');
     }
 
-    // Resolved (last 20)
-    const resBody = document.querySelector('#resolved tbody');
-    const recent = d.resolved.slice(0, 20);
-    if (!recent.length) {
-      resBody.innerHTML = '<tr><td colspan="5" class="empty">No resolved trades yet</td></tr>';
-    } else {
-      resBody.innerHTML = recent.map(r => `<tr>
-        <td><span class="pill ${r.side.toLowerCase()}">${r.side}</span></td>
-        <td><a href="${r.url}" target="_blank">${r.question}</a></td>
-        <td>${pct(r.entry)}</td>
-        <td>$${fmt(r.size)}</td>
-        <td><span class="pill ${r.won?'win':'loss'}">${r.won?'WIN':'LOSS'} ${r.pnl>=0?'+':''}$${fmt(r.pnl)}</span></td>
-      </tr>`).join('');
-    }
-
-    document.getElementById('updated').textContent = 'Live \u00b7 Updated ' + timeFmt(d.updated);
+    $('#updated').textContent = 'Updated ' + new Date(d.updated).toLocaleString();
   } catch(e) { console.error(e); }
 }
 load();
