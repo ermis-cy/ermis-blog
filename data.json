@@ -1,21 +1,21 @@
 {
-  "updated": "2026-04-12T22:17:33.736375+00:00",
-  "wallet": 216.0,
+  "updated": "2026-04-12T22:18:05.576109+00:00",
+  "wallet": 202.81,
   "deposit": 245.8,
-  "open_value": 373.16,
-  "total": 589.16,
-  "pnl": 343.36,
-  "pnl_pct": 139.7,
+  "open_value": 372.56,
+  "total": 575.37,
+  "pnl": 329.57,
+  "pnl_pct": 134.1,
   "positions": [
     {
       "side": "Yes",
       "question": "Trump announces end of military operations against Iran",
       "url": "https://polymarket.com/market/trump-announces-end-of-military-operations-against-iran-by-april-21st",
       "entry": 0.14,
-      "current": 0.135,
+      "current": 0.13,
       "cost": 13.19,
-      "value": 12.72,
-      "pnl": -0.47
+      "value": 12.25,
+      "pnl": -0.94
     },
     {
       "side": "Yes",
@@ -52,10 +52,10 @@
       "question": "Will Elon Musk post 480-499 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-480-499",
       "entry": -0.0542,
-      "current": 0.009,
+      "current": 0.008,
       "cost": -10.92,
-      "value": 1.81,
-      "pnl": 12.73
+      "value": 1.61,
+      "pnl": 12.53
     },
     {
       "side": "Yes",
@@ -82,10 +82,10 @@
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": -0.2373,
-      "current": 0.054,
+      "current": 0.0545,
       "cost": -33.7,
-      "value": 7.67,
-      "pnl": 41.37
+      "value": 7.74,
+      "pnl": 41.44
     },
     {
       "side": "Yes",
@@ -852,6 +852,12 @@
       "pnl": 361.87,
       "wallet": 207.98,
       "total": 607.67
+    },
+    {
+      "t": "2026-04-12T22:18:05.576109+00:00",
+      "pnl": 329.57,
+      "wallet": 202.81,
+      "total": 575.37
     }
   ]
 }
