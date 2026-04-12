@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T05:13:29.872131+00:00",
-  "total_value": 233.361424,
+  "updated": "2026-04-12T05:13:34.896715+00:00",
+  "total_value": 238.171424,
   "pnl": -2.442238386393984,
   "wallet_balance": 135.681424,
-  "invested": 97.68,
+  "invested": 102.49,
   "wins": 5,
   "losses": 6,
-  "total_trades": 99,
+  "total_trades": 102,
   "open_positions": [
     {
       "side": "YES",
@@ -448,6 +448,27 @@
       "url": "https://polymarket.com/market/j1100-kaw-kas-2026-04-12-btts",
       "entry": 0.6,
       "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Solana Up or Down - April 12, 3:15AM-3:30AM ET",
+      "url": "https://polymarket.com/market/sol-updown-15m-1775978100",
+      "entry": 0.5,
+      "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Spread: FC Anyang (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
+      "entry": 0.12,
+      "size": 1.93
+    },
+    {
+      "side": "YES",
+      "question": "Spread: Gimcheon Sangmu FC (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-home-1pt5",
+      "entry": 0.19,
+      "size": 1.88
     }
   ],
   "resolved": [
@@ -552,6 +573,30 @@
     }
   ],
   "recent_trades": [
+    {
+      "time": "2026-04-12T05:13:34.537615+00:00",
+      "side": "YES",
+      "question": "Spread: Gimcheon Sangmu FC (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-home-1pt5",
+      "price": 0.19,
+      "size": 1.88
+    },
+    {
+      "time": "2026-04-12T05:13:34.060733+00:00",
+      "side": "YES",
+      "question": "Spread: FC Anyang (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
+      "price": 0.12,
+      "size": 1.93
+    },
+    {
+      "time": "2026-04-12T05:13:33.379855+00:00",
+      "side": "YES",
+      "question": "Solana Up or Down - April 12, 3:15AM-3:30AM ET",
+      "url": "https://polymarket.com/market/sol-updown-15m-1775978100",
+      "price": 0.5,
+      "size": 1.0
+    },
     {
       "time": "2026-04-12T04:45:30.925636+00:00",
       "side": "YES",
@@ -765,30 +810,6 @@
       "side": "YES",
       "question": "Ethereum Up or Down - April 12, 1:50AM-1:55AM ET",
       "url": "https://polymarket.com/market/eth-updown-5m-1775973000",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:49.545710+00:00",
-      "side": "YES",
-      "question": "Dogecoin Up or Down - April 12, 1:40AM-1:45AM ET",
-      "url": "https://polymarket.com/market/doge-updown-5m-1775972400",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:48.760845+00:00",
-      "side": "YES",
-      "question": "XRP Up or Down - April 12, 1:40AM-1:45AM ET",
-      "url": "https://polymarket.com/market/xrp-updown-5m-1775972400",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:48.009183+00:00",
-      "side": "YES",
-      "question": "Ethereum Up or Down - April 12, 1:40AM-1:45AM ET",
-      "url": "https://polymarket.com/market/eth-updown-5m-1775972400",
       "price": 0.5,
       "size": 2.25
     }
