@@ -1,22 +1,12 @@
 {
-  "updated": "2026-04-12T19:16:12.001196+00:00",
+  "updated": "2026-04-12T19:17:53.075154+00:00",
   "wallet": 21.83,
   "deposit": 245.8,
-  "open_value": 280.71,
-  "total": 302.54,
-  "pnl": 56.74,
-  "pnl_pct": 23.1,
+  "open_value": 277.36,
+  "total": 299.19,
+  "pnl": 53.39,
+  "pnl_pct": 21.7,
   "positions": [
-    {
-      "side": "Yes",
-      "question": "Military action against Iran ends on April 30, 2026?",
-      "url": "https://polymarket.com/market/military-action-against-iran-ends-on-april-30-2026",
-      "entry": 0.002,
-      "current": 0.0015,
-      "cost": 3.2,
-      "value": 2.4,
-      "pnl": -0.8
-    },
     {
       "side": "Yes",
       "question": "Military action against Iran continues through April 30",
@@ -32,7 +22,7 @@
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 6.1852,
-      "current": 0.52,
+      "current": 0.525,
       "cost": 0.9,
       "value": 0.08,
       "pnl": -0.82
@@ -42,10 +32,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.1525,
+      "current": 0.1445,
       "cost": 1.56,
-      "value": 0.87,
-      "pnl": -0.69
+      "value": 0.82,
+      "pnl": -0.74
     },
     {
       "side": "Yes",
@@ -72,10 +62,10 @@
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.0595,
+      "current": 0.0585,
       "cost": 12.66,
-      "value": 53.8,
-      "pnl": 41.14
+      "value": 52.9,
+      "pnl": 40.24
     },
     {
       "side": "Yes",
@@ -172,7 +162,7 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.493,
+      "current": 0.492,
       "cost": 1.15,
       "value": 0.78,
       "pnl": -0.37
@@ -676,6 +666,12 @@
       "pnl": 56.02,
       "wallet": 21.83,
       "total": 301.82
+    },
+    {
+      "t": "2026-04-12T19:17:53.075154+00:00",
+      "pnl": 53.39,
+      "wallet": 21.83,
+      "total": 299.19
     }
   ]
 }
