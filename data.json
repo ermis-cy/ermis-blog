@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T13:36:58.306379+00:00",
+  "updated": "2026-04-12T13:41:58.291328+00:00",
   "wallet": 0.92,
   "deposit": 245.8,
-  "open_value": 178.62,
-  "total": 179.54,
-  "pnl": -66.26,
-  "pnl_pct": -27.0,
+  "open_value": 173.79,
+  "total": 174.71,
+  "pnl": -71.09,
+  "pnl_pct": -28.9,
   "positions": [
     {
       "side": "Yes",
@@ -62,10 +62,10 @@
       "question": "Will Elon Musk post 440-459 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-440-459",
       "entry": 0.005,
-      "current": 0.0045,
+      "current": 0.004,
       "cost": 14.72,
-      "value": 13.25,
-      "pnl": -1.47
+      "value": 11.78,
+      "pnl": -2.94
     },
     {
       "side": "Yes",
@@ -112,10 +112,10 @@
       "question": "Will the price of Ethereum be above $2,200 on April 12?",
       "url": "https://polymarket.com/market/ethereum-above-2200-on-april-12",
       "entry": 0.4,
-      "current": 0.349,
+      "current": 0.2865,
       "cost": 22.67,
-      "value": 19.78,
-      "pnl": -2.89
+      "value": 16.24,
+      "pnl": -6.43
     },
     {
       "side": "Yes",
@@ -162,10 +162,10 @@
       "question": "Will SV Werder Bremen win on 2026-04-12?",
       "url": "https://polymarket.com/market/bun-koe-wer-2026-04-12-wer",
       "entry": 0.31,
-      "current": 0.115,
+      "current": 0.165,
       "cost": 0.39,
-      "value": 0.15,
-      "pnl": -0.25
+      "value": 0.21,
+      "pnl": -0.18
     },
     {
       "side": "Yes",
@@ -192,10 +192,10 @@
       "question": "Will FK Rostov win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-ros-spa-2026-04-12-ros",
       "entry": 1.7146,
-      "current": 0.305,
+      "current": 0.315,
       "cost": 1.28,
       "value": 0.23,
-      "pnl": -1.05
+      "pnl": -1.04
     },
     {
       "side": "Over",
@@ -212,20 +212,20 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.084,
-      "current": 0.0845,
+      "current": 0.0855,
       "cost": 9.57,
-      "value": 9.63,
-      "pnl": 0.06
+      "value": 9.74,
+      "pnl": 0.17
     },
     {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.385,
+      "current": 0.391,
       "cost": 1.15,
-      "value": 0.61,
-      "pnl": -0.54
+      "value": 0.62,
+      "pnl": -0.53
     },
     {
       "side": "Yes",
@@ -424,6 +424,12 @@
       "pnl": -66.26,
       "wallet": 0.92,
       "total": 179.54
+    },
+    {
+      "t": "2026-04-12T13:41:58.291328+00:00",
+      "pnl": -71.09,
+      "wallet": 0.92,
+      "total": 174.71
     }
   ]
 }
