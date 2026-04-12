@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T15:54:16.146167+00:00",
-  "wallet": 0.0,
+  "updated": "2026-04-12T15:59:30.854520+00:00",
+  "wallet": 27.29,
   "deposit": 245.8,
-  "open_value": 136.48,
-  "total": 136.48,
-  "pnl": -109.32,
-  "pnl_pct": -44.5,
+  "open_value": 139.45,
+  "total": 166.74,
+  "pnl": -79.06,
+  "pnl_pct": -32.2,
   "positions": [
     {
       "side": "Yes",
@@ -22,20 +22,20 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.078,
+      "current": 0.0835,
       "cost": 1.56,
-      "value": 0.44,
-      "pnl": -1.12
+      "value": 0.48,
+      "pnl": -1.09
     },
     {
       "side": "Yes",
       "question": "Will the price of Ethereum be above $2,200 on April 12?",
       "url": "https://polymarket.com/market/ethereum-above-2200-on-april-12",
       "entry": 4.3692,
-      "current": 0.0055,
+      "current": 0.0005,
       "cost": 12.39,
-      "value": 0.02,
-      "pnl": -12.37
+      "value": 0.0,
+      "pnl": -12.39
     },
     {
       "side": "Yes",
@@ -82,10 +82,10 @@
       "question": "Will Elon Musk post 440-459 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-440-459",
       "entry": 0.005,
-      "current": 0.0025,
+      "current": 0.0035,
       "cost": 14.72,
-      "value": 7.36,
-      "pnl": -7.36
+      "value": 10.31,
+      "pnl": -4.42
     },
     {
       "side": "Yes",
@@ -232,7 +232,7 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.4835,
+      "current": 0.483,
       "cost": 1.15,
       "value": 0.77,
       "pnl": -0.38
@@ -574,6 +574,12 @@
       "pnl": -109.32,
       "wallet": 0.0,
       "total": 136.48
+    },
+    {
+      "t": "2026-04-12T15:59:30.854520+00:00",
+      "pnl": -79.06,
+      "wallet": 27.29,
+      "total": 166.74
     }
   ]
 }
