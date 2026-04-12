@@ -1,61 +1,41 @@
 {
-  "updated": "2026-04-12T14:24:16.143262+00:00",
-  "wallet": 0.0,
+  "updated": "2026-04-12T14:29:16.167384+00:00",
+  "wallet": 27.29,
   "deposit": 245.8,
-  "open_value": 132.88,
-  "total": 132.88,
-  "pnl": -112.92,
-  "pnl_pct": -45.9,
+  "open_value": 134.47,
+  "total": 161.76,
+  "pnl": -84.04,
+  "pnl_pct": -34.2,
   "positions": [
-    {
-      "side": "Yes",
-      "question": "Iran x Israel/US conflict ends by April 30?",
-      "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
-      "entry": 6.1852,
-      "current": 0.475,
-      "cost": 0.9,
-      "value": 0.07,
-      "pnl": -0.83
-    },
-    {
-      "side": "Yes",
-      "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
-      "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
-      "entry": 0.2739,
-      "current": 0.0875,
-      "cost": 1.56,
-      "value": 0.5,
-      "pnl": -1.06
-    },
     {
       "side": "Yes",
       "question": "Will the price of Ethereum be above $2,200 on April 12?",
       "url": "https://polymarket.com/market/ethereum-above-2200-on-april-12",
       "entry": 4.3692,
-      "current": 0.289,
+      "current": 0.27,
       "cost": 12.39,
-      "value": 0.82,
-      "pnl": -11.57
+      "value": 0.77,
+      "pnl": -11.62
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 340-359 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-340-359",
       "entry": 0.3768,
-      "current": 0.0405,
+      "current": 0.049,
       "cost": 4.19,
-      "value": 0.45,
-      "pnl": -3.74
+      "value": 0.55,
+      "pnl": -3.65
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.0275,
+      "current": 0.028,
       "cost": 12.66,
-      "value": 24.87,
-      "pnl": 12.21
+      "value": 25.32,
+      "pnl": 12.66
     },
     {
       "side": "Yes",
@@ -72,10 +52,10 @@
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": 0.008,
-      "current": 0.0105,
+      "current": 0.0115,
       "cost": 13.39,
-      "value": 17.58,
-      "pnl": 4.19
+      "value": 19.25,
+      "pnl": 5.86
     },
     {
       "side": "Yes",
@@ -182,7 +162,7 @@
       "question": "Will SV Werder Bremen win on 2026-04-12?",
       "url": "https://polymarket.com/market/bun-koe-wer-2026-04-12-wer",
       "entry": 0.31,
-      "current": 0.014,
+      "current": 0.013,
       "cost": 0.39,
       "value": 0.02,
       "pnl": -0.38
@@ -202,7 +182,7 @@
       "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 2.5",
       "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-2pt5",
       "entry": 2.1283,
-      "current": 0.57,
+      "current": 0.575,
       "cost": 0.85,
       "value": 0.23,
       "pnl": -0.62
@@ -232,10 +212,10 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.426,
+      "current": 0.4235,
       "cost": 1.15,
-      "value": 0.68,
-      "pnl": -0.47
+      "value": 0.67,
+      "pnl": -0.48
     }
   ],
   "pnl_history": [
@@ -466,6 +446,12 @@
       "pnl": -112.92,
       "wallet": 0.0,
       "total": 132.88
+    },
+    {
+      "t": "2026-04-12T14:29:16.167384+00:00",
+      "pnl": -84.04,
+      "wallet": 27.29,
+      "total": 161.76
     }
   ]
 }
