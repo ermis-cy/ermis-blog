@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T19:02:53.075811+00:00",
+  "updated": "2026-04-12T19:06:11.966610+00:00",
   "wallet": 21.83,
   "deposit": 245.8,
-  "open_value": 296.72,
-  "total": 318.55,
-  "pnl": 72.75,
-  "pnl_pct": 29.6,
+  "open_value": 280.93,
+  "total": 302.76,
+  "pnl": 56.96,
+  "pnl_pct": 23.2,
   "positions": [
     {
       "side": "Yes",
@@ -42,10 +42,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.187,
+      "current": 0.194,
       "cost": 1.56,
-      "value": 1.07,
-      "pnl": -0.5
+      "value": 1.11,
+      "pnl": -0.46
     },
     {
       "side": "Yes",
@@ -72,10 +72,10 @@
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.086,
+      "current": 0.0685,
       "cost": 12.66,
-      "value": 77.77,
-      "pnl": 65.11
+      "value": 61.94,
+      "pnl": 49.28
     },
     {
       "side": "Yes",
@@ -172,7 +172,7 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.493,
+      "current": 0.4935,
       "cost": 1.15,
       "value": 0.78,
       "pnl": -0.37
