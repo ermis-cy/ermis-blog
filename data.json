@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T21:17:53.071778+00:00",
+  "updated": "2026-04-12T21:21:11.965198+00:00",
   "wallet": 189.33,
   "deposit": 245.8,
-  "open_value": 437.38,
-  "total": 626.71,
-  "pnl": 380.91,
-  "pnl_pct": 155.0,
+  "open_value": 438.55,
+  "total": 627.88,
+  "pnl": 382.08,
+  "pnl_pct": 155.4,
   "positions": [
     {
       "side": "Yes",
@@ -32,20 +32,20 @@
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": -0.2373,
-      "current": 0.053,
+      "current": 0.056,
       "cost": -33.7,
-      "value": 7.53,
-      "pnl": 41.23
+      "value": 7.95,
+      "pnl": 41.66
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 440-459 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-440-459",
       "entry": -0.0479,
-      "current": 0.0195,
+      "current": 0.0215,
       "cost": -14.25,
-      "value": 5.8,
-      "pnl": 20.05
+      "value": 6.4,
+      "pnl": 20.65
     },
     {
       "side": "Yes",
@@ -72,10 +72,10 @@
       "question": "Military action against Iran continues through April 30",
       "url": "https://polymarket.com/market/military-action-against-iran-continues-through-april-30-2026",
       "entry": 0.014,
-      "current": 0.0005,
+      "current": 0.0015,
       "cost": 2.73,
-      "value": 0.1,
-      "pnl": -2.63
+      "value": 0.29,
+      "pnl": -2.44
     },
     {
       "side": "Yes",
@@ -92,20 +92,20 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.043,
+      "current": 0.0365,
       "cost": 1.56,
-      "value": 0.25,
-      "pnl": -1.32
+      "value": 0.21,
+      "pnl": -1.35
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 340-359 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-340-359",
       "entry": 0.3768,
-      "current": 0.111,
+      "current": 0.1115,
       "cost": 4.19,
       "value": 1.24,
-      "pnl": -2.96
+      "pnl": -2.95
     },
     {
       "side": "Yes",
