@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-12T19:36:11.965766+00:00",
+  "updated": "2026-04-12T19:37:53.052886+00:00",
   "wallet": 21.83,
   "deposit": 245.8,
-  "open_value": 231.85,
-  "total": 253.68,
-  "pnl": 7.88,
+  "open_value": 231.77,
+  "total": 253.6,
+  "pnl": 7.8,
   "pnl_pct": 3.2,
   "positions": [
     {
@@ -22,10 +22,10 @@
       "question": "Military action against Iran continues through April 30",
       "url": "https://polymarket.com/market/military-action-against-iran-continues-through-april-30-2026",
       "entry": 0.014,
-      "current": 0.007,
+      "current": 0.0065,
       "cost": 2.73,
-      "value": 1.36,
-      "pnl": -1.36
+      "value": 1.27,
+      "pnl": -1.46
     },
     {
       "side": "Yes",
@@ -42,10 +42,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.136,
+      "current": 0.1395,
       "cost": 1.56,
-      "value": 0.78,
-      "pnl": -0.79
+      "value": 0.79,
+      "pnl": -0.77
     },
     {
       "side": "Yes",
@@ -172,7 +172,7 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.4905,
+      "current": 0.4915,
       "cost": 1.15,
       "value": 0.78,
       "pnl": -0.37
@@ -700,6 +700,12 @@
       "pnl": 31.14,
       "wallet": 21.83,
       "total": 276.94
+    },
+    {
+      "t": "2026-04-12T19:37:53.052886+00:00",
+      "pnl": 7.8,
+      "wallet": 21.83,
+      "total": 253.6
     }
   ]
 }
