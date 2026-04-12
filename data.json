@@ -1,15 +1,170 @@
 {
-  "updated": "2026-04-12T11:38:22.949521+00:00",
-  "wallet_balance": 180.52,
+  "updated": "2026-04-12T11:43:22.962914+00:00",
+  "wallet_balance": 0.0,
   "deposit": 245.8,
-  "open_value": 0,
-  "total_pnl": -65.28,
-  "realized_pnl": 0,
-  "unrealized_pnl": 0,
+  "open_value": 175.95,
+  "total_pnl": -69.85,
+  "realized_pnl": -105.81,
+  "unrealized_pnl": -5.07,
   "wins": 0,
-  "losses": 0,
-  "total_trades": 0,
-  "open_positions": [],
+  "losses": 62,
+  "total_trades": 76,
+  "open_positions": [
+    {
+      "side": "Yes",
+      "question": "Will SV Werder Bremen win on 2026-04-12?",
+      "url": "https://polymarket.com/market/bun-koe-wer-2026-04-12-wer",
+      "entry": 0.31,
+      "current": 0.315,
+      "size": 37.37,
+      "value": 37.97,
+      "pnl": 0.6,
+      "shares": 120.54
+    },
+    {
+      "side": "Yes",
+      "question": "Will FK Rostov win on 2026-04-12?",
+      "url": "https://polymarket.com/market/rus-ros-spa-2026-04-12-ros",
+      "entry": 0.2952,
+      "current": 0.295,
+      "size": 20.71,
+      "value": 20.7,
+      "pnl": -0.02,
+      "shares": 70.16
+    },
+    {
+      "side": "Yes",
+      "question": "Will FK Lokomotiv Moskva win on 2026-04-12?",
+      "url": "https://polymarket.com/market/rus-lok-mak-2026-04-12-lok",
+      "entry": 0.6052,
+      "current": 0.61,
+      "size": 36.13,
+      "value": 36.42,
+      "pnl": 0.29,
+      "shares": 59.71
+    },
+    {
+      "side": "Over",
+      "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 3.5",
+      "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-3pt5",
+      "entry": 0.3401,
+      "current": 0.345,
+      "size": 27.97,
+      "value": 28.38,
+      "pnl": 0.4,
+      "shares": 82.25
+    },
+    {
+      "side": "Over",
+      "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 2.5",
+      "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-2pt5",
+      "entry": 0.5701,
+      "current": 0.57,
+      "size": 35.28,
+      "value": 35.28,
+      "pnl": -0.01,
+      "shares": 61.89
+    },
+    {
+      "side": "Yes",
+      "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
+      "url": "https://polymarket.com/market/israel-x-hezbollah-ceasefire-by-april-30-2026-989-656",
+      "entry": 0.264,
+      "current": 0.2125,
+      "size": 1.65,
+      "value": 1.33,
+      "pnl": -0.32,
+      "shares": 6.25
+    },
+    {
+      "side": "Yes",
+      "question": "Trump announces end of military operations against Iran by A",
+      "url": "https://polymarket.com/market/trump-announces-end-of-military-operations-against-iran-by-april-30th-753-882-164-769-641-926",
+      "entry": 0.3925,
+      "current": 0.275,
+      "size": 2.49,
+      "value": 1.74,
+      "pnl": -0.74,
+      "shares": 6.34
+    },
+    {
+      "side": "Yes",
+      "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
+      "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
+      "entry": 0.084,
+      "current": 0.0825,
+      "size": 9.57,
+      "value": 9.4,
+      "pnl": -0.17,
+      "shares": 113.93
+    },
+    {
+      "side": "Gimcheon Sangmu FC",
+      "question": "Spread: Gimcheon Sangmu FC (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-home-1pt5",
+      "entry": 0.18,
+      "current": 0.0005,
+      "size": 1.88,
+      "value": 0.01,
+      "pnl": -1.87,
+      "shares": 10.44
+    },
+    {
+      "side": "FC Anyang",
+      "question": "Spread: FC Anyang (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
+      "entry": 0.13,
+      "current": 0.0005,
+      "size": 1.93,
+      "value": 0.01,
+      "pnl": -1.92,
+      "shares": 14.85
+    },
+    {
+      "side": "Warriors",
+      "question": "Warriors vs. Clippers",
+      "url": "https://polymarket.com/market/nba-gsw-lac-2026-04-12",
+      "entry": 0.31,
+      "current": 0.305,
+      "size": 1.0,
+      "value": 0.98,
+      "pnl": -0.02,
+      "shares": 3.23
+    },
+    {
+      "side": "Yes",
+      "question": "Iran x Israel/US conflict ends by April 15?",
+      "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
+      "entry": 0.724,
+      "current": 0.524,
+      "size": 1.15,
+      "value": 0.83,
+      "pnl": -0.32,
+      "shares": 1.59
+    },
+    {
+      "side": "Yes",
+      "question": "Iran x Israel/US conflict ends by April 30?",
+      "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
+      "entry": 0.74,
+      "current": 0.575,
+      "size": 2.12,
+      "value": 1.65,
+      "pnl": -0.47,
+      "shares": 2.86
+    },
+    {
+      "side": "Yes",
+      "question": "Will Ghana win the 2026 FIFA World Cup?",
+      "url": "https://polymarket.com/market/will-ghana-win-the-2026-fifa-world-cup",
+      "entry": 0.0035,
+      "current": 0.0025,
+      "size": 1.75,
+      "value": 1.25,
+      "pnl": -0.5,
+      "shares": 500.0
+    }
+  ],
   "pnl_history": [
     {
       "t": "2026-04-12T11:00:01.350716+00:00",
@@ -64,6 +219,12 @@
       "pnl": -65.28,
       "wallet": 180.52,
       "positions": 0
+    },
+    {
+      "t": "2026-04-12T11:43:22.962914+00:00",
+      "pnl": -69.85,
+      "wallet": 0.0,
+      "positions": 175.95
     }
   ]
 }
