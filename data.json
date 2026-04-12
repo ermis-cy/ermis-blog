@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-12T04:23:29.846288+00:00",
-  "total_value": 235.36141700000002,
-  "pnl": -4.294090238245836,
+  "updated": "2026-04-12T04:28:29.864127+00:00",
+  "total_value": 234.36141700000002,
+  "pnl": -3.442238386393984,
   "wallet_balance": 143.681417,
-  "invested": 91.68,
-  "wins": 3,
+  "invested": 90.68,
+  "wins": 4,
   "losses": 6,
   "total_trades": 91,
   "open_positions": [
@@ -55,13 +55,6 @@
       "question": "Hyperliquid Up or Down - April 11, 10:20PM-10:25PM ET",
       "url": "https://polymarket.com/market/hype-updown-5m-1775960400",
       "entry": 0.5,
-      "size": 1.0
-    },
-    {
-      "side": "YES",
-      "question": "CF Am\u00e9rica vs. CF Cruz Azul: Both Teams to Score",
-      "url": "https://polymarket.com/market/mex-ame-caz-2026-04-11-btts",
-      "entry": 0.54,
       "size": 1.0
     },
     {
@@ -453,6 +446,15 @@
       "size": 1.0,
       "won": true,
       "pnl": 0.6129032258064517
+    },
+    {
+      "side": "YES",
+      "question": "CF Am\u00e9rica vs. CF Cruz Azul: Both Teams to Score",
+      "url": "https://polymarket.com/market/mex-ame-caz-2026-04-11-btts",
+      "entry": 0.54,
+      "size": 1.0,
+      "won": true,
+      "pnl": 0.8518518518518516
     },
     {
       "side": "NO",
