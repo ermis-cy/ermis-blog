@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T03:23:29.848630+00:00",
-  "total_value": 242.559765,
-  "pnl": 0.9607843137254901,
+  "updated": "2026-04-12T03:28:29.864770+00:00",
+  "total_value": 239.719765,
+  "pnl": -1.87921568627451,
   "wallet_balance": 217.509765,
-  "invested": 25.05,
+  "invested": 22.21,
   "wins": 1,
-  "losses": 0,
+  "losses": 2,
   "total_trades": 43,
   "open_positions": [
     {
@@ -49,20 +49,6 @@
       "url": "https://polymarket.com/market/trump-announces-end-of-military-operations-against-iran-by-april-30th-753-882-164-769-641-926",
       "entry": 0.54,
       "size": 1.68
-    },
-    {
-      "side": "NO",
-      "question": "San Diego FC vs. Minnesota United FC: O/U 2.5",
-      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-total-2pt5",
-      "entry": 0.4,
-      "size": 1.25
-    },
-    {
-      "side": "NO",
-      "question": "San Diego FC vs. Minnesota United FC: O/U 1.5",
-      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-total-1pt5",
-      "entry": 0.18000000000000005,
-      "size": 1.59
     },
     {
       "side": "YES",
@@ -179,6 +165,24 @@
       "size": 1.0,
       "won": true,
       "pnl": 0.9607843137254901
+    },
+    {
+      "side": "NO",
+      "question": "San Diego FC vs. Minnesota United FC: O/U 2.5",
+      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-total-2pt5",
+      "entry": 0.4,
+      "size": 1.25,
+      "won": false,
+      "pnl": -1.25
+    },
+    {
+      "side": "NO",
+      "question": "San Diego FC vs. Minnesota United FC: O/U 1.5",
+      "url": "https://polymarket.com/market/mls-sdg-min-2026-04-11-total-1pt5",
+      "entry": 0.18000000000000005,
+      "size": 1.59,
+      "won": false,
+      "pnl": -1.59
     }
   ],
   "recent_trades": [
