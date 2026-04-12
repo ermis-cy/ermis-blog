@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T09:03:37.477951+00:00",
-  "total_value": 247.18,
-  "pnl": -10.52,
-  "unrealized_pnl": -2.66,
+  "updated": "2026-04-12T09:08:37.472615+00:00",
+  "total_value": 247.19,
+  "pnl": -11.52,
+  "unrealized_pnl": -1.65,
   "wallet_balance": 239.88,
-  "invested": 9.96,
+  "invested": 8.96,
   "wins": 31,
-  "losses": 37,
+  "losses": 38,
   "total_trades": 77,
   "open_positions": [
     {
@@ -50,9 +50,9 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.72,
-      "current": 0.5605,
+      "current": 0.57,
       "size": 1.16,
-      "pnl": -0.26
+      "pnl": -0.24
     },
     {
       "side": "YES",
@@ -71,15 +71,6 @@
       "current": 0.305,
       "size": 1.0,
       "pnl": 0.02
-    },
-    {
-      "side": "YES",
-      "question": "Kawasaki Frontale vs. Kashima Antlers: Both Teams to Score",
-      "url": "https://polymarket.com/market/j1100-kaw-kas-2026-04-12-btts",
-      "entry": 0.6,
-      "current": 0.0005,
-      "size": 1.0,
-      "pnl": -1.0
     },
     {
       "side": "YES",
@@ -682,6 +673,15 @@
       "question": "Bitcoin Up or Down - April 12, 2:30AM-2:45AM ET",
       "url": "https://polymarket.com/market/btc-updown-15m-1775975400",
       "entry": 0.5,
+      "size": 1.0,
+      "won": false,
+      "pnl": -1.0
+    },
+    {
+      "side": "YES",
+      "question": "Kawasaki Frontale vs. Kashima Antlers: Both Teams to Score",
+      "url": "https://polymarket.com/market/j1100-kaw-kas-2026-04-12-btts",
+      "entry": 0.6,
       "size": 1.0,
       "won": false,
       "pnl": -1.0
