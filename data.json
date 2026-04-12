@@ -1,8 +1,8 @@
 {
-  "updated": "2026-04-12T08:38:37.449785+00:00",
-  "total_value": 252.26,
+  "updated": "2026-04-12T08:43:37.453191+00:00",
+  "total_value": 252.19,
   "pnl": -6.52,
-  "unrealized_pnl": -1.58,
+  "unrealized_pnl": -1.65,
   "wallet_balance": 239.88,
   "invested": 13.96,
   "wins": 31,
@@ -32,7 +32,7 @@
       "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
       "url": "https://polymarket.com/market/israel-x-hezbollah-ceasefire-by-april-30-2026-989-656",
       "entry": 0.31,
-      "current": 0.2465,
+      "current": 0.2495,
       "size": 1.0,
       "pnl": -0.2
     },
@@ -50,9 +50,9 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.72,
-      "current": 0.5555,
+      "current": 0.5625,
       "size": 1.16,
-      "pnl": -0.27
+      "pnl": -0.25
     },
     {
       "side": "YES",
@@ -113,9 +113,9 @@
       "question": "Kawasaki Frontale vs. Kashima Antlers: Both Teams to Score",
       "url": "https://polymarket.com/market/j1100-kaw-kas-2026-04-12-btts",
       "entry": 0.6,
-      "current": 0.65,
+      "current": 0.595,
       "size": 1.0,
-      "pnl": 0.08
+      "pnl": -0.01
     },
     {
       "side": "YES",
