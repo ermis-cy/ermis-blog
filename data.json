@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-12T10:53:37.451131+00:00",
+  "updated": "2026-04-12T10:58:37.455575+00:00",
   "total_value": 246.1,
   "pnl": -10.52,
   "unrealized_pnl": -1.74,
@@ -32,9 +32,9 @@
       "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
       "url": "https://polymarket.com/market/israel-x-hezbollah-ceasefire-by-april-30-2026-989-656",
       "entry": 0.31,
-      "current": 0.207,
+      "current": 0.2055,
       "size": 1.0,
-      "pnl": -0.33
+      "pnl": -0.34
     },
     {
       "side": "YES",
@@ -50,9 +50,9 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.72,
-      "current": 0.5675,
+      "current": 0.5715,
       "size": 1.16,
-      "pnl": -0.25
+      "pnl": -0.24
     },
     {
       "side": "YES",
