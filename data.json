@@ -1,15 +1,59 @@
 {
-  "updated": "2026-04-12T11:14:40.662106+00:00",
-  "wallet_balance": 207.21,
+  "updated": "2026-04-12T11:15:56.719151+00:00",
+  "wallet_balance": 239.88,
   "deposit": 245.8,
-  "open_value": 38.36,
-  "total_pnl": -0.23,
+  "open_value": 95.7,
+  "total_pnl": 89.78,
   "realized_pnl": -104.81,
-  "unrealized_pnl": -7.82,
+  "unrealized_pnl": -8.77,
   "wins": 0,
   "losses": 61,
-  "total_trades": 72,
+  "total_trades": 76,
   "open_positions": [
+    {
+      "side": "Yes",
+      "question": "Will FK Lokomotiv Moskva win on 2026-04-12?",
+      "url": "https://polymarket.com/market/rus-lok-mak-2026-04-12-lok",
+      "entry": 0.62,
+      "current": 0.605,
+      "size": 18.7,
+      "value": 18.25,
+      "pnl": -0.45,
+      "shares": 30.16
+    },
+    {
+      "side": "Yes",
+      "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
+      "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
+      "entry": 0.084,
+      "current": 0.083,
+      "size": 9.57,
+      "value": 9.46,
+      "pnl": -0.11,
+      "shares": 113.93
+    },
+    {
+      "side": "Yes",
+      "question": "Will SV Werder Bremen win on 2026-04-12?",
+      "url": "https://polymarket.com/market/bun-koe-wer-2026-04-12-wer",
+      "entry": 0.31,
+      "current": 0.31,
+      "size": 18.97,
+      "value": 18.97,
+      "pnl": 0.0,
+      "shares": 61.19
+    },
+    {
+      "side": "Yes",
+      "question": "Will FK Rostov win on 2026-04-12?",
+      "url": "https://polymarket.com/market/rus-ros-spa-2026-04-12-ros",
+      "entry": 0.31,
+      "current": 0.3,
+      "size": 11.04,
+      "value": 10.69,
+      "pnl": -0.36,
+      "shares": 35.62
+    },
     {
       "side": "Over",
       "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 2.5",
@@ -33,17 +77,6 @@
       "shares": 41.54
     },
     {
-      "side": "FC Anyang",
-      "question": "Spread: FC Anyang (-1.5)",
-      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
-      "entry": 0.13,
-      "current": 0.0005,
-      "size": 1.93,
-      "value": 0.01,
-      "pnl": -1.92,
-      "shares": 14.85
-    },
-    {
       "side": "Gimcheon Sangmu FC",
       "question": "Spread: Gimcheon Sangmu FC (-1.5)",
       "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-home-1pt5",
@@ -53,6 +86,17 @@
       "value": 0.01,
       "pnl": -1.87,
       "shares": 10.44
+    },
+    {
+      "side": "FC Anyang",
+      "question": "Spread: FC Anyang (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
+      "entry": 0.13,
+      "current": 0.0005,
+      "size": 1.93,
+      "value": 0.01,
+      "pnl": -1.92,
+      "shares": 14.85
     },
     {
       "side": "Yes",
@@ -92,10 +136,10 @@
       "question": "Trump announces end of military operations against Iran by A",
       "url": "https://polymarket.com/market/trump-announces-end-of-military-operations-against-iran-by-april-30th-753-882-164-769-641-926",
       "entry": 0.52,
-      "current": 0.285,
+      "current": 0.275,
       "size": 1.68,
-      "value": 0.92,
-      "pnl": -0.76,
+      "value": 0.89,
+      "pnl": -0.79,
       "shares": 3.23
     },
     {
