@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T18:07:53.053824+00:00",
+  "updated": "2026-04-12T18:11:11.964908+00:00",
   "wallet": 21.83,
   "deposit": 245.8,
-  "open_value": 224.43,
-  "total": 246.26,
-  "pnl": 0.46,
-  "pnl_pct": 0.2,
+  "open_value": 233.49,
+  "total": 255.32,
+  "pnl": 9.52,
+  "pnl_pct": 3.9,
   "positions": [
     {
       "side": "Yes",
@@ -22,10 +22,10 @@
       "question": "Military action against Iran continues through April 30",
       "url": "https://polymarket.com/market/military-action-against-iran-continues-through-april-30-2026",
       "entry": 0.014,
-      "current": 0.014,
+      "current": 0.013,
       "cost": 2.73,
-      "value": 2.73,
-      "pnl": 0.0
+      "value": 2.53,
+      "pnl": -0.2
     },
     {
       "side": "Yes",
@@ -42,10 +42,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.142,
+      "current": 0.1545,
       "cost": 1.56,
-      "value": 0.81,
-      "pnl": -0.75
+      "value": 0.88,
+      "pnl": -0.68
     },
     {
       "side": "Yes",
@@ -62,10 +62,10 @@
       "question": "Will Elon Musk post 340-359 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-340-359",
       "entry": 0.3768,
-      "current": 0.07,
+      "current": 0.074,
       "cost": 4.19,
-      "value": 0.78,
-      "pnl": -3.42
+      "value": 0.82,
+      "pnl": -3.37
     },
     {
       "side": "Yes",
@@ -82,40 +82,40 @@
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.049,
+      "current": 0.062,
       "cost": 12.66,
-      "value": 44.31,
-      "pnl": 31.65
+      "value": 56.07,
+      "pnl": 43.41
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": 0.008,
-      "current": 0.022,
+      "current": 0.019,
       "cost": 13.39,
-      "value": 36.83,
-      "pnl": 23.44
+      "value": 31.81,
+      "pnl": 18.42
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 440-459 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-440-459",
       "entry": 0.005,
-      "current": 0.0065,
+      "current": 0.007,
       "cost": 14.72,
-      "value": 19.14,
-      "pnl": 4.42
+      "value": 20.61,
+      "pnl": 5.89
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 420-439 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-420-439",
       "entry": 0.007,
-      "current": 0.0105,
+      "current": 0.011,
       "cost": 13.38,
-      "value": 20.07,
-      "pnl": 6.69
+      "value": 21.02,
+      "pnl": 7.64
     },
     {
       "side": "Yes",
@@ -208,16 +208,6 @@
       "pnl": -0.39
     },
     {
-      "side": "Yes",
-      "question": "Will FK Lokomotiv Moskva win on 2026-04-12?",
-      "url": "https://polymarket.com/market/rus-lok-mak-2026-04-12-lok",
-      "entry": 3.1584,
-      "current": 0.0005,
-      "cost": 1.11,
-      "value": 0.0,
-      "pnl": -1.11
-    },
-    {
       "side": "Over",
       "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 2.5",
       "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-2pt5",
@@ -252,10 +242,10 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.488,
+      "current": 0.482,
       "cost": 1.15,
-      "value": 0.78,
-      "pnl": -0.37
+      "value": 0.77,
+      "pnl": -0.38
     }
   ],
   "pnl_history": [
