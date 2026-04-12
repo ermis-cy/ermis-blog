@@ -1,18 +1,18 @@
 {
-  "updated": "2026-04-12T15:04:16.149558+00:00",
-  "wallet": 27.29,
+  "updated": "2026-04-12T15:09:16.143793+00:00",
+  "wallet": 0.0,
   "deposit": 245.8,
-  "open_value": 140.7,
-  "total": 167.99,
-  "pnl": -77.81,
-  "pnl_pct": -31.7,
+  "open_value": 140.6,
+  "total": 140.6,
+  "pnl": -105.2,
+  "pnl_pct": -42.8,
   "positions": [
     {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 6.1852,
-      "current": 0.545,
+      "current": 0.53,
       "cost": 0.9,
       "value": 0.08,
       "pnl": -0.82
@@ -22,20 +22,20 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.087,
+      "current": 0.084,
       "cost": 1.56,
-      "value": 0.5,
-      "pnl": -1.07
+      "value": 0.48,
+      "pnl": -1.08
     },
     {
       "side": "Yes",
       "question": "Will the price of Ethereum be above $2,200 on April 12?",
       "url": "https://polymarket.com/market/ethereum-above-2200-on-april-12",
       "entry": 4.3692,
-      "current": 0.077,
+      "current": 0.049,
       "cost": 12.39,
-      "value": 0.22,
-      "pnl": -12.17
+      "value": 0.14,
+      "pnl": -12.25
     },
     {
       "side": "Yes",
@@ -182,9 +182,9 @@
       "question": "Will SV Werder Bremen win on 2026-04-12?",
       "url": "https://polymarket.com/market/bun-koe-wer-2026-04-12-wer",
       "entry": 0.31,
-      "current": 0.0015,
+      "current": 0.004,
       "cost": 0.39,
-      "value": 0.0,
+      "value": 0.01,
       "pnl": -0.39
     },
     {
@@ -192,7 +192,7 @@
       "question": "Will FK Lokomotiv Moskva win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-lok-mak-2026-04-12-lok",
       "entry": 3.1584,
-      "current": 0.065,
+      "current": 0.045,
       "cost": 1.11,
       "value": 0.02,
       "pnl": -1.09
@@ -212,10 +212,10 @@
       "question": "Will FK Rostov win on 2026-04-12?",
       "url": "https://polymarket.com/market/rus-ros-spa-2026-04-12-ros",
       "entry": 1.7146,
-      "current": 0.175,
+      "current": 0.155,
       "cost": 1.28,
-      "value": 0.13,
-      "pnl": -1.15
+      "value": 0.12,
+      "pnl": -1.16
     },
     {
       "side": "Over",
@@ -232,7 +232,7 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.4835,
+      "current": 0.4845,
       "cost": 1.15,
       "value": 0.77,
       "pnl": -0.38
@@ -514,6 +514,12 @@
       "pnl": -77.81,
       "wallet": 27.29,
       "total": 167.99
+    },
+    {
+      "t": "2026-04-12T15:09:16.143793+00:00",
+      "pnl": -105.2,
+      "wallet": 0.0,
+      "total": 140.6
     }
   ]
 }
