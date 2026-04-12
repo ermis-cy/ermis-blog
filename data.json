@@ -1,11 +1,11 @@
 {
-  "updated": "2026-04-12T17:41:11.964771+00:00",
+  "updated": "2026-04-12T17:42:53.051403+00:00",
   "wallet": 21.83,
   "deposit": 245.8,
-  "open_value": 168.64,
-  "total": 190.47,
-  "pnl": -55.33,
-  "pnl_pct": -22.5,
+  "open_value": 169.32,
+  "total": 191.15,
+  "pnl": -54.65,
+  "pnl_pct": -22.2,
   "positions": [
     {
       "side": "Yes",
@@ -22,17 +22,17 @@
       "question": "Military action against Iran continues through April 30",
       "url": "https://polymarket.com/market/military-action-against-iran-continues-through-april-30-2026",
       "entry": 0.014,
-      "current": 0.014,
+      "current": 0.0135,
       "cost": 2.73,
-      "value": 2.73,
-      "pnl": 0.0
+      "value": 2.63,
+      "pnl": -0.1
     },
     {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 6.1852,
-      "current": 0.535,
+      "current": 0.53,
       "cost": 0.9,
       "value": 0.08,
       "pnl": -0.82
@@ -42,10 +42,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.2739,
-      "current": 0.093,
+      "current": 0.0915,
       "cost": 1.56,
-      "value": 0.53,
-      "pnl": -1.03
+      "value": 0.52,
+      "pnl": -1.04
     },
     {
       "side": "Yes",
@@ -62,9 +62,9 @@
       "question": "Will Elon Musk post 340-359 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-340-359",
       "entry": 0.3768,
-      "current": 0.065,
+      "current": 0.0655,
       "cost": 4.19,
-      "value": 0.72,
+      "value": 0.73,
       "pnl": -3.47
     },
     {
@@ -82,30 +82,30 @@
       "question": "Will Elon Musk post 360-379 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-360-379",
       "entry": 0.014,
-      "current": 0.0485,
+      "current": 0.0545,
       "cost": 12.66,
-      "value": 43.86,
-      "pnl": 31.2
+      "value": 49.28,
+      "pnl": 36.62
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 400-419 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-400-419",
       "entry": 0.008,
-      "current": 0.0175,
+      "current": 0.0165,
       "cost": 13.39,
-      "value": 29.3,
-      "pnl": 15.9
+      "value": 27.62,
+      "pnl": 14.23
     },
     {
       "side": "Yes",
       "question": "Will Elon Musk post 440-459 tweets from April 10 to Apr",
       "url": "https://polymarket.com/market/elon-musk-of-tweets-april-10-april-17-440-459",
       "entry": 0.005,
-      "current": 0.0065,
+      "current": 0.0055,
       "cost": 14.72,
-      "value": 19.14,
-      "pnl": 4.42
+      "value": 16.2,
+      "pnl": 1.47
     },
     {
       "side": "Yes",
@@ -222,7 +222,7 @@
       "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 2.5",
       "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-2pt5",
       "entry": 2.1283,
-      "current": 0.805,
+      "current": 0.795,
       "cost": 0.85,
       "value": 0.32,
       "pnl": -0.53
@@ -242,20 +242,20 @@
       "question": "CD Mirand\u00e9s vs. CD Castell\u00f3n: O/U 3.5",
       "url": "https://polymarket.com/market/es2-mir-cas-2026-04-12-total-3pt5",
       "entry": 1.3276,
-      "current": 0.465,
+      "current": 0.43,
       "cost": 1.11,
-      "value": 0.39,
-      "pnl": -0.72
+      "value": 0.36,
+      "pnl": -0.75
     },
     {
       "side": "Yes",
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.4815,
+      "current": 0.4825,
       "cost": 1.15,
-      "value": 0.76,
-      "pnl": -0.39
+      "value": 0.77,
+      "pnl": -0.38
     }
   ],
   "pnl_history": [
@@ -642,6 +642,12 @@
       "pnl": -51.87,
       "wallet": 21.83,
       "total": 193.93
+    },
+    {
+      "t": "2026-04-12T17:42:53.051403+00:00",
+      "pnl": -54.65,
+      "wallet": 21.83,
+      "total": 191.15
     }
   ]
 }
