@@ -1,24 +1,35 @@
 {
-  "updated": "2026-04-12T11:24:20.158676+00:00",
-  "wallet_balance": 0.0,
+  "updated": "2026-04-12T11:28:22.950418+00:00",
+  "wallet_balance": 150.43,
   "deposit": 245.8,
-  "open_value": 96.79,
-  "total_pnl": -149.01,
+  "open_value": 97.64,
+  "total_pnl": 2.27,
   "realized_pnl": -104.81,
-  "unrealized_pnl": -8.49,
+  "unrealized_pnl": -8.29,
   "wins": 0,
   "losses": 61,
   "total_trades": 76,
   "open_positions": [
     {
       "side": "Yes",
+      "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
+      "url": "https://polymarket.com/market/israel-x-hezbollah-ceasefire-by-april-30-2026-989-656",
+      "entry": 0.264,
+      "current": 0.213,
+      "size": 1.65,
+      "value": 1.33,
+      "pnl": -0.32,
+      "shares": 6.25
+    },
+    {
+      "side": "Yes",
       "question": "Trump announces end of military operations against Iran by A",
       "url": "https://polymarket.com/market/trump-announces-end-of-military-operations-against-iran-by-april-30th-753-882-164-769-641-926",
       "entry": 0.3925,
-      "current": 0.28,
+      "current": 0.295,
       "size": 2.49,
-      "value": 1.78,
-      "pnl": -0.71,
+      "value": 1.87,
+      "pnl": -0.62,
       "shares": 6.34
     },
     {
@@ -37,10 +48,10 @@
       "question": "Will Scottie Scheffler win the 2026 Masters tournament?",
       "url": "https://polymarket.com/market/will-scottie-scheffler-win-the-2026-masters-tournament",
       "entry": 0.084,
-      "current": 0.0825,
+      "current": 0.083,
       "size": 9.57,
-      "value": 9.4,
-      "pnl": -0.17,
+      "value": 9.46,
+      "pnl": -0.11,
       "shares": 113.93
     },
     {
@@ -88,17 +99,6 @@
       "shares": 41.54
     },
     {
-      "side": "FC Anyang",
-      "question": "Spread: FC Anyang (-1.5)",
-      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
-      "entry": 0.13,
-      "current": 0.0005,
-      "size": 1.93,
-      "value": 0.01,
-      "pnl": -1.92,
-      "shares": 14.85
-    },
-    {
       "side": "Gimcheon Sangmu FC",
       "question": "Spread: Gimcheon Sangmu FC (-1.5)",
       "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-home-1pt5",
@@ -108,6 +108,17 @@
       "value": 0.01,
       "pnl": -1.87,
       "shares": 10.44
+    },
+    {
+      "side": "FC Anyang",
+      "question": "Spread: FC Anyang (-1.5)",
+      "url": "https://polymarket.com/market/kor-san-any-2026-04-12-spread-away-1pt5",
+      "entry": 0.13,
+      "current": 0.0005,
+      "size": 1.93,
+      "value": 0.01,
+      "pnl": -1.92,
+      "shares": 14.85
     },
     {
       "side": "Yes",
@@ -136,7 +147,7 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.724,
-      "current": 0.5505,
+      "current": 0.5495,
       "size": 1.15,
       "value": 0.87,
       "pnl": -0.28,
@@ -147,22 +158,11 @@
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 0.74,
-      "current": 0.59,
+      "current": 0.595,
       "size": 2.12,
-      "value": 1.69,
-      "pnl": -0.43,
+      "value": 1.7,
+      "pnl": -0.42,
       "shares": 2.86
-    },
-    {
-      "side": "Yes",
-      "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
-      "url": "https://polymarket.com/market/israel-x-hezbollah-ceasefire-by-april-30-2026-989-656",
-      "entry": 0.32,
-      "current": 0.206,
-      "size": 1.0,
-      "value": 0.64,
-      "pnl": -0.36,
-      "shares": 3.12
     },
     {
       "side": "Yes",
@@ -212,6 +212,12 @@
       "pnl": -149.01,
       "wallet": 0.0,
       "positions": 96.79
+    },
+    {
+      "t": "2026-04-12T11:28:22.950418+00:00",
+      "pnl": 2.27,
+      "wallet": 150.43,
+      "positions": 97.64
     }
   ]
 }
