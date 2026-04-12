@@ -1,12 +1,12 @@
 {
-  "updated": "2026-04-12T04:43:29.873720+00:00",
-  "total_value": 233.361423,
+  "updated": "2026-04-12T04:45:31.384743+00:00",
+  "total_value": 97.68,
   "pnl": -2.442238386393984,
-  "wallet_balance": 136.681423,
-  "invested": 96.68,
+  "wallet_balance": 0.0,
+  "invested": 97.68,
   "wins": 5,
   "losses": 6,
-  "total_trades": 98,
+  "total_trades": 99,
   "open_positions": [
     {
       "side": "YES",
@@ -441,6 +441,13 @@
       "url": "https://polymarket.com/market/btc-updown-15m-1775975400",
       "entry": 0.5,
       "size": 1.0
+    },
+    {
+      "side": "YES",
+      "question": "Kawasaki Frontale vs. Kashima Antlers: Both Teams to Score",
+      "url": "https://polymarket.com/market/j1100-kaw-kas-2026-04-12-btts",
+      "entry": 0.6,
+      "size": 1.0
     }
   ],
   "resolved": [
@@ -545,6 +552,14 @@
     }
   ],
   "recent_trades": [
+    {
+      "time": "2026-04-12T04:45:30.925636+00:00",
+      "side": "YES",
+      "question": "Kawasaki Frontale vs. Kashima Antlers: Both Teams to Score",
+      "url": "https://polymarket.com/market/j1100-kaw-kas-2026-04-12-btts",
+      "price": 0.6,
+      "size": 1.0
+    },
     {
       "time": "2026-04-12T04:28:38.996071+00:00",
       "side": "YES",
@@ -774,14 +789,6 @@
       "side": "YES",
       "question": "Ethereum Up or Down - April 12, 1:40AM-1:45AM ET",
       "url": "https://polymarket.com/market/eth-updown-5m-1775972400",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:47.304067+00:00",
-      "side": "YES",
-      "question": "Solana Up or Down - April 12, 1:40AM-1:45AM ET",
-      "url": "https://polymarket.com/market/sol-updown-5m-1775972400",
       "price": 0.5,
       "size": 2.25
     }
