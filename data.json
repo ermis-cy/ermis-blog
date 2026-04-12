@@ -1,103 +1,130 @@
 {
-  "updated": "2026-04-12T08:33:29.850882+00:00",
-  "total_value": 253.842589,
-  "pnl": -6.524559314765333,
-  "wallet_balance": 239.882589,
+  "updated": "2026-04-12T08:33:48.406075+00:00",
+  "total_value": 251.86,
+  "pnl": -6.52,
+  "unrealized_pnl": -1.98,
+  "wallet_balance": 239.88,
   "invested": 13.96,
   "wins": 31,
   "losses": 33,
-  "total_trades": 102,
+  "total_trades": 77,
   "open_positions": [
     {
       "side": "YES",
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 0.74,
-      "size": 1.06
+      "current": 0.615,
+      "size": 1.06,
+      "pnl": -0.18
     },
     {
       "side": "YES",
       "question": "Houston Astros vs. Seattle Mariners",
       "url": "https://polymarket.com/market/mlb-hou-sea-2026-04-11",
       "entry": 0.41,
-      "size": 1.0
+      "current": 0.41,
+      "size": 1.0,
+      "pnl": 0.0
     },
     {
       "side": "YES",
       "question": "Israel x Hezbollah ceasefire by April 30, 2026?",
       "url": "https://polymarket.com/market/israel-x-hezbollah-ceasefire-by-april-30-2026-989-656",
       "entry": 0.31,
-      "size": 1.0
+      "current": 0.2555,
+      "size": 1.0,
+      "pnl": -0.18
     },
     {
       "side": "YES",
       "question": "Iran x Israel/US conflict ends by April 30?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-30-766-662-668-546",
       "entry": 0.74,
-      "size": 1.06
+      "current": 0.615,
+      "size": 1.06,
+      "pnl": -0.18
     },
     {
       "side": "YES",
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.72,
-      "size": 1.16
+      "current": 0.5555,
+      "size": 1.16,
+      "pnl": -0.27
     },
     {
       "side": "YES",
       "question": "Trump announces end of military operations against Iran by A",
       "url": "https://polymarket.com/market/trump-announces-end-of-military-operations-against-iran-by-april-30th-753-882-164-769-641-926",
       "entry": 0.54,
-      "size": 1.68
+      "current": 0.265,
+      "size": 1.68,
+      "pnl": -0.86
     },
     {
       "side": "YES",
       "question": "Warriors vs. Clippers",
       "url": "https://polymarket.com/market/nba-gsw-lac-2026-04-12",
       "entry": 0.3,
-      "size": 1.0
+      "current": 0.305,
+      "size": 1.0,
+      "pnl": 0.02
     },
     {
       "side": "YES",
       "question": "BNB Up or Down - April 12, 2:30AM-2:45AM ET",
       "url": "https://polymarket.com/market/bnb-updown-15m-1775975400",
       "entry": 0.5,
-      "size": 1.0
+      "current": 0.5,
+      "size": 1.0,
+      "pnl": 0.0
     },
     {
       "side": "YES",
       "question": "Dogecoin Up or Down - April 12, 2:30AM-2:45AM ET",
       "url": "https://polymarket.com/market/doge-updown-15m-1775975400",
       "entry": 0.5,
-      "size": 1.0
+      "current": 0.5,
+      "size": 1.0,
+      "pnl": 0.0
     },
     {
       "side": "YES",
       "question": "Solana Up or Down - April 12, 2:30AM-2:45AM ET",
       "url": "https://polymarket.com/market/sol-updown-15m-1775975400",
       "entry": 0.5,
-      "size": 1.0
+      "current": 0.5,
+      "size": 1.0,
+      "pnl": 0.0
     },
     {
       "side": "YES",
       "question": "Bitcoin Up or Down - April 12, 2:30AM-2:45AM ET",
       "url": "https://polymarket.com/market/btc-updown-15m-1775975400",
       "entry": 0.5,
-      "size": 1.0
+      "current": 0.5,
+      "size": 1.0,
+      "pnl": 0.0
     },
     {
       "side": "YES",
       "question": "Kawasaki Frontale vs. Kashima Antlers: Both Teams to Score",
       "url": "https://polymarket.com/market/j1100-kaw-kas-2026-04-12-btts",
       "entry": 0.6,
-      "size": 1.0
+      "current": 0.395,
+      "size": 1.0,
+      "pnl": -0.34
     },
     {
       "side": "YES",
       "question": "Solana Up or Down - April 12, 3:15AM-3:30AM ET",
       "url": "https://polymarket.com/market/sol-updown-15m-1775978100",
       "entry": 0.5,
-      "size": 1.0
+      "current": 0.5,
+      "size": 1.0,
+      "pnl": 0.0
     }
   ],
   "resolved": [
@@ -108,7 +135,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "NO",
@@ -153,7 +180,7 @@
       "entry": 0.62,
       "size": 1.0,
       "won": true,
-      "pnl": 0.6129032258064517
+      "pnl": 0.61
     },
     {
       "side": "YES",
@@ -162,7 +189,7 @@
       "entry": 0.54,
       "size": 1.0,
       "won": true,
-      "pnl": 0.8518518518518516
+      "pnl": 0.85
     },
     {
       "side": "YES",
@@ -171,7 +198,7 @@
       "entry": 0.49,
       "size": 1.0,
       "won": true,
-      "pnl": 1.0408163265306123
+      "pnl": 1.04
     },
     {
       "side": "YES",
@@ -216,7 +243,7 @@
       "entry": 0.45,
       "size": 1.0,
       "won": true,
-      "pnl": 1.2222222222222223
+      "pnl": 1.22
     },
     {
       "side": "YES",
@@ -225,7 +252,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "YES",
@@ -234,7 +261,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "YES",
@@ -243,7 +270,7 @@
       "entry": 0.48,
       "size": 1.0,
       "won": true,
-      "pnl": 1.0833333333333335
+      "pnl": 1.08
     },
     {
       "side": "YES",
@@ -279,7 +306,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "YES",
@@ -288,7 +315,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "YES",
@@ -297,7 +324,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "YES",
@@ -306,7 +333,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "YES",
@@ -315,7 +342,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "YES",
@@ -333,7 +360,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "YES",
@@ -360,7 +387,7 @@
       "entry": 0.51,
       "size": 2.24,
       "won": true,
-      "pnl": 2.152156862745098
+      "pnl": 2.15
     },
     {
       "side": "YES",
@@ -459,7 +486,7 @@
       "entry": 0.51,
       "size": 2.24,
       "won": true,
-      "pnl": 2.152156862745098
+      "pnl": 2.15
     },
     {
       "side": "YES",
@@ -540,7 +567,7 @@
       "entry": 0.51,
       "size": 2.24,
       "won": true,
-      "pnl": 2.152156862745098
+      "pnl": 2.15
     },
     {
       "side": "YES",
@@ -612,7 +639,7 @@
       "entry": 0.51,
       "size": 1.0,
       "won": true,
-      "pnl": 0.9607843137254901
+      "pnl": 0.96
     },
     {
       "side": "YES",
@@ -856,54 +883,6 @@
       "size": 2.24
     },
     {
-      "time": "2026-04-12T03:43:53.165470+00:00",
-      "side": "YES",
-      "question": "Solana Up or Down - April 12, 1:50AM-1:55AM ET",
-      "url": "https://polymarket.com/market/sol-updown-5m-1775973000",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
-      "time": "2026-04-12T03:43:53.165405+00:00",
-      "side": "YES",
-      "question": "Bitcoin Up or Down - April 12, 1:45AM-2:00AM ET",
-      "url": "https://polymarket.com/market/btc-updown-15m-1775972700",
-      "price": 0.49,
-      "size": 1.0
-    },
-    {
-      "time": "2026-04-12T03:43:52.691537+00:00",
-      "side": "NO",
-      "question": "Bitcoin Up or Down - April 12, 1:30AM-1:45AM ET",
-      "url": "https://polymarket.com/market/btc-updown-15m-1775971800",
-      "price": 0.51,
-      "size": 1.0
-    },
-    {
-      "time": "2026-04-12T03:43:52.691472+00:00",
-      "side": "YES",
-      "question": "Bitcoin Up or Down - April 12, 1:50AM-1:55AM ET",
-      "url": "https://polymarket.com/market/btc-updown-5m-1775973000",
-      "price": 0.51,
-      "size": 2.24
-    },
-    {
-      "time": "2026-04-12T03:43:52.370360+00:00",
-      "side": "YES",
-      "question": "Solana Up or Down - April 12, 1:30AM-1:45AM ET",
-      "url": "https://polymarket.com/market/sol-updown-15m-1775971800",
-      "price": 0.5,
-      "size": 1.0
-    },
-    {
-      "time": "2026-04-12T03:43:52.298567+00:00",
-      "side": "YES",
-      "question": "XRP Up or Down - April 12, 1:50AM-1:55AM ET",
-      "url": "https://polymarket.com/market/xrp-updown-5m-1775973000",
-      "price": 0.5,
-      "size": 2.25
-    },
-    {
       "time": "2026-04-12T03:43:51.042607+00:00",
       "side": "YES",
       "question": "Ethereum Up or Down - April 12, 1:50AM-1:55AM ET",
@@ -916,6 +895,54 @@
       "side": "YES",
       "question": "Ethereum Up or Down - April 12, 1:50AM-1:55AM ET",
       "url": "https://polymarket.com/market/eth-updown-5m-1775973000",
+      "price": 0.5,
+      "size": 2.25
+    },
+    {
+      "time": "2026-04-12T03:43:49.545710+00:00",
+      "side": "YES",
+      "question": "Dogecoin Up or Down - April 12, 1:40AM-1:45AM ET",
+      "url": "https://polymarket.com/market/doge-updown-5m-1775972400",
+      "price": 0.5,
+      "size": 2.25
+    },
+    {
+      "time": "2026-04-12T03:43:48.760845+00:00",
+      "side": "YES",
+      "question": "XRP Up or Down - April 12, 1:40AM-1:45AM ET",
+      "url": "https://polymarket.com/market/xrp-updown-5m-1775972400",
+      "price": 0.5,
+      "size": 2.25
+    },
+    {
+      "time": "2026-04-12T03:43:48.009183+00:00",
+      "side": "YES",
+      "question": "Ethereum Up or Down - April 12, 1:40AM-1:45AM ET",
+      "url": "https://polymarket.com/market/eth-updown-5m-1775972400",
+      "price": 0.5,
+      "size": 2.25
+    },
+    {
+      "time": "2026-04-12T03:43:47.304067+00:00",
+      "side": "YES",
+      "question": "Solana Up or Down - April 12, 1:40AM-1:45AM ET",
+      "url": "https://polymarket.com/market/sol-updown-5m-1775972400",
+      "price": 0.5,
+      "size": 2.25
+    },
+    {
+      "time": "2026-04-12T03:43:46.431480+00:00",
+      "side": "YES",
+      "question": "BNB Up or Down - April 12, 1:40AM-1:45AM ET",
+      "url": "https://polymarket.com/market/bnb-updown-5m-1775972400",
+      "price": 0.5,
+      "size": 2.25
+    },
+    {
+      "time": "2026-04-12T03:43:45.730304+00:00",
+      "side": "YES",
+      "question": "Dogecoin Up or Down - April 12, 1:45AM-2:00AM ET",
+      "url": "https://polymarket.com/market/doge-updown-15m-1775972700",
       "price": 0.5,
       "size": 2.25
     }
