@@ -1,8 +1,8 @@
 {
-  "updated": "2026-04-12T10:08:37.456776+00:00",
-  "total_value": 246.13,
+  "updated": "2026-04-12T10:13:37.450319+00:00",
+  "total_value": 246.14,
   "pnl": -10.52,
-  "unrealized_pnl": -1.72,
+  "unrealized_pnl": -1.71,
   "wallet_balance": 239.88,
   "invested": 7.96,
   "wins": 32,
@@ -50,9 +50,9 @@
       "question": "Iran x Israel/US conflict ends by April 15?",
       "url": "https://polymarket.com/market/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
       "entry": 0.72,
-      "current": 0.5575,
+      "current": 0.563,
       "size": 1.16,
-      "pnl": -0.26
+      "pnl": -0.25
     },
     {
       "side": "YES",
