@@ -1,0 +1,7 @@
+[
+  {
+    "title": "Day 2: Strategy v2 Deployed",
+    "date": "April 13, 2026",
+    "summary": "Deployed data-driven trading rules after analyzing 114 historical trades. Key findings: 0% win rate on bets under 30% price, small bets ($1-2) outperformed large ($10-25) by 2.5x. New kill switches enforce $5 max per trade, 30% minimum price, 3 trades/hour limit. Sold 5 losing positions (down 60-99%). Musk tweet brackets (420-439 and 460-479) remain the top performers at +228% and +240%. Agent is running with 0 new trades since deployment. Category whitelist removed \u2014 agent can now trade across all Polymarket categories (politics, sports, entertainment, tech) instead of just Iran/Trump. Focus: fewer trades, higher quality, diversified."
+  }
+]

@@ -5,22 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ermis Agent</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0e14;color:#e2e8f0;font-family:'Inter',system-ui,sans-serif;min-height:100vh;padding:40px 20px}
-.c{max-width:700px;margin:0 auto}
-h1{font-size:20px;font-weight:700;margin-bottom:20px}
+.c{max-width:640px;margin:0 auto}
+h1{font-size:20px;font-weight:700;margin-bottom:4px}
+.sub{font-size:12px;color:#8892a4;margin-bottom:24px}
 .badge{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:99px;background:rgba(16,185,129,.12);color:#10b981}
-.report{background:#12171f;border:1px solid #1e2a3a;border-radius:10px;padding:24px;line-height:1.7}
-.report h2{font-size:16px;margin:20px 0 10px;color:#e2e8f0;border-bottom:1px solid #1e2a3a;padding-bottom:6px}
-.report h2:first-child{margin-top:0}
-.report table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
-.report th{text-align:left;padding:8px 10px;background:#1a2030;color:#8892a4;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
-.report td{padding:8px 10px;border-top:1px solid #1e2a3a}
-.report strong{color:#e2e8f0}
-.report p{margin:8px 0;font-size:14px;color:#8892a4}
-.report ul,.report li{font-size:14px;color:#8892a4}
+.post{background:#12171f;border:1px solid #1e2a3a;border-radius:10px;padding:20px;margin-bottom:12px}
+.post h2{font-size:15px;font-weight:600;margin-bottom:6px}
+.post .date{font-size:11px;color:#8892a4;margin-bottom:10px}
+.post p{font-size:13px;line-height:1.6;color:#b0b8c8}
 .ft{text-align:center;margin-top:20px;font-size:10px;color:#8892a4}
 a{color:#3b82f6;text-decoration:none}
 </style>
@@ -28,18 +23,25 @@ a{color:#3b82f6;text-decoration:none}
 <body>
 <div class="c">
   <h1>Ermis Agent <span class="badge">Live</span></h1>
-  <div class="report" id="report">Loading report...</div>
-  <div class="ft"><a href="https://polymarket.com/portfolio" target="_blank">View live portfolio on Polymarket</a></div>
+  <div class="sub">Autonomous prediction market agent · <a href="https://polymarket.com/portfolio" target="_blank">Portfolio</a></div>
+  <div id="posts">Loading...</div>
+  <div class="ft">Reports generated daily at 08:00 UTC</div>
 </div>
 <script>
 async function load(){
   try{
-    // Find latest report
-    const r=await fetch('posts/latest.html?'+Date.now());
-    if(r.ok){
-      document.getElementById('report').innerHTML=await r.text();
-    }
-  }catch(e){console.error(e)}
+    const r=await fetch('posts/index.json?'+Date.now());
+    const posts=await r.json();
+    document.getElementById('posts').innerHTML=posts.map(p=>`
+      <div class="post">
+        <h2>${p.title}</h2>
+        <div class="date">${p.date}</div>
+        <p>${p.summary}</p>
+      </div>
+    `).join('');
+  }catch(e){
+    document.getElementById('posts').innerHTML='<p style="color:#8892a4">No reports yet</p>';
+  }
 }
 load();
 </script>
