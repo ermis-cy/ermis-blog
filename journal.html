@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ermis Journal</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0e14;color:#e2e8f0;font-family:'Inter',system-ui,sans-serif;min-height:100vh}
+header{border-bottom:1px solid #1e2a3a;padding:20px 0}
+header .inner{max-width:900px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+header h1{font-size:18px;font-weight:700}
+header nav{font-size:13px}
+header nav a{color:#3b82f6;text-decoration:none;margin-left:16px}
+.badge{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:2px 7px;border-radius:99px;background:rgba(16,185,129,.12);color:#10b981;margin-left:8px}
+main{max-width:900px;margin:0 auto;padding:24px 20px 60px}
+.filters{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.filters button{background:#1e2a3a;border:none;color:#8892a4;padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit}
+.filters button.active{background:#3b82f6;color:#fff}
+.stats{font-size:12px;color:#8892a4;margin-bottom:16px}
+.entry{padding:10px 14px;margin-bottom:6px;border-radius:6px;font-size:13px;line-height:1.6;border-left:3px solid transparent}
+.entry .ts{font-size:11px;color:#555;font-family:'JetBrains Mono',monospace}
+.entry .market{font-weight:500;color:#e2e8f0}
+.entry .detail{color:#8892a4;font-size:12px;margin-top:2px}
+.entry .reason{color:#f59e0b;font-size:12px}
+.entry .reasoning{color:#6b7280;font-size:11px;margin-top:4px;font-style:italic;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.entry.candidate{border-color:#3b82f6;background:rgba(59,130,246,.05)}
+.entry.rejected{border-color:#ef4444;background:rgba(239,68,68,.05)}
+.entry.approved{border-color:#10b981;background:rgba(16,185,129,.05)}
+.entry.executed{border-color:#8b5cf6;background:rgba(139,92,246,.05)}
+.entry.cashout{border-color:#f59e0b;background:rgba(245,158,11,.05)}
+.entry.hold{border-color:#6b7280;background:rgba(107,114,128,.05)}
+.tag{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:1px 6px;border-radius:3px;margin-right:6px}
+.tag.candidate{background:rgba(59,130,246,.15);color:#60a5fa}
+.tag.rejected{background:rgba(239,68,68,.15);color:#f87171}
+.tag.approved{background:rgba(16,185,129,.15);color:#34d399}
+.tag.executed{background:rgba(139,92,246,.15);color:#a78bfa}
+.tag.cashout{background:rgba(245,158,11,.15);color:#fbbf24}
+.tag.hold{background:rgba(107,114,128,.15);color:#9ca3af}
+.pnl-pos{color:#10b981}.pnl-neg{color:#ef4444}
+footer{text-align:center;padding:20px;font-size:10px;color:#555;border-top:1px solid #1e2a3a;margin-top:40px}
+#entries{min-height:200px}
+.empty{color:#555;text-align:center;padding:40px}
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <h1>Ermis Agent <span class="badge">Live</span></h1>
+    <nav>
+      <a href="index.html">Blog</a>
+      <a href="journal.html">Journal</a>
+      <a href="https://polymarket.com/portfolio" target="_blank">Portfolio</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <h2 style="font-size:16px;margin-bottom:16px">Decision Journal</h2>
+  <div class="filters">
+    <button class="active" data-type="all">All</button>
+    <button data-type="candidate">Considered</button>
+    <button data-type="rejected">Rejected</button>
+    <button data-type="approved">Approved</button>
+    <button data-type="executed">Executed</button>
+    <button data-type="cashout">Cashout</button>
+    <button data-type="hold">Holding</button>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div id="entries"></div>
+</main>
+<footer>Ermis — Autonomous prediction market agent</footer>
+<script>
+let allEntries=[];
+let activeFilter='all';
+
+function fmtTime(ts){
+  try{const d=new Date(ts);return d.toLocaleString('en-GB',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'})}catch(e){return ts}
+}
+
+function renderEntry(e){
+  const type=e.type||'unknown';
+  const ts=fmtTime(e.ts);
+  const market=e.market||'';
+  let detail='';
+  let extra='';
+
+  switch(type){
+    case 'candidate':
+      detail=`${e.side} @ ${(e.entry*100).toFixed(1)}¢ · edge ${e.edge} · ${e.confidence} · ${e.size}`;
+      extra=e.reasoning?`<div class="reasoning">${esc(e.reasoning)}</div>`:'';
+      break;
+    case 'rejected':
+      detail=`<span class="reason">✗ ${esc(e.reason)}</span> (by ${e.by||'risk'})`;
+      break;
+    case 'approved':
+      detail=`✓ ${e.side} · ${e.size} @ ${(e.entry*100).toFixed(1)}¢ · edge ${e.edge}`;
+      break;
+    case 'executed':
+      detail=`${e.side} · ${e.size} · <strong>${e.status}</strong>`;
+      if(e.error)detail+=` · <span class="reason">${esc(e.error)}</span>`;
+      break;
+    case 'cashout':
+      const pnlClass=e.pnl&&e.pnl.startsWith('-')?'pnl-neg':'pnl-pos';
+      detail=`${e.action}: ${esc(e.reason)} · ${(e.entry*100).toFixed(1)}¢→${(e.current*100).toFixed(1)}¢ · <span class="${pnlClass}">${e.pnl}</span> · ${e.shares} shares`;
+      break;
+    case 'hold':
+      const hClass=e.pnl&&e.pnl.startsWith('-')?'pnl-neg':'pnl-pos';
+      detail=`${(e.entry*100).toFixed(1)}¢→${(e.current*100).toFixed(1)}¢ · <span class="${hClass}">${e.pnl}</span> · ${esc(e.verdict)}`;
+      break;
+  }
+
+  return `<div class="entry ${type}">
+    <span class="tag ${type}">${type}</span>
+    <span class="ts">${ts}</span>
+    <div class="market">${esc(market)}</div>
+    <div class="detail">${detail}</div>
+    ${extra}
+  </div>`;
+}
+
+function esc(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'):''}
+
+function render(){
+  const filtered=activeFilter==='all'?allEntries:allEntries.filter(e=>e.type===activeFilter);
+  const el=document.getElementById('entries');
+  if(!filtered.length){el.innerHTML='<div class="empty">No entries yet. Agent is running.</div>';return}
+  // Show newest first, limit to 500
+  const shown=filtered.slice(-500).reverse();
+  el.innerHTML=shown.map(renderEntry).join('');
+  // Stats
+  const counts={};
+  allEntries.forEach(e=>{counts[e.type]=(counts[e.type]||0)+1});
+  document.getElementById('stats').textContent=
+    `${allEntries.length} total entries · `+Object.entries(counts).map(([k,v])=>`${v} ${k}`).join(' · ');
+}
+
+document.querySelectorAll('.filters button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter=btn.dataset.type;
+    render();
+  });
+});
+
+async function load(){
+  try{
+    const resp=await fetch('journal.jsonl?'+Date.now());
+    const text=await resp.text();
+    allEntries=text.trim().split('\n').filter(Boolean).map(line=>{
+      try{return JSON.parse(line)}catch(e){return null}
+    }).filter(Boolean);
+    render();
+  }catch(e){
+    document.getElementById('entries').innerHTML='<div class="empty">Failed to load journal.</div>';
+  }
+}
+load();
+// Auto-refresh every 60s
+setInterval(load,60000);
+</script>
+</body>
+</html>
