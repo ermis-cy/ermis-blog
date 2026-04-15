@@ -24,7 +24,12 @@ main{max-width:900px;margin:0 auto;padding:24px 20px 60px}
 .entry .market{font-weight:500;color:#e2e8f0}
 .entry .detail{color:#8892a4;font-size:12px;margin-top:2px}
 .entry .reason{color:#f59e0b;font-size:12px}
-.entry .reasoning{color:#6b7280;font-size:11px;margin-top:4px;font-style:italic;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.entry .rationale{color:#c9d1d9;font-size:12px;margin-top:6px;line-height:1.5;padding:6px 8px;background:rgba(255,255,255,.03);border-radius:4px}
+.entry .reasoning{color:#6b7280;font-size:11px;margin-top:4px;font-style:italic;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.strat-tag{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:2px 6px;border-radius:3px;margin-right:4px}
+.strat-tag.bracket{background:rgba(251,191,36,.15);color:#fbbf24}
+.strat-tag.smart_money{background:rgba(96,165,250,.15);color:#60a5fa}
+.strat-tag.unknown{background:rgba(107,114,128,.15);color:#9ca3af}
 .entry.candidate{border-color:#3b82f6;background:rgba(59,130,246,.05)}
 .entry.rejected{border-color:#ef4444;background:rgba(239,68,68,.05)}
 .entry.approved{border-color:#10b981;background:rgba(16,185,129,.05)}
@@ -76,40 +81,61 @@ function fmtTime(ts){
   try{const d=new Date(ts);return d.toLocaleString('en-GB',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'})}catch(e){return ts}
 }
 
+function stratTag(e){
+  const s=e.strategy||(e.reasoning&&e.reasoning.startsWith('smart_money')?'smart_money':e.reasoning&&e.reasoning.startsWith('bracket')?'bracket':'');
+  if(!s)return '';
+  const label=s==='smart_money'?'SMART MONEY':s==='bracket'?'BRACKET':s.toUpperCase();
+  return `<span class="strat-tag ${s}">${label}</span>`;
+}
+
+function rationaleBlock(e){
+  if(e.rationale)return `<div class="rationale">${esc(e.rationale)}</div>`;
+  if(e.reasoning)return `<div class="reasoning">${esc(e.reasoning)}</div>`;
+  return '';
+}
+
 function renderEntry(e){
   const type=e.type||'unknown';
   const ts=fmtTime(e.ts);
   const market=e.market||'';
   let detail='';
   let extra='';
+  const strat=stratTag(e);
 
   switch(type){
     case 'candidate':
       detail=`${e.side} @ ${(e.entry*100).toFixed(1)}¢ · edge ${e.edge} · ${e.confidence} · ${e.size}`;
-      extra=e.reasoning?`<div class="reasoning">${esc(e.reasoning)}</div>`:'';
+      extra=rationaleBlock(e);
       break;
     case 'rejected':
-      detail=`<span class="reason">✗ ${esc(e.reason)}</span> (by ${e.by||'risk'})`;
+      detail=`<span class="reason">${esc(e.reason)}</span> (by ${e.by||'risk'})`;
       break;
     case 'approved':
-      detail=`✓ ${e.side} · ${e.size} @ ${(e.entry*100).toFixed(1)}¢ · edge ${e.edge}`;
+      detail=`${e.side} · ${e.size} @ ${(e.entry*100).toFixed(1)}¢ · edge ${e.edge}`;
+      if(e.kelly)detail+=` · kelly ${e.kelly}`;
+      if(e.portfolio_pct)detail+=` · ${e.portfolio_pct} of portfolio`;
+      if(e.potential_payout)detail+=` · payout ${e.potential_payout}`;
+      extra=rationaleBlock(e);
       break;
     case 'executed':
       detail=`${e.side} · ${e.size} · <strong>${e.status}</strong>`;
       if(e.error)detail+=` · <span class="reason">${esc(e.error)}</span>`;
+      extra=rationaleBlock(e);
       break;
     case 'cashout':
       const pnlClass=e.pnl&&e.pnl.startsWith('-')?'pnl-neg':'pnl-pos';
-      detail=`${e.action}: ${esc(e.reason)} · ${(e.entry*100).toFixed(1)}¢→${(e.current*100).toFixed(1)}¢ · <span class="${pnlClass}">${e.pnl}</span> · ${e.shares} shares`;
+      detail=`${e.action}: ${esc(e.reason)} · ${(e.entry*100).toFixed(1)}¢→${(e.current*100).toFixed(1)}¢ · <span class="${pnlClass}">${e.pnl}</span> (${e.dollar_pnl||''}) · ${e.shares} shares`;
+      extra=rationaleBlock(e);
       break;
     case 'hold':
       const hClass=e.pnl&&e.pnl.startsWith('-')?'pnl-neg':'pnl-pos';
       detail=`${(e.entry*100).toFixed(1)}¢→${(e.current*100).toFixed(1)}¢ · <span class="${hClass}">${e.pnl}</span> · ${esc(e.verdict)}`;
+      extra=rationaleBlock(e);
       break;
   }
 
   return `<div class="entry ${type}">
-    <span class="tag ${type}">${type}</span>
+    ${strat}<span class="tag ${type}">${type}</span>
     <span class="ts">${ts}</span>
     <div class="market">${esc(market)}</div>
     <div class="detail">${detail}</div>
