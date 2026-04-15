@@ -30,6 +30,10 @@ main{max-width:900px;margin:0 auto;padding:24px 20px 60px}
 .strat-tag.bracket{background:rgba(251,191,36,.15);color:#fbbf24}
 .strat-tag.smart_money{background:rgba(96,165,250,.15);color:#60a5fa}
 .strat-tag.unknown{background:rgba(107,114,128,.15);color:#9ca3af}
+.outcome{margin-top:4px;font-size:12px;padding:2px 0}
+.rejected-outcome{color:#f87171}
+.approved-outcome{color:#34d399}
+.executed-outcome{color:#a78bfa}
 .entry.candidate{border-color:#3b82f6;background:rgba(59,130,246,.05)}
 .entry.rejected{border-color:#ef4444;background:rgba(239,68,68,.05)}
 .entry.approved{border-color:#10b981;background:rgba(16,185,129,.05)}
@@ -103,39 +107,53 @@ function renderEntry(e){
   const strat=stratTag(e);
 
   switch(type){
-    case 'candidate':
+    case 'candidate': {
       detail=`${e.side} @ ${(e.entry*100).toFixed(1)}¢ · edge ${e.edge} · ${e.confidence} · ${e.size}`;
-      extra=rationaleBlock(e);
+      // Merge outcome into same card
+      const outcome=e._outcome;
+      if(outcome){
+        if(outcome.type==='rejected'){
+          detail+=`<div class="outcome rejected-outcome">✗ ${esc(outcome.reason)}</div>`;
+        } else if(outcome.type==='approved'){
+          let appDetail=`✓ Approved`;
+          if(outcome.kelly)appDetail+=` · kelly ${outcome.kelly}`;
+          if(outcome.portfolio_pct)appDetail+=` · ${outcome.portfolio_pct} of portfolio`;
+          if(outcome.potential_payout)appDetail+=` · payout ${outcome.potential_payout}`;
+          detail+=`<div class="outcome approved-outcome">${appDetail}</div>`;
+          if(outcome._executed){
+            const ex=outcome._executed;
+            const statusClass=ex.status==='filled'?'pnl-pos':'pnl-neg';
+            detail+=`<div class="outcome executed-outcome">⚡ <span class="${statusClass}">${ex.status}</span> · ${ex.size}</div>`;
+          }
+        }
+      }
+      extra=rationaleBlock(outcome||e);
       break;
+    }
     case 'rejected':
-      detail=`<span class="reason">${esc(e.reason)}</span> (by ${e.by||'risk'})`;
-      break;
     case 'approved':
-      detail=`${e.side} · ${e.size} @ ${(e.entry*100).toFixed(1)}¢ · edge ${e.edge}`;
-      if(e.kelly)detail+=` · kelly ${e.kelly}`;
-      if(e.portfolio_pct)detail+=` · ${e.portfolio_pct} of portfolio`;
-      if(e.potential_payout)detail+=` · payout ${e.potential_payout}`;
-      extra=rationaleBlock(e);
-      break;
     case 'executed':
-      detail=`${e.side} · ${e.size} · <strong>${e.status}</strong>`;
-      if(e.error)detail+=` · <span class="reason">${esc(e.error)}</span>`;
-      extra=rationaleBlock(e);
-      break;
-    case 'cashout':
+      return ''; // Merged into candidate cards
+    case 'cashout': {
       const pnlClass=e.pnl&&e.pnl.startsWith('-')?'pnl-neg':'pnl-pos';
       detail=`${e.action}: ${esc(e.reason)} · ${(e.entry*100).toFixed(1)}¢→${(e.current*100).toFixed(1)}¢ · <span class="${pnlClass}">${e.pnl}</span> (${e.dollar_pnl||''}) · ${e.shares} shares`;
       extra=rationaleBlock(e);
       break;
-    case 'hold':
+    }
+    case 'hold': {
       const hClass=e.pnl&&e.pnl.startsWith('-')?'pnl-neg':'pnl-pos';
       detail=`${(e.entry*100).toFixed(1)}¢→${(e.current*100).toFixed(1)}¢ · <span class="${hClass}">${e.pnl}</span> · ${esc(e.verdict)}`;
       extra=rationaleBlock(e);
       break;
+    }
   }
+  if(!detail&&!extra)return '';
 
-  return `<div class="entry ${type}">
-    ${strat}<span class="tag ${type}">${type}</span>
+  // Use outcome type for card styling if merged
+  const cardType=e._outcome?e._outcome.type:type;
+
+  return `<div class="entry ${cardType}">
+    ${strat}<span class="tag ${cardType}">${cardType==='rejected'?'REJECTED':cardType==='approved'?'APPROVED':type.toUpperCase()}</span>
     <span class="ts">${ts}</span>
     <div class="market">${esc(market)}</div>
     <div class="detail">${detail}</div>
@@ -145,18 +163,64 @@ function renderEntry(e){
 
 function esc(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'):''}
 
+function mergeEntries(entries){
+  // Build lookup: market_id+ts_minute → rejected/approved/executed
+  const outcomes={};// market_id → {rejected/approved}
+  const executed={};// market_id → executed
+  for(const e of entries){
+    if(e.type==='rejected'||e.type==='approved'){
+      const key=e.market_id||e.market;
+      if(!outcomes[key])outcomes[key]=e;
+    }
+    if(e.type==='executed'){
+      const key=e.market_id||e.market;
+      if(!executed[key])executed[key]=e;
+    }
+  }
+  // Attach outcomes to candidates
+  for(const e of entries){
+    if(e.type==='candidate'){
+      const key=e.market_id||e.market;
+      if(outcomes[key])e._outcome=outcomes[key];
+      if(e._outcome&&e._outcome.type==='approved'&&executed[key]){
+        e._outcome._executed=executed[key];
+      }
+    }
+  }
+  return entries;
+}
+
 function render(){
-  const filtered=activeFilter==='all'?allEntries:allEntries.filter(e=>e.type===activeFilter);
+  mergeEntries(allEntries);
+  // Filter logic: candidate cards inherit their outcome type
+  let filtered;
+  if(activeFilter==='all'){
+    filtered=allEntries.filter(e=>e.type!=='rejected'&&e.type!=='approved'&&e.type!=='executed');
+  } else if(activeFilter==='candidate'){
+    filtered=allEntries.filter(e=>e.type==='candidate');
+  } else if(activeFilter==='rejected'){
+    filtered=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome.type==='rejected');
+  } else if(activeFilter==='approved'){
+    filtered=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome.type==='approved');
+  } else if(activeFilter==='executed'){
+    filtered=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome._executed);
+  } else {
+    filtered=allEntries.filter(e=>e.type===activeFilter);
+  }
   const el=document.getElementById('entries');
   if(!filtered.length){el.innerHTML='<div class="empty">No entries yet. Agent is running.</div>';return}
-  // Show newest first, limit to 500
   const shown=filtered.slice(-500).reverse();
   el.innerHTML=shown.map(renderEntry).join('');
   // Stats
-  const counts={};
-  allEntries.forEach(e=>{counts[e.type]=(counts[e.type]||0)+1});
+  const raw=allEntries;
+  const nCandidate=raw.filter(e=>e.type==='candidate').length;
+  const nRejected=raw.filter(e=>e.type==='rejected').length;
+  const nApproved=raw.filter(e=>e.type==='approved').length;
+  const nExecuted=raw.filter(e=>e.type==='executed').length;
+  const nCashout=raw.filter(e=>e.type==='cashout').length;
+  const nHold=raw.filter(e=>e.type==='hold').length;
   document.getElementById('stats').textContent=
-    `${allEntries.length} total entries · `+Object.entries(counts).map(([k,v])=>`${v} ${k}`).join(' · ');
+    `${nCandidate} considered · ${nRejected} rejected · ${nApproved} approved · ${nExecuted} executed · ${nCashout} cashout · ${nHold} hold`;
 }
 
 document.querySelectorAll('.filters button').forEach(btn=>{
