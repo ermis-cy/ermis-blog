@@ -127,7 +127,8 @@ function renderEntry(e){
           }
         }
       }
-      extra=rationaleBlock(outcome||e);
+      // Always show candidate rationale (has wallet details, Poisson stats etc.)
+      extra=rationaleBlock(e);
       break;
     }
     case 'rejected':
