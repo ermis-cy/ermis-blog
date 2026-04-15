@@ -226,16 +226,15 @@ function renderMore(){
 function render(){
   applyFilter();
   renderMore();
-  // Stats
-  const raw=allEntries;
-  const nCandidate=raw.filter(e=>e.type==='candidate').length;
-  const nRejected=raw.filter(e=>e.type==='rejected').length;
-  const nApproved=raw.filter(e=>e.type==='approved').length;
-  const nExecuted=raw.filter(e=>e.type==='executed').length;
-  const nCashout=raw.filter(e=>e.type==='cashout').length;
-  const nHold=raw.filter(e=>e.type==='hold').length;
-  document.getElementById('stats').textContent=
-    `${nCandidate} considered · ${nRejected} rejected · ${nApproved} approved · ${nExecuted} executed · ${nCashout} cashout · ${nHold} hold`;
+  // Stats — count from merged cards, not raw entries
+  const c=allEntries.filter(e=>e.type==='candidate');
+  const nRejected=c.filter(e=>e._outcome&&e._outcome.type==='rejected').length;
+  const nApproved=c.filter(e=>e._outcome&&e._outcome.type==='approved').length;
+  const nExecuted=c.filter(e=>e._outcome&&e._outcome._executed).length;
+  const nCashout=allEntries.filter(e=>e.type==='cashout').length;
+  const nHold=allEntries.filter(e=>e.type==='hold').length;
+  const parts=[`${c.length} evaluated`,`${nRejected} rejected`,`${nApproved} approved`,`${nExecuted} executed`,`${nCashout} cashout`,`${nHold} hold`];
+  document.getElementById('stats').textContent=parts.filter(p=>!p.startsWith('0 ')).join(' · ');
 }
 
 // Infinite scroll — load more when near bottom
