@@ -190,27 +190,42 @@ function mergeEntries(entries){
   return entries;
 }
 
-function render(){
+let filteredCache=[];
+let renderedCount=0;
+const PAGE_SIZE=50;
+
+function applyFilter(){
   mergeEntries(allEntries);
-  // Filter logic: candidate cards inherit their outcome type
-  let filtered;
   if(activeFilter==='all'){
-    filtered=allEntries.filter(e=>e.type!=='rejected'&&e.type!=='approved'&&e.type!=='executed');
+    filteredCache=allEntries.filter(e=>e.type!=='rejected'&&e.type!=='approved'&&e.type!=='executed');
   } else if(activeFilter==='candidate'){
-    filtered=allEntries.filter(e=>e.type==='candidate');
+    filteredCache=allEntries.filter(e=>e.type==='candidate');
   } else if(activeFilter==='rejected'){
-    filtered=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome.type==='rejected');
+    filteredCache=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome.type==='rejected');
   } else if(activeFilter==='approved'){
-    filtered=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome.type==='approved');
+    filteredCache=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome.type==='approved');
   } else if(activeFilter==='executed'){
-    filtered=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome._executed);
+    filteredCache=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome._executed);
   } else {
-    filtered=allEntries.filter(e=>e.type===activeFilter);
+    filteredCache=allEntries.filter(e=>e.type===activeFilter);
   }
+  filteredCache=filteredCache.slice().reverse();
+  renderedCount=0;
+}
+
+function renderMore(){
   const el=document.getElementById('entries');
-  if(!filtered.length){el.innerHTML='<div class="empty">No entries yet. Agent is running.</div>';return}
-  const shown=filtered.slice(-500).reverse();
-  el.innerHTML=shown.map(renderEntry).join('');
+  const batch=filteredCache.slice(renderedCount,renderedCount+PAGE_SIZE);
+  if(!batch.length&&!renderedCount){el.innerHTML='<div class="empty">No entries yet. Agent is running.</div>';return}
+  const html=batch.map(renderEntry).join('');
+  if(!renderedCount)el.innerHTML=html;
+  else el.insertAdjacentHTML('beforeend',html);
+  renderedCount+=batch.length;
+}
+
+function render(){
+  applyFilter();
+  renderMore();
   // Stats
   const raw=allEntries;
   const nCandidate=raw.filter(e=>e.type==='candidate').length;
@@ -222,6 +237,14 @@ function render(){
   document.getElementById('stats').textContent=
     `${nCandidate} considered · ${nRejected} rejected · ${nApproved} approved · ${nExecuted} executed · ${nCashout} cashout · ${nHold} hold`;
 }
+
+// Infinite scroll — load more when near bottom
+window.addEventListener('scroll',()=>{
+  if(renderedCount>=filteredCache.length)return;
+  if(window.innerHeight+window.scrollY>=document.body.offsetHeight-300){
+    renderMore();
+  }
+});
 
 document.querySelectorAll('.filters button').forEach(btn=>{
   btn.addEventListener('click',()=>{
