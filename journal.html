@@ -21,34 +21,34 @@ main{max-width:900px;margin:0 auto;padding:24px 20px 60px}
 .stats{font-size:12px;color:#8892a4;margin-bottom:16px}
 .entry{padding:10px 14px;margin-bottom:6px;border-radius:6px;font-size:13px;line-height:1.6;border-left:3px solid transparent}
 .entry .ts{font-size:11px;color:#555;font-family:'JetBrains Mono',monospace}
-.entry .market{font-weight:500;color:#e2e8f0;margin-top:2px}
+.entry .market{font-weight:500;color:#e2e8f0}
 .entry .detail{color:#8892a4;font-size:12px;margin-top:2px}
+.entry .reason{color:#f59e0b;font-size:12px}
 .entry .rationale{color:#c9d1d9;font-size:12px;margin-top:6px;line-height:1.5;padding:6px 8px;background:rgba(255,255,255,.03);border-radius:4px}
-.tag{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:2px 6px;border-radius:3px;margin-right:6px}
-
-.entry.considered{border-color:#3b82f6;background:rgba(59,130,246,.05)}
-.tag.considered{background:rgba(59,130,246,.15);color:#60a5fa}
-
+.entry .reasoning{color:#6b7280;font-size:11px;margin-top:4px;font-style:italic;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.strat-tag{display:inline-block;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:2px 6px;border-radius:3px;margin-right:4px}
+.strat-tag.sweep{background:rgba(16,185,129,.15);color:#10b981}
+.strat-tag.arb{background:rgba(251,191,36,.15);color:#fbbf24}
+.strat-tag.copy{background:rgba(96,165,250,.15);color:#60a5fa}
+.strat-tag.unknown{background:rgba(107,114,128,.15);color:#9ca3af}
+.outcome{margin-top:4px;font-size:12px;padding:2px 0}
+.rejected-outcome{color:#f87171}
+.approved-outcome{color:#34d399}
+.executed-outcome{color:#a78bfa}
+.entry.candidate{border-color:#3b82f6;background:rgba(59,130,246,.05)}
 .entry.rejected{border-color:#ef4444;background:rgba(239,68,68,.05)}
-.tag.rejected{background:rgba(239,68,68,.15);color:#f87171}
-
+.entry.approved{border-color:#10b981;background:rgba(16,185,129,.05)}
 .entry.executed{border-color:#8b5cf6;background:rgba(139,92,246,.05)}
+.entry.cashout{border-color:#f59e0b;background:rgba(245,158,11,.05)}
+.entry.hold{border-color:#6b7280;background:rgba(107,114,128,.05)}
+.tag{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:1px 6px;border-radius:3px;margin-right:6px}
+.tag.candidate{background:rgba(59,130,246,.15);color:#60a5fa}
+.tag.rejected{background:rgba(239,68,68,.15);color:#f87171}
+.tag.approved{background:rgba(16,185,129,.15);color:#34d399}
 .tag.executed{background:rgba(139,92,246,.15);color:#a78bfa}
-
-.entry.unwound{border-color:#f59e0b;background:rgba(245,158,11,.05)}
-.tag.unwound{background:rgba(245,158,11,.15);color:#fbbf24}
-
-.entry.legacy{border-color:#374151;background:rgba(55,65,81,.05)}
-.tag.legacy{background:rgba(55,65,81,.35);color:#9ca3af}
-
-.strat{display:inline-block;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:2px 6px;border-radius:3px;margin-right:4px}
-.strat.sweep{background:rgba(16,185,129,.15);color:#10b981}
-.strat.arb{background:rgba(251,191,36,.15);color:#fbbf24}
-.strat.copy{background:rgba(96,165,250,.15);color:#60a5fa}
-
-.pnl-pos{color:#10b981}
-.pnl-neg{color:#ef4444}
-
+.tag.cashout{background:rgba(245,158,11,.15);color:#fbbf24}
+.tag.hold{background:rgba(107,114,128,.15);color:#9ca3af}
+.pnl-pos{color:#10b981}.pnl-neg{color:#ef4444}
 footer{text-align:center;padding:20px;font-size:10px;color:#555;border-top:1px solid #1e2a3a;margin-top:40px}
 #entries{min-height:200px}
 .empty{color:#555;text-align:center;padding:40px}
@@ -66,164 +66,203 @@ footer{text-align:center;padding:20px;font-size:10px;color:#555;border-top:1px s
 <main>
   <h2 style="font-size:16px;margin-bottom:16px">Decision Journal</h2>
   <div class="filters">
-    <button class="active" data-filter="all">All</button>
-    <button data-filter="considered">Considered</button>
-    <button data-filter="rejected">Rejected</button>
-    <button data-filter="executed">Executed</button>
-    <button data-filter="sweep">Sweep</button>
-    <button data-filter="arb">Arb</button>
-    <button data-filter="legacy">Legacy</button>
+    <button class="active" data-type="all">All</button>
+    <button data-type="candidate">Considered</button>
+    <button data-type="rejected">Rejected</button>
+    <button data-type="approved">Approved</button>
+    <button data-type="executed">Executed</button>
+    <button data-type="cashout">Cashout</button>
+    <button data-type="hold">Holding</button>
   </div>
   <div class="stats" id="stats"></div>
   <div id="entries"></div>
 </main>
 <footer>Ermis — Autonomous prediction market agent</footer>
 <script>
-let allEntries = [];
-let activeFilter = 'all';
-
-function esc(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'):''}
+let allEntries=[];
+let activeFilter='all';
 
 function fmtTime(ts){
-  try{const d=new Date(ts);return d.toLocaleString('en-GB',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'})}
-  catch(e){return ts||''}
+  try{const d=new Date(ts);return d.toLocaleString('en-GB',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'})}catch(e){return ts}
 }
 
-// Classify each raw entry into a display category
-function classify(e){
-  switch(e.type){
-    case 'sweep_considered': return {cat:'considered',strat:'sweep'};
-    case 'sweep_rejected':   return {cat:'rejected',  strat:'sweep'};
-    case 'sweep_buy':        return {cat:'executed',  strat:'sweep'};
-    case 'arb_considered':   return {cat:'considered',strat:'arb'};
-    case 'arb_rejected':     return {cat:'rejected',  strat:'arb'};
-    case 'arb_execute':
-      return e.status==='partial_unwind'
-        ? {cat:'unwound', strat:'arb'}
-        : {cat:'executed',strat:'arb'};
-    case 'copy_buy':
-    case 'copy_sell':
-    case 'copy_skip':        return {cat:'legacy',    strat:'copy'};
-    default:                 return {cat:'legacy',    strat:'copy'};
-  }
+function stratTag(e){
+  const s=e.strategy||'unknown';
+  const label=s==='sweep'?'SWEEP':s==='arb'?'ARB':s==='copy'?'COPY':'';
+  if(!label)return '';
+  return `<span class="strat-tag ${s}">${label}</span>`;
 }
 
-function renderDetail(e){
-  switch(e.type){
-    case 'sweep_considered':
-      return `${esc(e.outcome)} · price ${e.price} · return ${esc(e.return_pct)} · ${esc(e.data_source)} (conf ${e.confidence}) · expires in ${e.hours_to_expiry}h`;
-    case 'sweep_rejected':
-      return `<span style="color:#f87171">${esc(e.reason)}</span>${e.price ? ' · price '+e.price : ''}`;
-    case 'sweep_buy':
-      return `${esc(e.outcome)} · ${esc(e.size)} @ ${e.price} · profit ${esc(e.expected_profit)} (${esc(e.return_pct)}) · ${esc(e.data_source)}${e.paper?' · <span style="color:#fbbf24">PAPER</span>':''}`;
-    case 'arb_considered':
-      return `${esc(e.arb_type)} · ${e.legs} legs · gross ${esc(e.gross_pct)} · net ${esc(e.net_pct)}`;
-    case 'arb_rejected':
-      return `${esc(e.arb_type)} · <span style="color:#f87171">${esc(e.reason)}</span>`;
-    case 'arb_execute':
-      const sc = e.status==='filled'?'pnl-pos':e.status==='partial_unwind'?'pnl-neg':'';
-      return `${esc(e.arb_type)} · ${e.legs} legs · cost ${esc(e.total_cost)} → payout ${esc(e.expected_payout)} · <span class="${sc}">${esc(e.status)}</span>`;
-    case 'copy_buy':
-      return `copied ${esc(e.wallet)} · ${esc(e.size)} @ ${e.entry} · payout ${esc(e.potential_payout)}`;
-    case 'copy_sell':
-      return `copied ${esc(e.wallet)} · ${esc(e.shares)} shares · ${e.entry}→${e.exit} · <span class="${e.pnl&&e.pnl.startsWith('-')?'pnl-neg':'pnl-pos'}">${esc(e.pnl)}</span>`;
-    case 'copy_skip':
-      return `skipped ${esc(e.wallet)} · ${esc(e.reason)}`;
-    default:
-      return '';
-  }
+function rationaleBlock(e){
+  if(e.rationale)return `<div class="rationale">${esc(e.rationale)}</div>`;
+  if(e.reasoning)return `<div class="reasoning">${esc(e.reasoning)}</div>`;
+  return '';
 }
 
 function renderEntry(e){
-  const {cat, strat} = classify(e);
-  const market = e.market || e.market_id || '';
-  const detail = renderDetail(e);
-  if(!detail) return '';
+  const type=e.type||'unknown';
+  const ts=fmtTime(e.ts);
+  const market=e.market||'';
+  let detail='';
+  let extra='';
+  const strat=stratTag(e);
 
-  return `<div class="entry ${cat}">
-    <span class="strat ${strat}">${strat.toUpperCase()}</span><span class="tag ${cat}">${cat.toUpperCase()}</span><span class="ts">${fmtTime(e.ts)}</span>
+  switch(type){
+    case 'candidate': {
+      detail=`${e.side||''} @ ${e.entry!=null?(e.entry*100).toFixed(1)+'¢':'?'} · edge ${e.edge||'?'} · ${e.confidence||'?'} · ${e.size||'?'}`;
+      const outcome=e._outcome;
+      if(outcome){
+        if(outcome.type==='rejected'){
+          detail+=`<div class="outcome rejected-outcome">✗ ${esc(outcome.reason)}</div>`;
+        } else if(outcome.type==='approved'){
+          let appDetail=`✓ Approved`;
+          if(outcome.kelly)appDetail+=` · kelly ${outcome.kelly}`;
+          if(outcome.portfolio_pct)appDetail+=` · ${outcome.portfolio_pct} of portfolio`;
+          if(outcome.potential_payout)appDetail+=` · payout ${outcome.potential_payout}`;
+          detail+=`<div class="outcome approved-outcome">${appDetail}</div>`;
+          if(outcome._executed){
+            const ex=outcome._executed;
+            const statusClass=ex.status==='filled'?'pnl-pos':'pnl-neg';
+            detail+=`<div class="outcome executed-outcome">⚡ <span class="${statusClass}">${ex.status}</span> · ${ex.size||''}</div>`;
+          }
+        }
+      }
+      extra=rationaleBlock(e);
+      break;
+    }
+    case 'rejected':
+    case 'approved':
+    case 'executed':
+      return ''; // Merged into candidate cards
+    case 'cashout': {
+      const pnlClass=e.pnl&&e.pnl.startsWith('-')?'pnl-neg':'pnl-pos';
+      detail=`${e.action||'sold'}: ${esc(e.reason)} · ${e.entry!=null?(e.entry*100).toFixed(1)+'¢':'?'}→${e.exit!=null?(e.exit*100).toFixed(1)+'¢':'?'} · <span class="${pnlClass}">${e.pnl||''}</span> (${e.dollar_pnl||''}) · ${e.shares||''} shares`;
+      extra=rationaleBlock(e);
+      break;
+    }
+    case 'hold': {
+      const hClass=e.pnl&&e.pnl.startsWith('-')?'pnl-neg':'pnl-pos';
+      detail=`${e.entry!=null?(e.entry*100).toFixed(1)+'¢':'?'}→${e.current!=null?(e.current*100).toFixed(1)+'¢':'?'} · <span class="${hClass}">${e.pnl||''}</span> · ${esc(e.verdict||'')}`;
+      extra=rationaleBlock(e);
+      break;
+    }
+    default:
+      return '';
+  }
+  if(!detail&&!extra)return '';
+
+  const cardType=e._outcome?e._outcome.type:type;
+
+  return `<div class="entry ${cardType}">
+    ${strat}<span class="tag ${cardType}">${cardType==='rejected'?'REJECTED':cardType==='approved'?'APPROVED':type.toUpperCase()}</span>
+    <span class="ts">${ts}</span>
     <div class="market">${esc(market)}</div>
     <div class="detail">${detail}</div>
-    ${e.rationale ? `<div class="rationale">${esc(e.rationale)}</div>` : ''}
+    ${extra}
   </div>`;
 }
 
-function matchesFilter(e){
-  if(activeFilter === 'all') return true;
-  const {cat, strat} = classify(e);
-  if(activeFilter === 'sweep') return strat === 'sweep';
-  if(activeFilter === 'arb')   return strat === 'arb';
-  if(activeFilter === 'legacy')return strat === 'copy';
-  return cat === activeFilter;
+function esc(s){return s?String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'):''}
+
+function mergeEntries(entries){
+  const outcomes={};
+  const executed={};
+  for(const e of entries){
+    if(e.type==='rejected'||e.type==='approved'){
+      const key=e.market_id||e.market;
+      if(!outcomes[key])outcomes[key]=e;
+    }
+    if(e.type==='executed'){
+      const key=e.market_id||e.market;
+      if(!executed[key])executed[key]=e;
+    }
+  }
+  for(const e of entries){
+    if(e.type==='candidate'){
+      const key=e.market_id||e.market;
+      if(outcomes[key])e._outcome=outcomes[key];
+      if(e._outcome&&e._outcome.type==='approved'&&executed[key]){
+        e._outcome._executed=executed[key];
+      }
+    }
+  }
+  return entries;
 }
 
-let filteredCache = [];
-let renderedCount = 0;
-const PAGE_SIZE = 50;
+let filteredCache=[];
+let renderedCount=0;
+const PAGE_SIZE=50;
 
 function applyFilter(){
-  filteredCache = allEntries.filter(matchesFilter).slice().reverse();
-  renderedCount = 0;
+  mergeEntries(allEntries);
+  if(activeFilter==='all'){
+    filteredCache=allEntries.filter(e=>e.type!=='rejected'&&e.type!=='approved'&&e.type!=='executed');
+  } else if(activeFilter==='candidate'){
+    filteredCache=allEntries.filter(e=>e.type==='candidate');
+  } else if(activeFilter==='rejected'){
+    filteredCache=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome.type==='rejected');
+  } else if(activeFilter==='approved'){
+    filteredCache=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome.type==='approved');
+  } else if(activeFilter==='executed'){
+    filteredCache=allEntries.filter(e=>e.type==='candidate'&&e._outcome&&e._outcome._executed);
+  } else {
+    filteredCache=allEntries.filter(e=>e.type===activeFilter);
+  }
+  filteredCache=filteredCache.slice().reverse();
+  renderedCount=0;
 }
 
 function renderMore(){
-  const el = document.getElementById('entries');
-  const batch = filteredCache.slice(renderedCount, renderedCount + PAGE_SIZE);
-  if(!batch.length && !renderedCount){
-    el.innerHTML = '<div class="empty">No entries yet. Agent is running.</div>';
-    return;
-  }
-  const html = batch.map(renderEntry).filter(Boolean).join('');
-  if(!renderedCount) el.innerHTML = html || '<div class="empty">No entries match this filter.</div>';
-  else el.insertAdjacentHTML('beforeend', html);
-  renderedCount += batch.length;
+  const el=document.getElementById('entries');
+  const batch=filteredCache.slice(renderedCount,renderedCount+PAGE_SIZE);
+  if(!batch.length&&!renderedCount){el.innerHTML='<div class="empty">No entries yet. Agent is running.</div>';return}
+  const html=batch.map(renderEntry).join('');
+  if(!renderedCount)el.innerHTML=html||'<div class="empty">No entries match this filter.</div>';
+  else el.insertAdjacentHTML('beforeend',html);
+  renderedCount+=batch.length;
 }
 
 function render(){
   applyFilter();
   renderMore();
-
-  // Stats
-  const cats = allEntries.map(e => classify(e));
-  const count = (f) => cats.filter(f).length;
-  const parts = [
-    `${count(c=>c.cat==='considered')} considered`,
-    `${count(c=>c.cat==='rejected')} rejected`,
-    `${count(c=>c.cat==='executed')} executed`,
-    `${count(c=>c.strat==='sweep')} sweep`,
-    `${count(c=>c.strat==='arb')} arb`,
-  ];
-  document.getElementById('stats').textContent = parts.filter(p=>!p.startsWith('0 ')).join(' · ');
+  const c=allEntries.filter(e=>e.type==='candidate');
+  const nRejected=c.filter(e=>e._outcome&&e._outcome.type==='rejected').length;
+  const nApproved=c.filter(e=>e._outcome&&e._outcome.type==='approved').length;
+  const nExecuted=c.filter(e=>e._outcome&&e._outcome._executed).length;
+  const nCashout=allEntries.filter(e=>e.type==='cashout').length;
+  const nHold=allEntries.filter(e=>e.type==='hold').length;
+  const parts=[`${c.length} evaluated`,`${nRejected} rejected`,`${nApproved} approved`,`${nExecuted} executed`,`${nCashout} cashout`,`${nHold} hold`];
+  document.getElementById('stats').textContent=parts.filter(p=>!p.startsWith('0 ')).join(' · ');
 }
 
 window.addEventListener('scroll',()=>{
-  if(renderedCount >= filteredCache.length) return;
-  if(window.innerHeight + window.scrollY >= document.body.offsetHeight - 300) renderMore();
+  if(renderedCount>=filteredCache.length)return;
+  if(window.innerHeight+window.scrollY>=document.body.offsetHeight-300){renderMore();}
 });
 
 document.querySelectorAll('.filters button').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
-    activeFilter = btn.dataset.filter;
+    activeFilter=btn.dataset.type;
     render();
   });
 });
 
 async function load(){
   try{
-    const resp = await fetch('journal.jsonl?' + Date.now());
-    const text = await resp.text();
-    allEntries = text.trim().split('\n').filter(Boolean).map(line=>{
+    const resp=await fetch('journal.jsonl?'+Date.now());
+    const text=await resp.text();
+    allEntries=text.trim().split('\n').filter(Boolean).map(line=>{
       try{return JSON.parse(line)}catch(e){return null}
     }).filter(Boolean);
     render();
-  } catch(e){
-    document.getElementById('entries').innerHTML = '<div class="empty">Failed to load journal.</div>';
+  }catch(e){
+    document.getElementById('entries').innerHTML='<div class="empty">Failed to load journal.</div>';
   }
 }
 load();
-setInterval(load, 60000);
+setInterval(load,60000);
 </script>
 </body>
 </html>
